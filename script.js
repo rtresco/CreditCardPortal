@@ -10,7 +10,7 @@ const rewards = [
  {category:"Entertainment",icon:"🎟️",card:"Discover",cash:"5%",details:"Movies, concerts, events, etc.",until:"Dec 31, 2026",search:["movie","concert","entertainment","event"]},
  {category:"Streaming Services",icon:"▶️",card:"Capital One Savor",cash:"3%",details:"Netflix, YouTube TV, Disney+/Hulu Bundle, Paramount+, Spotify, HBO Max, etc.",until:"Ongoing",search:["streaming","netflix","youtube tv","disney","hulu","paramount","spotify","hbo"]},
  {category:"Utilities",icon:"💡",card:"Discover",cash:"5%",details:"Electric, water, internet, phone, etc.",until:"Dec 31, 2026",search:["utility","electric","electricity","water","internet","phone"]},
- {category:"Drugstores",icon:"💊",card:"Chase",cash:"3%",details:"CVS, Walgreens, etc.",until:"Ongoing",search:["drugstore","cvs","walgreens","pharmacy"]},
+ {category:"Drugstores",icon:"💊",card:"Chase Freedom Flex & Unlimited",cash:"3%",details:"CVS, Walgreens, etc.",until:"Ongoing",search:["drugstore","cvs","walgreens","pharmacy"]},
  {category:"Everything Else",icon:"•••",card:"Bank of America",cash:"2.625%",details:"Any purchase not listed above",until:"Ongoing",search:["everything else","other"]}
 ];
 
