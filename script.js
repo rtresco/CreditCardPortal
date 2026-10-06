@@ -15,35 +15,35 @@ const rewards = [
 ];
 
 const bills = [
- ["⚡ Electricity","Utilities","Discover","5% Cash Back","Expires December 31, 2026, then BOA Visa","https://www.discountpowertx.com/"],
- ["⚡ Water","Utilities","Discover","5% Cash Back","Expires December 31, 2026, then BOA Checking to avoid credit card processing fees","https://www.houstonwaterbills.houstontx.gov/"],
- ["⚡ Gas","Utilities","BOA Checking","","Avoids credit card processing fees.","https://myaccount.centerpointenergy.com/"],
- ["⚡ Internet","Utilities","BOA Checking","","$10 discount with bank account","https://www.att.com/"],
- ["📱 Cell Phones","Utilities","BOA Checking","","$15 discount ($5 per line) with bank account","https://www.verizon.com/"],
- ["🚗 Auto Loans","Home/Auto","BOA Checking","","Bank account payment only available","https://www.wellsfargo.com/"],
- ["🏠🚗 Home and Auto Insurance","Home/Auto","BOA Visa","","","https://www.statefarm.com/"],
- ["🏠 Houston Property Taxes","Home/Auto","BOA Visa","","Check to see if credit txn fee is > than cash back. If so, use BOA Checking","https://www.hctax.net/"],
- ["🏠 Houston Property Taxes Protest","Home/Auto","BOA Visa","","","https://www.hctax.net/"],
- ["🚗 Renew Auto Registration","Home/Auto","BOA Visa","","Check for credit txn fee","https://renew.txdmv.gov/Renew/RegistrationRenewalServlet"],
- ["📦 🚚 Public Storage","Home/Auto","BOA Visa","","","https://www.publicstorage.com/"],
- ["🚗 Mattress Loan","Home/Auto","BOA Checking","","","https://id.synchrony.com/idp/en/standard/login"],
- ["🚗 Toll Roads","Home/Auto","BOA Visa","","","https://www.hctra.org/"],
- ["📚 Julie’s College Tuition","School","BOA Visa","","","https://howdy.tamu.edu/"],
- ["🏠 Lora’s Apartment Rent","School","BOA Checking","","","https://west10.residentportal.com/auth"],
- ["🏠 Julie’s Apartment Rent","School","BOA Checking","","","https://woodlandsapts.residentportal.com/auth"],
+ ["⚡ Electricity","Utilities","Discover","5% Cash Back","Expires December 31, 2026, then Bank of America Visa","https://www.discountpowertx.com/"],
+ ["⚡ Water","Utilities","Discover","5% Cash Back","Expires December 31, 2026, then Bank of America Checking to avoid credit card processing fees","https://www.houstonwaterbills.houstontx.gov/"],
+ ["⚡ Gas","Utilities","Bank of America Checking","","Avoids credit card processing fees.","https://myaccount.centerpointenergy.com/"],
+ ["⚡ Internet","Utilities","Bank of America Checking","","$10 discount with bank account","https://www.att.com/"],
+ ["📱 Cell Phones","Utilities","Bank of America Checking","","$15 discount ($5 per line) with bank account","https://www.verizon.com/"],
+ ["🚗 Auto Loans","Home/Auto","Bank of America Checking","","Bank account payment only available","https://www.wellsfargo.com/"],
+ ["🏠🚗 Home and Auto Insurance","Home/Auto","Bank of America Visa","","","https://www.statefarm.com/"],
+ ["🏠 Houston Property Taxes","Home/Auto","Bank of America Visa","","Check to see if credit txn fee is > than cash back. If so, use Bank of America Checking","https://www.hctax.net/"],
+ ["🏠 Houston Property Taxes Protest","Home/Auto","Bank of America Visa","","","https://www.hctax.net/"],
+ ["🚗 Renew Auto Registration","Home/Auto","Bank of America Visa","","Check for credit txn fee","https://renew.txdmv.gov/Renew/RegistrationRenewalServlet"],
+ ["📦 🚚 Public Storage","Home/Auto","Bank of America Visa","","","https://www.publicstorage.com/"],
+ ["🚗 Mattress Loan","Home/Auto","Bank of America Checking","","","https://id.synchrony.com/idp/en/standard/login"],
+ ["🚗 Toll Roads","Home/Auto","Bank of America Visa","","","https://www.hctra.org/"],
+ ["📚 Julie’s College Tuition","School","Bank of America Visa","","","https://howdy.tamu.edu/"],
+ ["🏠 Lora’s Apartment Rent","School","Bank of America Checking","","","https://west10.residentportal.com/auth"],
+ ["🏠 Julie’s Apartment Rent","School","Bank of America Checking","","","https://woodlandsapts.residentportal.com/auth"],
  ["📺 Netflix","Streaming","Capital One Savor","3% cash back","","https://www.netflix.com/"],
- ["📺 Paramount+","Streaming","BOA Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
+ ["📺 Paramount+","Streaming","Bank of America Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
  ["📺 YouTube TV","Streaming","Chase Freedom Unlimited","$20 Cash Back","Expires 10/29/2026","https://tv.youtube.com/"],
  ["📺 Disney+/Hulu Bundle","Streaming","Capital One Savor","3% cash back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
  ["📺 HBO Max","Streaming","Capital One Savor","3% cash back","","https://play.hbomax.com/"],
  ["🎵 Spotify","Streaming","Capital One Savor","3% cash back","Promo price expires 12/1/2026, then $10.99/month","https://www.spotify.com/"],
- ["💾 ChatGPT","Software","BOA Visa","","","https://chatgpt.com/"],
- ["💾 Life360","Software","BOA Visa","","","https://play.google.com/"],
- ["💾 Apple iCloud","Software","BOA Visa","","","https://www.icloud.com/"],
- ["💾 Google Home Premium Standard (Nest Aware)","Software","BOA Visa","","","https://play.google.com/"],
- ["💾 Google Health (Fitbit)","Software","BOA Visa","","","https://play.google.com/"],
- ["💾 Google One (Cloud Storage/AI Plus)","Software","BOA Visa","","","https://play.google.com/"],
- ["💾 VRadio","Software","BOA Visa","","","https://play.google.com/"]
+ ["💾 ChatGPT","Software","Bank of America Visa","","","https://chatgpt.com/"],
+ ["💾 Life360","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["💾 Apple iCloud","Software","Bank of America Visa","","","https://www.icloud.com/"],
+ ["💾 Google Home Premium Standard (Nest Aware)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["💾 Google Health (Fitbit)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["💾 Google One (Cloud Storage/AI Plus)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["💾 VRadio","Software","Bank of America Visa","","","https://play.google.com/"]
 ];
 
 const benefits = {
@@ -101,7 +101,7 @@ function cardChipClass(name){
   if(name.includes("Capital One Savor")) return "chip-capital";
   if(name.includes("Chase Freedom Unlimited")) return "chip-unlimited";
   if(name.includes("Chase Freedom Flex")) return "chip-flex";
-  if(name.includes("Bank of America") || name.includes("BOA Visa")) return "chip-boa";
+  if(name.includes("Bank of America") || name.includes("Bank of America Visa")) return "chip-boa";
   return "chip-neutral";
 }
 function renderCardChips(name){
@@ -136,7 +136,7 @@ function paymentCardClass(method){
   if(method === "Capital One Savor") return "payment-capital";
   if(method === "Chase Freedom Unlimited") return "payment-unlimited";
   if(method === "Chase Freedom Flex") return "payment-flex";
-  if(method === "BOA Visa" || method === "BOA Checking") return "payment-boa";
+  if(method === "Bank of America Visa" || method === "Bank of America Checking") return "payment-boa";
   return "payment-boa";
 }
 function renderBills(filter="All"){
