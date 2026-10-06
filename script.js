@@ -35,8 +35,8 @@ const bills = [
  ["📺 Paramount+","Streaming","Bank of America Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
  ["📺 YouTube TV","Streaming","Chase Freedom Unlimited","$20 Cash Back","Expires 10/29/2026","https://tv.youtube.com/"],
  ["📺 Disney+/Hulu Bundle","Streaming","Capital One Savor","3% cash back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
- ["📺 HBO Max","Streaming","Capital One Savor","3% cash back","","https://play.hbomax.com/"],
- ["🎵 Spotify","Streaming","Capital One Savor","3% cash back","Promo price expires 12/1/2026, then $10.99/month","https://www.spotify.com/"],
+ ["📺 HBO Max","Streaming","Capital One Savor","3% cash back","Promo price expires 12/1/2026, then $10.99/month","https://play.hbomax.com/"],
+ ["🎵 Spotify","Streaming","Capital One Savor","3% cash back","","https://www.spotify.com/"],
  ["💾 ChatGPT","Software","Bank of America Visa","","","https://chatgpt.com/"],
  ["💾 Life360","Software","Bank of America Visa","","","https://play.google.com/"],
  ["💾 Apple iCloud","Software","Bank of America Visa","","","https://www.icloud.com/"],
@@ -153,7 +153,7 @@ function renderBills(filter="All"){
             <span class="method-label">Payment Method</span>
             <strong class="payment-method-chip ${paymentCardClass(b[2])}">${b[2]}</strong>
           </div>
-          ${b[3] ? `<div class="payment-reward"><span>⭐</span>${b[3]}</div>` : ""}
+          ${b[2] === "Bank of America Visa" ? `<div class="payment-reward"><span>⭐</span>2.625% cash back</div>` : (b[3] ? `<div class="payment-reward"><span>⭐</span>${b[3]}</div>` : "")}
           ${b[4] ? `<div class="payment-note ${b[4].includes("Expires")||b[4].includes("expires") ? "note-red" : ""}">${b[4]}</div>` : ""}
         </article>`).join("")}
     </div>`;
