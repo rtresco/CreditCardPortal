@@ -96,19 +96,29 @@ const cards = [
  ["","Chase","Freedom Unlimited Visa","3% on dining and drugstores; also carries Chase benefits.","Dining • Drugstores • Benefits"]
 ];
 
+function cardChipClass(name){
+  if(name.includes("Discover")) return "chip-discover";
+  if(name.includes("Capital One Savor")) return "chip-capital";
+  if(name.includes("Chase Freedom Unlimited")) return "chip-unlimited";
+  if(name.includes("Chase Freedom Flex")) return "chip-flex";
+  if(name.includes("Bank of America") || name.includes("BOA Visa")) return "chip-boa";
+  return "chip-neutral";
+}
+function renderCardChips(name){
+  const parts = name === "Capital One / Chase" ? ["Capital One Savor","Chase Freedom Flex"] :
+    name === "Chase Freedom Flex & Unlimited" ? ["Chase Freedom Flex","Chase Freedom Unlimited"] : [name];
+  return `<div class="card-chips">${parts.map(x=>`<span class="card-chip ${cardChipClass(x)}">${x}</span>`).join("")}</div>`;
+}
 function renderRewards(){
   rewardGrid.innerHTML = rewards.map((r,i)=>`
     <article class="reward-card" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
       <div class="reward-top"><div class="reward-icon">${r.icon}</div><div><div class="reward-title">${r.category}</div><div class="reward-detail">${r.details}</div></div></div>
-      <div class="reward-main"><div class="card-name">${r.card}</div><div class="cash">${r.cash}</div></div>
+      <div class="reward-main"><div class="card-name">${renderCardChips(r.card)}</div><div class="cash">${r.cash}</div></div>
       ${r.until!=="Ongoing"?`<div class="expiry">Expires ${r.until}</div>`:""}
     </article>`).join("");
   expiringGrid.innerHTML = rewards.filter(r=>r.until!=="Ongoing").map(r=>`
     <div class="expiry-card"><h3>${r.icon} ${r.category}</h3><div class="expiry-date">${r.until}</div><div class="expiry-note">${r.card} • ${r.cash} • ${r.details}</div></div>
-  `).join("") + `
-    <div class="expiry-card"><h3>📺 Disney+/Hulu Bundle</h3><div class="expiry-date">Nov 24, 2026</div><div class="expiry-note">Promo price expires, then $12.99/month.</div></div>
-    <div class="expiry-card"><h3>📺 HBO Max</h3><div class="expiry-date">Dec 1, 2026</div><div class="expiry-note">Promo price expires, then $10.99/month.</div></div>
-  `;
+  `).join("");
   document.getElementById("rewards").insertAdjacentHTML("beforeend", `
     <div class="info-panel page-notes">
       <h2>📝 Notes</h2>
@@ -120,19 +130,28 @@ function renderRewards(){
       </ul>
     </div>`);
 }
+
+function paymentCardClass(method){
+  if(method === "Discover") return "payment-discover";
+  if(method === "Capital One Savor") return "payment-capital";
+  if(method === "Chase Freedom Unlimited") return "payment-unlimited";
+  if(method === "Chase Freedom Flex") return "payment-flex";
+  if(method === "BOA Visa" || method === "BOA Checking") return "payment-boa";
+  return "payment-boa";
+}
 function renderBills(filter="All"){
   const rows=bills.filter(b=>filter==="All"||b[1]===filter);
   billsTable.innerHTML=`
     <div class="payment-grid">
       ${rows.map(b=>`
-        <article class="payment-card">
+        <article class="payment-card ${paymentCardClass(b[2])}">
           <div class="payment-card-top">
             <div class="payment-payee">${b[5] ? `<a href="${b[5]}" target="_blank" rel="noopener" title="Open ${b[0].replace(/<[^>]*>/g,"")} website">${b[0]} <span class="external-link">↗</span></a>` : b[0]}</div>
             <span class="type-pill type-${b[1].toLowerCase().replace(/[^a-z]+/g,"-")}">${b[1]}</span>
           </div>
           <div class="payment-method">
             <span class="method-label">Payment Method</span>
-            <strong>${b[2]}</strong>
+            <strong class="payment-method-chip ${paymentCardClass(b[2])}">${b[2]}</strong>
           </div>
           ${b[3] ? `<div class="payment-reward"><span>⭐</span>${b[3]}</div>` : ""}
           ${b[4] ? `<div class="payment-note ${b[4].includes("Expires")||b[4].includes("expires") ? "note-red" : ""}">${b[4]}</div>` : ""}
@@ -151,9 +170,9 @@ function renderBenefits(card="Chase Freedom Flex"){
   "Discover More":"https://www.mycardbenefits.com/",
   "Bank of America":"https://bankofamericalifestylebenefits.com/client/dashboard.jsf"
 };
-benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn ${c===card?"active":""}" data-card="${c}"><span>${c.replace("Chase Freedom ","Chase ")}</span>${benefitGuides[c]?`<a class="benefit-guide-link" href="${benefitGuides[c]}" target="_blank" rel="noopener" title="Open ${c} benefits guide" onclick="event.stopPropagation()">↗</a>`:""}</button>`).join("");
+benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn ${c===card?"active":""} ${c===card?cardChipClass(c):""}" data-card="${c}"><span>${c.replace("Chase Freedom ","Chase ")}</span>${benefitGuides[c]?`<a class="benefit-guide-link" href="${benefitGuides[c]}" target="_blank" rel="noopener" title="Open ${c} benefits guide" onclick="event.stopPropagation()">↗</a>`:""}</button>`).join("");
   benefitContent.innerHTML=`
-    <div class="benefit-list">${benefits[card].map(b=>`<article class="benefit-card"><span class="tag">${card}</span><h3>${b[0]}</h3><div class="benefit-body">${b[1]}</div></article>`).join("")}</div>
+    <div class="benefit-list">${benefits[card].map(b=>`<article class="benefit-card"><span class="tag ${cardChipClass(card)}">${card}</span><h3>${b[0]}</h3><div class="benefit-body">${b[1]}</div></article>`).join("")}</div>
     <div class="info-panel">
       <h2>📝 Benefit Notes</h2>
       <ul>
@@ -171,12 +190,12 @@ benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn $
 }
 function renderOffers(){
   offersGrid.innerHTML=`
-  <article class="offer-card"><div class="offer-head">Discover 5% Categories</div><div class="offer-body"><h3>Q4 2026 (Oct 1–Dec 31)</h3><ul><li>Restaurants</li><li>Entertainment</li><li>Utilities</li></ul><h3>Q1 2027 (Jan 1–Mar 31)</h3><ul><li>TBD</li></ul><strong>Activation required each quarter.</strong></div></article>
-  <article class="offer-card"><div class="offer-head">Chase Freedom Flex +4% Categories</div><div class="offer-body"><h3>Q4 2026 (Oct 1–Dec 31)</h3><ul><li>Grocery stores — 5%</li><li>Restaurants, takeout, delivery — 7%</li><li>American Red Cross donations — 5%</li></ul><h3>Q1 2027 (Jan 1–Mar 31)</h3><ul><li>Grocery stores (excluding Walmart and Target) — 5%</li><li>Streaming services — 5%</li></ul></div></article>
+  <article class="offer-card"><div class="offer-head offer-discover">Discover 5% Categories</div><div class="offer-body"><h3>Q4 2026 (Oct 1–Dec 31)</h3><ul><li>Restaurants</li><li>Entertainment</li><li>Utilities</li></ul><h3>Q1 2027 (Jan 1–Mar 31)</h3><ul><li>TBD</li></ul><strong>Activation required each quarter.</strong></div></article>
+  <article class="offer-card"><div class="offer-head offer-flex">Chase Freedom Flex +4% Categories</div><div class="offer-body"><h3>Q4 2026 (Oct 1–Dec 31)</h3><ul><li>Grocery stores — 5%</li><li>Restaurants, takeout, delivery — 7%</li><li>American Red Cross donations — 5%</li></ul><h3>Q1 2027 (Jan 1–Mar 31)</h3><ul><li>Grocery stores (excluding Walmart and Target) — 5%</li><li>Streaming services — 5%</li></ul></div></article>
   <article class="offer-card"><div class="offer-head">Offers Currently Used</div><div class="offer-body"><h3>Paramount+</h3><p><strong>Bank of America Debit Card</strong></p><p>Up to $8 off/month • No expiration.</p></div></article>`;
 }
 function renderCards(){
-  cardsGrid.innerHTML=cards.map(c=>`<article class="my-card ${c[0]}"><h2>${c[1]}</h2><p><strong>${c[2]}</strong></p><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
+  cardsGrid.innerHTML=cards.map(c=>`<article class="my-card ${c[0]} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand">${c[1]}</div><h2>${c[2]}</h2><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
 }
 function showView(view){
   document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===view));

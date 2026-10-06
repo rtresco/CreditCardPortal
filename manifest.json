@@ -4,8 +4,8 @@
   "description": "Credit card rewards, benefits, offers, and recurring payments.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#eef4f9",
-  "theme_color": "#123f78",
+  "background_color": "#020617",
+  "theme_color": "#0b3d78",
   "icons": [
     {
       "src": "assets/android-icon-192x192.png",
