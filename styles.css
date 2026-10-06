@@ -193,7 +193,7 @@ table{width:100%;border-collapse:collapse;min-width:760px}th{background:var(--na
   --navy2:#0b3d78;
   --blue:#3b9cff;
   --orange:#ff9f1a;
-  --green:#22c55e;
+  --green:#f4f7fb;
   --red:#ff5b5b;
   --bg:#020617;
   --card:#0d1527;
@@ -225,7 +225,7 @@ main{max-width:1400px;padding:24px}
 .reward-card:hover,.payment-card:hover{box-shadow:0 14px 30px rgba(0,0,0,.35)}
 .reward-top{border-bottom-color:#24324a}
 .reward-title,.reward-detail{color:#f4f7fb}.reward-detail{color:#94a3b8}
-.card-name{color:#dce9ff}.cash{color:var(--green)}
+.card-name{color:#dce9ff}.cash{color:#f4f7fb}
 .expiry{color:#ff6666}
 .search-results{background:#0d1527}.search-result{border-bottom-color:#24324a}.search-result strong{color:#dce9ff}
 .expiring-grid .expiry-card{border-color:#61333b;border-left-color:var(--red)}
@@ -324,3 +324,6 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .payment-method-chip.chip-unlimited,.payment-method-chip.payment-unlimited{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%);border-color:#284f82;}
 .payment-method-chip.chip-flex,.payment-method-chip.payment-flex{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%);border-color:#3972d4;}
 .payment-method-chip.chip-boa,.payment-method-chip.payment-boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%);border-color:#9aa3ad;}
+
+/* Expiring card payment-method chip treatment */
+.expiry-card-chip{margin-bottom:7px}.expiry-card-chip .card-chips{gap:6px}.expiry-card-chip .card-chip{min-height:26px;padding:5px 9px;font-size:11px}

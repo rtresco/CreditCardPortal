@@ -33,7 +33,7 @@ const bills = [
  ["🏠 Julie’s Apartment Rent","School","BOA Checking","","","https://woodlandsapts.residentportal.com/auth"],
  ["📺 Netflix","Streaming","Capital One Savor","3% cash back","","https://www.netflix.com/"],
  ["📺 Paramount+","Streaming","BOA Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
- ["📺 YouTube TV","Streaming","Capital One Savor","3% cash back","","https://tv.youtube.com/"],
+ ["📺 YouTube TV","Streaming","Chase Freedom Unlimited","$20 Cash Back","Expires 10/29/2026","https://tv.youtube.com/"],
  ["📺 Disney+/Hulu Bundle","Streaming","Capital One Savor","3% cash back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
  ["📺 HBO Max","Streaming","Capital One Savor","3% cash back","","https://play.hbomax.com/"],
  ["🎵 Spotify","Streaming","Capital One Savor","3% cash back","Promo price expires 12/1/2026, then $10.99/month","https://www.spotify.com/"],
@@ -117,7 +117,7 @@ function renderRewards(){
       ${r.until!=="Ongoing"?`<div class="expiry">Expires ${r.until}</div>`:""}
     </article>`).join("");
   expiringGrid.innerHTML = rewards.filter(r=>r.until!=="Ongoing").map(r=>`
-    <div class="expiry-card"><h3>${r.icon} ${r.category}</h3><div class="expiry-date">${r.until}</div><div class="expiry-note">${r.card} • ${r.cash} • ${r.details}</div></div>
+    <div class="expiry-card"><h3>${r.icon} ${r.category}</h3><div class="expiry-date">${r.until}</div><div class="expiry-note"><div class="expiry-card-chip">${renderCardChips(r.card)}</div><div>${r.cash} • ${r.details}</div></div></div>
   `).join("");
   document.getElementById("rewards").insertAdjacentHTML("beforeend", `
     <div class="info-panel page-notes">
@@ -192,7 +192,7 @@ function renderOffers(){
   offersGrid.innerHTML=`
   <article class="offer-card"><div class="offer-head offer-discover">Discover 5% Categories</div><div class="offer-body"><h3>Q4 2026 (Oct 1–Dec 31)</h3><ul><li>Restaurants</li><li>Entertainment</li><li>Utilities</li></ul><h3>Q1 2027 (Jan 1–Mar 31)</h3><ul><li>TBD</li></ul><strong>Activation required each quarter.</strong></div></article>
   <article class="offer-card"><div class="offer-head offer-flex">Chase Freedom Flex +4% Categories</div><div class="offer-body"><h3>Q4 2026 (Oct 1–Dec 31)</h3><ul><li>Grocery stores — 5%</li><li>Restaurants, takeout, delivery — 7%</li><li>American Red Cross donations — 5%</li></ul><h3>Q1 2027 (Jan 1–Mar 31)</h3><ul><li>Grocery stores (excluding Walmart and Target) — 5%</li><li>Streaming services — 5%</li></ul></div></article>
-  <article class="offer-card"><div class="offer-head">Offers Currently Used</div><div class="offer-body"><h3>Paramount+</h3><p><strong>Bank of America Debit Card</strong></p><p>Up to $8 off/month • No expiration.</p></div></article>`;
+  <article class="offer-card"><div class="offer-head">Offers Currently Used</div><div class="offer-body"><h3>Paramount+</h3><p><strong>Bank of America Debit Card</strong></p><p>Up to $8 off/month • No expiration.</p><h3>YouTube TV</h3><p><strong>Chase Freedom Unlimited</strong></p><p>$20 Cash Back • Expires 10/29/2026.</p></div></article>`;
 }
 function renderCards(){
   cardsGrid.innerHTML=cards.map(c=>`<article class="my-card ${c[0]} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand">${c[1]}</div><h2>${c[2]}</h2><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
