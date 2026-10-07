@@ -204,7 +204,7 @@ table{width:100%;border-collapse:collapse;min-width:760px}th{background:var(--na
 html,body{background:var(--bg);color:var(--text)}
 body{font-family:"Inter","Segoe UI",Arial,sans-serif;font-size:14px;letter-spacing:-.01em}
 .topbar{height:74px;background:#0b3d78;color:#fff;border-bottom:1px solid #1d4f8d}
-.brand-title{font-size:22px;font-weight:800;letter-spacing:-.025em}.brand-subtitle{color:#c9dcf4}
+.brand-title{font-size:22px;font-weight:650;letter-spacing:-.025em}.brand-subtitle{color:#c9dcf4}
 .updated{color:#d9e7f7}
 .desktop-nav{background:#082d5a;border-bottom:1px solid #163e70}
 .nav-btn{color:#c8d7ea;font-family:"Inter","Segoe UI",Arial,sans-serif;font-weight:700}
@@ -217,7 +217,7 @@ main{max-width:1400px;padding:24px}
 .search-wrap{background:#050b1a;border:1px solid #33435c;border-radius:12px;box-shadow:none}
 .search-wrap input{background:transparent;color:#f4f7fb;font-family:"Inter","Segoe UI",Arial,sans-serif}
 .search-wrap input::placeholder{color:#7f8da2}
-.section-heading h2,.page-heading h2{color:#eaf2ff;font-weight:800;letter-spacing:-.025em}
+.section-heading h2,.page-heading h2{color:#eaf2ff;font-weight:800;letter-spacing:-.025em}.section-heading h2{font-weight:650}
 .section-note{color:#7f8da2}
 .reward-grid{gap:12px}
 .reward-card,.search-results,.expiry-card,.benefit-card,.offer-card,.my-card,.info-panel,.payment-card,.table-card{background:#0d1527;border-color:#24324a;box-shadow:var(--shadow)}
