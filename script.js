@@ -37,13 +37,13 @@ const bills = [
  ["📺 Disney+/Hulu Bundle","Streaming","Capital One Savor","3% cash back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
  ["📺 HBO Max","Streaming","Capital One Savor","3% cash back","Promo price expires 12/1/2026, then $10.99/month","https://play.hbomax.com/"],
  ["🎵 Spotify","Streaming","Capital One Savor","3% cash back","","https://www.spotify.com/"],
- ["💾 ChatGPT","Software","Bank of America Visa","","","https://chatgpt.com/"],
- ["💾 Life360","Software","Bank of America Visa","","","https://play.google.com/"],
- ["💾 Apple iCloud","Software","Bank of America Visa","","","https://www.icloud.com/"],
- ["💾 Google Home Premium Standard (Nest Aware)","Software","Bank of America Visa","","","https://play.google.com/"],
- ["💾 Google Health (Fitbit)","Software","Bank of America Visa","","","https://play.google.com/"],
- ["💾 Google One (Cloud Storage/AI Plus)","Software","Bank of America Visa","","","https://play.google.com/"],
- ["💾 VRadio","Software","Bank of America Visa","","","https://play.google.com/"]
+ ["🤖 ChatGPT","Software","Bank of America Visa","","","https://chatgpt.com/"],
+ ["📍 Life360","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["☁️ Apple iCloud","Software","Bank of America Visa","","","https://www.icloud.com/"],
+ ["🏠 Google Home Premium Standard (Nest Aware)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["❤️ Google Health (Fitbit)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["☁️ Google One (Cloud Storage/AI Plus)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["📻 VRadio","Software","Bank of America Visa","","","https://play.google.com/"]
 ];
 
 const benefits = {
