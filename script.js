@@ -15,22 +15,22 @@ const rewards = [
 ];
 
 const bills = [
- ["⚡ Electricity","Utilities","Discover","5% Cash Back","Expires December 31, 2026, then Bank of America Visa","https://www.discountpowertx.com/"],
- ["⚡ Water","Utilities","Discover","5% Cash Back","Expires December 31, 2026, then Bank of America Checking to avoid credit card processing fees","https://www.houstonwaterbills.houstontx.gov/"],
- ["⚡ Gas","Utilities","Bank of America Checking","","Avoids credit card processing fees.","https://myaccount.centerpointenergy.com/"],
- ["⚡ Internet","Utilities","Bank of America Checking","","$10 discount with bank account","https://www.att.com/"],
+ ["⚡ Electricity","Utilities","Discover More","5% Cash Back","Expires December 31, 2026, then Bank of America Visa","https://www.discountpowertx.com/"],
+ ["💧 Water","Utilities","Discover More","5% Cash Back","Expires December 31, 2026, then Bank of America Checking to avoid credit card processing fees","https://www.houstonwaterbills.houstontx.gov/"],
+ ["🔥 Gas","Utilities","Bank of America Checking","","Avoids credit card processing fees.","https://myaccount.centerpointenergy.com/"],
+ ["🌐 Internet","Utilities","Bank of America Checking","","$10 discount with bank account","https://www.att.com/"],
  ["📱 Cell Phones","Utilities","Bank of America Checking","","$15 discount ($5 per line) with bank account","https://www.verizon.com/"],
  ["🚗 Auto Loans","Home/Auto","Bank of America Checking","","Bank account payment only available","https://www.wellsfargo.com/"],
  ["🏠🚗 Home and Auto Insurance","Home/Auto","Bank of America Visa","","","https://www.statefarm.com/"],
  ["🏠 Houston Property Taxes","Home/Auto","Bank of America Visa","","Check to see if credit txn fee is > than cash back. If so, use Bank of America Checking","https://www.hctax.net/"],
  ["🏠 Houston Property Taxes Protest","Home/Auto","Bank of America Visa","","","https://www.hctax.net/"],
- ["🚗 Renew Auto Registration","Home/Auto","Bank of America Visa","","Check for credit txn fee","https://renew.txdmv.gov/Renew/RegistrationRenewalServlet"],
+ ["🚗 Auto Registration","Home/Auto","Bank of America Visa","","","https://txt.texas.gov/"],
  ["📦 🚚 Public Storage","Home/Auto","Bank of America Visa","","","https://www.publicstorage.com/"],
- ["🚗 Mattress Loan","Home/Auto","Bank of America Checking","","","https://id.synchrony.com/idp/en/standard/login"],
+ ["🛏️ Mattress Loan","Home/Auto","Bank of America Checking","","","https://id.synchrony.com/idp/en/standard/login"],
  ["🚗 Toll Roads","Home/Auto","Bank of America Visa","","","https://www.hctra.org/"],
- ["📚 Julie’s College Tuition","School","Bank of America Visa","","","https://howdy.tamu.edu/"],
- ["🏠 Lora’s Apartment Rent","School","Bank of America Checking","","","https://west10.residentportal.com/auth"],
- ["🏠 Julie’s Apartment Rent","School","Bank of America Checking","","","https://woodlandsapts.residentportal.com/auth"],
+ ["📚 TAMU College Tuition","School","Bank of America Visa","","","https://howdy.tamu.edu/"],
+ ["🏠 FSU Apartment Rent","School","Bank of America Checking","","","https://west10.residentportal.com/auth"],
+ ["🏠 TAMU Apartment Rent","School","Bank of America Checking","","","https://woodlandsapts.residentportal.com/auth"],
  ["📺 Netflix","Streaming","Capital One Savor","3% cash back","","https://www.netflix.com/"],
  ["📺 Paramount+","Streaming","Bank of America Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
  ["📺 YouTube TV","Streaming","Chase Freedom Unlimited","$20 Cash Back","Expires 10/29/2026","https://tv.youtube.com/"],
@@ -89,11 +89,11 @@ const benefits = {
 };
 
 const cards = [
- ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% on the categories where it is the best card; also used for everything else.","Amazon • Walmart/Target/Sam's • Flights • Gas • Public transportation • Everything else"],
- ["capital","Capital One","Savor Mastercard","3% on grocery, dining, entertainment and popular streaming; 5% through Capital One Travel.","Streaming • Grocery • Dining • Entertainment • Travel portal"],
- ["discover","Discover","Discover More","Q4 2026 rotating categories: Restaurants, Entertainment and Utilities at 5%.","Activate quarterly categories."],
- ["","Chase","Freedom Flex Mastercard","Q4 2026 categories: Grocery 5%, Restaurants/takeout/delivery 7%, American Red Cross donations 5%.","Dining • Grocery • Benefits"],
- ["","Chase","Freedom Unlimited Visa","3% on dining and drugstores; also carries Chase benefits.","Dining • Drugstores • Benefits"]
+ ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% on the categories where it is the best card; also used for everything else.","Amazon • Walmart/Target/Sam's • Flights • Gas • Public transportation • Everything else","https://www.bankofamerica.com/"],
+ ["capital","Capital One","Savor Mastercard","3% on grocery, dining, entertainment and popular streaming; 5% through Capital One Travel.","Streaming • Grocery • Dining • Entertainment • Travel portal","https://www.capitalone.com/"],
+ ["discover","Discover","Discover More","Q4 2026 rotating categories: Restaurants, Entertainment and Utilities at 5%.","Activate quarterly categories.","https://www.capitalone.com/"],
+ ["","Chase","Freedom Flex Mastercard","Q4 2026 categories: Grocery 5%, Restaurants/takeout/delivery 7%, American Red Cross donations 5%.","Dining • Grocery • Benefits","https://www.chase.com/"],
+ ["","Chase","Freedom Unlimited Visa","3% on dining and drugstores; also carries Chase benefits.","Dining • Drugstores • Benefits","https://www.chase.com/"]
 ];
 
 function cardChipClass(name){
@@ -106,7 +106,8 @@ function cardChipClass(name){
 }
 function renderCardChips(name){
   const parts = name === "Capital One / Chase" ? ["Capital One Savor","Chase Freedom Flex"] :
-    name === "Chase Freedom Flex & Unlimited" ? ["Chase Freedom Flex","Chase Freedom Unlimited"] : [name];
+    name === "Chase Freedom Flex & Unlimited" ? ["Chase Freedom Flex","Chase Freedom Unlimited"] :
+    name === "Discover" ? ["Discover More"] : [name];
   return `<div class="card-chips">${parts.map(x=>`<span class="card-chip ${cardChipClass(x)}">${x}</span>`).join("")}</div>`;
 }
 function renderRewards(){
@@ -116,9 +117,6 @@ function renderRewards(){
       <div class="reward-main"><div class="card-name">${renderCardChips(r.card)}</div><div class="cash">${r.cash}</div></div>
       ${r.until!=="Ongoing"?`<div class="expiry">Expires ${r.until}</div>`:""}
     </article>`).join("");
-  expiringGrid.innerHTML = rewards.filter(r=>r.until!=="Ongoing").map(r=>`
-    <div class="expiry-card"><h3>${r.icon} ${r.category}</h3><div class="expiry-date">${r.until}</div><div class="expiry-note"><div class="expiry-card-chip">${renderCardChips(r.card)}</div><div>${r.cash} • ${r.details}</div></div></div>
-  `).join("");
   document.getElementById("rewards").insertAdjacentHTML("beforeend", `
     <div class="info-panel page-notes">
       <h2>📝 Notes</h2>
@@ -132,7 +130,7 @@ function renderRewards(){
 }
 
 function paymentCardClass(method){
-  if(method === "Discover") return "payment-discover";
+  if(method === "Discover" || method === "Discover More") return "payment-discover";
   if(method === "Capital One Savor") return "payment-capital";
   if(method === "Chase Freedom Unlimited") return "payment-unlimited";
   if(method === "Chase Freedom Flex") return "payment-flex";
@@ -195,7 +193,7 @@ function renderOffers(){
   <article class="offer-card"><div class="offer-head">Offers Currently Used</div><div class="offer-body"><div class="used-offer-item"><h3>Paramount+</h3><p><strong class="offer-card-title chip-boa">Bank of America Checking</strong></p><p>Up to $8 off/month • No expiration.</p></div><div class="used-offer-item"><h3>YouTube TV</h3><p><strong class="offer-card-title chip-unlimited">Chase Freedom Unlimited</strong></p><p>$20 Cash Back • Expires 10/29/2026.</p></div></div></article>`;
 }
 function renderCards(){
-  cardsGrid.innerHTML=cards.map(c=>`<article class="my-card ${c[0]} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand">${c[1]}</div><h2>${c[2]}</h2><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
+  cardsGrid.innerHTML=cards.map(c=>`<article class="my-card ${c[0]} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand">${c[1]}</div><h2>${c[2]} <a class="card-site-link" href="${c[5]}" target="_blank" rel="noopener" title="Open ${c[2]} website">↗</a></h2><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`).join("");
 }
 function showView(view){
   document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===view));

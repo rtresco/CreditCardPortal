@@ -20,8 +20,8 @@ main{max-width:1400px;margin:auto;padding:24px}
 .section-heading{margin:28px 0 12px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}.section-heading.compact{margin-top:30px}
 .section-heading h2,.page-heading h2{margin:0;font-size:19px;color:var(--navy)}.section-note{font-size:12px;color:var(--muted)}
 .reward-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.reward-card{background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:.15s}
-.reward-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(15,48,80,.15)}
+.reward-card{background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden;box-shadow:var(--shadow);cursor:default}
+.reward-card:hover{transform:none;box-shadow:var(--shadow)}
 .reward-top{display:flex;gap:10px;padding:13px;border-bottom:1px solid var(--line);align-items:center}
 .reward-icon{font-size:21px}.reward-title{font-weight:700}.reward-detail{font-size:12px;color:var(--muted);margin-top:2px}
 .reward-main{padding:14px;display:flex;justify-content:space-between;align-items:end}.card-name{font-weight:700;color:var(--navy)}.cash{font-size:25px;font-weight:800;color:var(--green)}
@@ -71,12 +71,9 @@ table{width:100%;border-collapse:collapse;min-width:760px}th{background:var(--na
   padding:16px;
   box-shadow:var(--shadow);
   min-width:0;
-  transition:transform .15s,box-shadow .15s;
+  cursor:default;
 }
-.payment-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 16px rgba(15,48,80,.14);
-}
+
 .payment-card-top{
   display:flex;
   align-items:flex-start;
@@ -106,13 +103,15 @@ table{width:100%;border-collapse:collapse;min-width:760px}th{background:var(--na
   border-top:1px solid #e5edf4;
   padding-top:11px;
   display:flex;
-  flex-direction:column;
-  gap:3px;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
 }
 .method-label{
-  font-size:10px;
+  font-family:"Inter","Segoe UI",Arial,sans-serif;
+  font-size:12px;
   text-transform:uppercase;
-  letter-spacing:.05em;
+  letter-spacing:0;
   color:var(--muted);
   font-weight:700;
   line-height:1;
@@ -213,7 +212,7 @@ body{font-family:"Inter","Segoe UI",Arial,sans-serif;font-size:14px;letter-spaci
 .desktop-nav .nav-btn.active{background:#0d1527;color:#fff;border-radius:8px 8px 0 0}
 main{max-width:1400px;padding:24px}
 .hero{background:#0d1527;border:1px solid #24324a;border-radius:18px;padding:25px;box-shadow:var(--shadow)}
-.hero h1,.page-heading h1{color:#f5f8fc;font-weight:800;letter-spacing:-.035em}
+.hero h1,.page-heading h1{color:#f5f8fc;font-weight:650;letter-spacing:-.035em}
 .hero p,.page-heading p{color:#94a3b8}
 .search-wrap{background:#050b1a;border:1px solid #33435c;border-radius:12px;box-shadow:none}
 .search-wrap input{background:transparent;color:#f4f7fb;font-family:"Inter","Segoe UI",Arial,sans-serif}
@@ -222,7 +221,7 @@ main{max-width:1400px;padding:24px}
 .section-note{color:#7f8da2}
 .reward-grid{gap:12px}
 .reward-card,.search-results,.expiry-card,.benefit-card,.offer-card,.my-card,.info-panel,.payment-card,.table-card{background:#0d1527;border-color:#24324a;box-shadow:var(--shadow)}
-.reward-card:hover,.payment-card:hover{box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.reward-card:hover,.payment-card:hover{transform:none;box-shadow:var(--shadow)}
 .reward-top{border-bottom-color:#24324a}
 .reward-title,.reward-detail{color:#f4f7fb}.reward-detail{color:#94a3b8}
 .card-name{color:#dce9ff}.cash{color:#f4f7fb}
@@ -259,7 +258,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 
 /* Card-specific gradient chips and portfolio cards */
 .card-chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.card-chip{display:inline-flex;align-items:center;min-height:28px;padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,.14);font-size:12px;font-weight:800;line-height:1.05;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 4px 10px rgba(0,0,0,.18);background-size:180% 180%;letter-spacing:-.01em}
+.card-chip{display:inline-block;width:max-content;max-width:100%;padding:3px 7px;border-radius:4px;border:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:700;line-height:1.15;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.16);background-size:180% 180%;text-shadow:0 1px 1px rgba(0,0,0,.28)}
 .chip-discover{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%);border-color:#e86a22}
 .chip-capital{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%);border-color:#9e3541}
 .chip-unlimited{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%);border-color:#284f82}
@@ -281,8 +280,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 
 
 /* Card Benefits: selected card tab uses the same issuer gradient treatment. */
-.tab-btn.active.chip-discover{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%);border-color:#e86a22;color:#fff}
-.tab-btn.active.chip-capital{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%);border-color:#9e3541;color:#fff}
+.tab-btn.active.chip-discover{background:linear-gradient(135deg,#9d2600 0%,#d94708 52%,#ff7a1a 100%);border-color:#e45a1b;color:#fff}
+.tab-btn.active.chip-capital{background:linear-gradient(135deg,#5f0b1b 0%,#861b2e 52%,#b33449 100%);border-color:#9f3447;color:#fff}
 .tab-btn.active.chip-unlimited{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%);border-color:#284f82;color:#fff}
 .tab-btn.active.chip-flex{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%);border-color:#3972d4;color:#fff}
 .tab-btn.active.chip-boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%);border-color:#9aa3ad;color:#fff}
@@ -295,13 +294,17 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .benefit-card .tag.chip-flex{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%);border-color:#3972d4}
 .benefit-card .tag.chip-boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%);border-color:#9aa3ad}
 
+
+/* Recurring Payments: content cards stand on the page without an outer container. */
+#billsTable.table-card{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;padding:0!important;}
+
 /* Recurring Payments: keep the content cards neutral; apply issuer gradients only to the payment-method chip. */
 .payment-card{background:#0d1527 !important;border-color:#24324a !important;color:#fff !important;}
 .payment-card .payment-payee,.payment-card .payment-method strong,.payment-card .method-label,.payment-card .payment-note,.payment-card .payment-reward{color:#fff !important;}
 .payment-card .payment-method{border-top-color:#24324a;}
 .payment-card .payment-reward{background:#101f33;color:#fff !important;}
 .payment-card .payment-note{border-top-color:#2a394f;}
-.payment-card .payment-note.note-red{color:#ffd0d0 !important;}
+.payment-card .payment-note.note-red{color:#ff6666 !important;}
 .payment-card .type-pill{background:#11243d;color:#fff;border-color:#29496e;}
 .payment-card .external-link{color:rgba(255,255,255,.9);}
 
@@ -309,15 +312,16 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   display:inline-block;
   width:max-content;
   max-width:100%;
-  padding:6px 10px;
-  border-radius:7px;
-  border:1px solid rgba(255,255,255,.16);
-  font-size:13px !important;
-  font-weight:800 !important;
+  padding:3px 7px;
+  border-radius:4px;
+  border:1px solid rgba(255,255,255,.18);
+  font-size:11px !important;
+  font-weight:700 !important;
   line-height:1.15;
   color:#fff !important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.18);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.16);
   background-size:180% 180%;
+  text-shadow:0 1px 1px rgba(0,0,0,.28);
 }
 .payment-method-chip.chip-discover,.payment-method-chip.payment-discover{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%);border-color:#e86a22;}
 .payment-method-chip.chip-capital,.payment-method-chip.payment-capital{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%);border-color:#9e3541;}
@@ -334,3 +338,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .offer-card-title.chip-boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%)!important;border-color:#9aa3ad!important}
 .used-offer-item + .used-offer-item{border-top:1px solid #2b3a51;margin-top:18px;padding-top:18px}
 .used-offer-item p{margin:6px 0}
+
+
+/* My Cards: small external-link arrow after each card name. */
+.card-site-link{display:inline-block;margin-left:6px;color:#8fb9e8;text-decoration:none!important;font-size:18px;line-height:1;font-weight:800;vertical-align:baseline;}
+.card-site-link:hover{text-decoration:none!important;color:#fff;}
