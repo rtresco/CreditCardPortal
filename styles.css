@@ -564,3 +564,13 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 3px 8px rgba(0,0,0,.15);
   text-shadow:0 1px 1px rgba(0,0,0,.3);
 }
+
+/* Single-card rewards: keep one continuous gradient across the entire lower section. */
+.reward-card:not(.reward-card-multi) .reward-gradient-area{
+  background-size:100% 100%!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+}
+.reward-card:not(.reward-card-multi) .reward-card-method{
+  background:transparent!important;
+}
