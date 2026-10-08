@@ -610,3 +610,43 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .payment-method-chip.payment-discover{border-color:#f07a2b!important}
 .payment-method-chip.payment-flex{border-color:#4f8be8!important}
 .payment-method-chip.payment-unlimited{border-color:#42638e!important}
+
+/* Final Recurring Payments alignment: the lower gradient fills all remaining card height,
+   and payment-method borders use the same issuer colors as Card Rewards. */
+.payment-card{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.payment-card-top{
+  flex:0 0 auto;
+}
+.payment-gradient-area{
+  flex:1 1 auto;
+  width:auto;
+  min-height:64px;
+  margin:0 -16px -16px!important;
+  padding:12px 16px 13px;
+  border-radius:0 0 10px 10px;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+}
+.payment-gradient-area .payment-card-reward-row{
+  flex:0 0 auto;
+}
+.payment-gradient-area .payment-note{
+  flex:0 0 auto;
+}
+.payment-method-chip.payment-boa{border-color:#c2c8ce!important}
+.payment-method-chip.payment-capital{border-color:#c94b5c!important}
+.payment-method-chip.payment-discover{border-color:#ff7b28!important}
+.payment-method-chip.payment-flex{border-color:#4d8cf0!important}
+.payment-method-chip.payment-unlimited{border-color:#3f6294!important}
+
+@media(max-width:760px){
+  .payment-gradient-area{
+    margin:0 -14px -14px!important;
+    padding:11px 14px 12px;
+  }
+}
