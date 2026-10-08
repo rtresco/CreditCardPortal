@@ -168,7 +168,7 @@ function renderBills(filter="All"){
             <div class="payment-payee">${b[5] ? `<a href="${b[5]}" target="_blank" rel="noopener" title="Open ${b[0].replace(/<[^>]*>/g,"")} website">${b[0]} <span class="external-link">↗</span></a>` : b[0]}</div>
             <span class="type-pill type-${b[1].toLowerCase().replace(/[^a-z]+/g,"-")}">${b[1]}</span>
           </div>
-          <div class="payment-gradient-area">
+          <div class="payment-gradient-area ${methodClass}">
             <div class="payment-card-reward-row">
               <strong class="payment-method-chip ${methodClass}">${b[2]}</strong>
               ${reward ? `<div class="payment-reward"><span>⭐</span>${reward}</div>` : ""}
