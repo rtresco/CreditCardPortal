@@ -825,3 +825,17 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background:rgba(7,16,31,.42)!important;
   background-image:none!important;
 }
+
+/* Keep split issuer gradients isolated to their own half in search results. */
+.search-result-bottom-split{
+  overflow:hidden;
+  isolation:isolate;
+  background:transparent!important;
+}
+.search-result-bottom-split .search-result-issuer-half{
+  background-clip:padding-box;
+  border:0!important;
+}
+.search-result-bottom-split .search-result-issuer-half + .search-result-issuer-half{
+  border-left:1px solid rgba(255,255,255,.12)!important;
+}
