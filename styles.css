@@ -902,3 +902,19 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     font-weight:650!important;
   }
 }
+
+/* Recurring Payments: show every category filter pill on mobile, wrapping to additional rows like Card Benefits. */
+@media(max-width:760px){
+  #billFilters.filter-row{
+    display:flex;
+    flex-wrap:wrap;
+    overflow:visible;
+    gap:8px;
+    padding-bottom:0;
+    margin-bottom:15px;
+  }
+  #billFilters .filter-btn{
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+}
