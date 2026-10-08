@@ -868,3 +868,14 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 @media(max-width:760px){
   .hero.rewards-search-only{gap:6px}
 }
+
+/* Standardize every page title to match the Card Rewards section heading. */
+.page-heading h1,
+.page-heading h2,
+#offers > .page-heading h1,
+#benefits > .page-heading h1,
+#bills > .page-heading h1,
+#cards > .page-heading h1{
+  font-size:19px!important;
+  font-weight:650!important;
+}
