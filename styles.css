@@ -343,3 +343,20 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 /* My Cards: small external-link arrow after each card name. */
 .card-site-link{display:inline-block;margin-left:6px;color:#8fb9e8;text-decoration:none!important;font-size:18px;line-height:1;font-weight:800;vertical-align:baseline;}
 .card-site-link:hover{text-decoration:none!important;color:#fff;}
+
+/* Card Rewards: compact header treatment */
+.reward-card .reward-top{align-items:center}
+.reward-card .reward-top>div:nth-child(2){flex:1;min-width:0}
+.reward-card .reward-title{font-size:16px!important;line-height:1.2;font-weight:700!important}
+.reward-card .reward-top .reward-header-rate{margin-left:auto;flex:0 0 auto;font-size:16px!important;line-height:1.2;font-weight:700!important;color:#ffc62e!important;text-align:right}
+.reward-card .reward-main{position:relative}
+.reward-card .reward-main .cash{display:none}
+.reward-card .reward-main .expiry{display:none}
+.reward-card .reward-top .reward-header-expiry{display:none}
+.reward-card .reward-expiry-row{display:flex;justify-content:flex-end;align-items:center;padding:9px 14px 11px;color:#ff6666;font-size:11px;font-weight:700}
+.reward-card .reward-gradient-area{padding:0;background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%)}
+.reward-card.chip-boa .reward-gradient-area{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%)}
+.reward-card.chip-capital .reward-gradient-area{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%)}
+.reward-card.chip-discover .reward-gradient-area{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%)}
+.reward-card.chip-flex .reward-gradient-area{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%)}
+.reward-card.chip-unlimited .reward-gradient-area{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%)}
