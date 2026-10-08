@@ -229,7 +229,7 @@ globalSearch.addEventListener("input",()=>{
   const q=globalSearch.value.trim().toLowerCase();
   if(!q){searchResults.classList.add("hidden");return}
   const matches=rewards.filter(r=>[r.category,r.card,r.details,...r.search].join(" ").toLowerCase().includes(q));
-  searchResults.innerHTML=matches.length?matches.map(r=>`<div class="search-result"><div><strong>${r.icon} ${r.category}</strong><br><span>${r.details}</span></div><div><strong>${r.card}</strong><br><span class="cash">${r.cash}</span></div></div>`).join(""):`<div class="search-result">No matching category found.</div>`;
+  searchResults.innerHTML=matches.length?matches.map(r=>`<article class="search-result ${cardChipClass(r.card.includes("Capital One")?"Capital One Savor":r.card.includes("Freedom Flex")?"Chase Freedom Flex":r.card.includes("Unlimited")?"Chase Freedom Unlimited":r.card.includes("Discover")?"Discover More":"Bank of America")}"><div class="search-result-top"><div class="search-result-category"><span class="search-result-icon">${r.icon}</span><div><strong>${r.category}</strong><div class="search-result-detail">${r.details}</div></div></div><strong class="search-result-cash">${r.cash}</strong></div><div class="search-result-bottom">${renderCardChips(r.card)}</div></article>`).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
   searchResults.classList.remove("hidden");
 });
 
