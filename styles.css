@@ -87,11 +87,11 @@ main{max-width:1400px;margin:auto;padding:24px}
   .reward-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cards-grid,.offers-grid,.payment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.benefit-list{grid-template-columns:1fr}
 }
 @media(max-width:760px){
-  body{font-size:14px;padding-bottom:66px}.topbar{height:64px;padding:0 15px}.brand-title{font-size:18px}.brand-subtitle{display:none}.updated{font-size:11px}.desktop-nav{display:none}.mobile-nav{[...]
+  body{font-size:14px;padding-bottom:66px}.topbar{height:64px;padding:0 15px}.brand-title{font-size:18px}.brand-subtitle{display:none}.updated{font-size:11px}.desktop-nav{display:none}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;height:66px;background:#0b2347;border-top:1px solid #163e70;justify-content:space-around;align-items:center;z-index:998}.mobile-nav .nav-btn{border:0;background:transparent;color:#8fa5be;padding:8px 6px;font:600 12px "Inter","Segoe UI",Arial,sans-serif;cursor:pointer;border-radius:0;transition:color .2s;display:flex;flex-direction:column;align-items:center;gap:4px}.mobile-nav .nav-btn span{font-size:20px}.mobile-nav .nav-btn.active{color:#fff}
   main{padding:13px}.hero{display:block;padding:18px}.hero h1{font-size:23px}.search-wrap{width:100%;margin-top:15px}
   .reward-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.reward-main{padding:11px;display:block}.cash{font-size:22px;margin-top:3px}.expiry{padding:0 11px 11px}
-  .expiring-grid,.benefit-list,.offers-grid,.cards-grid,.payment-grid{grid-template-columns:1fr}.section-heading{margin-top:20px}.section-note{display:none}.search-result{display:block}.search-res[...]
+  .expiring-grid,.benefit-list,.offers-grid,.cards-grid,.payment-grid{grid-template-columns:1fr}.section-heading{margin-top:20px}.section-note{display:none}.search-result{display:block}.search-results{margin-top:6px;border-radius:6px}
 }
 @media(max-width:430px){
-  .reward-grid{grid-template-columns:1fr}.reward-title{font-size:13px}.reward-detail{font-size:10px}.reward-icon{font-size:18px}.cash{font-size:20px}
+  .reward-grid{grid-template-columns:1fr 1fr}.reward-title{font-size:13px}.reward-detail{font-size:10px}.reward-icon{font-size:18px}.cash{font-size:20px}
 }
