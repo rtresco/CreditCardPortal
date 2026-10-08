@@ -110,23 +110,12 @@ function renderCardChips(name){
   return `<div class="card-chips">${parts.map(x=>`<span class="card-chip ${cardChipClass(x)}">${x}</span>`).join("")}</div>`;
 }
 function renderRewards(){
-  rewardGrid.innerHTML = rewards.map((r,i)=>{
-    const parts = r.card === "Capital One / Chase" ? ["Capital One Savor","Chase Freedom Flex"] :
-      r.card === "Chase Freedom Flex & Unlimited" ? ["Chase Freedom Flex","Chase Freedom Unlimited"] :
-      r.card === "Discover" ? ["Discover More"] : [r.card];
-    const multi = parts.length > 1;
-    const rewardSections = parts.map(card => `
-      <div class="reward-issuer-section ${cardChipClass(card)}">
-        <div class="reward-issuer-name">${card}</div>
-        <div class="cash">${r.cash}</div>
-      </div>`).join("");
-    return `
-      <article class="reward-card ${multi ? "reward-card-multi" : cardChipClass(parts[0])}" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
-        <div class="reward-top"><div class="reward-icon">${r.icon}</div><div><div class="reward-title">${r.category}</div><div class="reward-detail">${r.details}</div></div></div>
-        ${multi ? rewardSections : `<div class="reward-main ${cardChipClass(parts[0])}"><div class="reward-issuer-name">${parts[0]}</div><div class="cash">${r.cash}</div></div>`}
-        ${r.until!=="Ongoing"?`<div class="expiry">Expires ${r.until}</div>`:""}
-      </article>`;
-  }).join("");
+  rewardGrid.innerHTML = rewards.map((r,i)=>`
+    <article class="reward-card" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
+      <div class="reward-top"><div class="reward-icon">${r.icon}</div><div><div class="reward-title">${r.category}</div><div class="reward-detail">${r.details}</div></div></div>
+      <div class="reward-main"><div class="card-name">${renderCardChips(r.card)}</div><div class="cash">${r.cash}</div></div>
+      ${r.until!=="Ongoing"?`<div class="expiry">Expires ${r.until}</div>`:""}
+    </article>`).join("");
   document.getElementById("rewards").insertAdjacentHTML("beforeend", `
     <div class="info-panel page-notes">
       <h2>📝 Notes</h2>
