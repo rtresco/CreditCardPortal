@@ -1,5 +1,4 @@
 const rewards = [
- {category:"Amazon",icon:"📦",card:"Bank of America",cash:"2.625%",details:"All Amazon purchases",until:"Ongoing",search:["amazon"]},
  {category:"Warehouse & Superstores",icon:"🛒",card:"Bank of America",cash:"2.625%",details:"Walmart, Target, Sam's Club, etc.",until:"Ongoing",search:["walmart","target","sam's","sams","warehouse","superstore"]},
  {category:"Grocery Stores",icon:"🧺",card:"Chase Freedom Flex",cash:"5%",details:"Kroger, HEB, etc. (excludes warehouse and superstores)",until:"Dec 31, 2026",search:["grocery","kroger","heb"]},
  {category:"Flights",icon:"✈️",card:"Bank of America",cash:"2.625%",details:"Airlines, air travel purchases",until:"Ongoing",search:["flight","airline","air travel"]},
@@ -89,7 +88,7 @@ const benefits = {
 };
 
 const cards = [
- ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% everywhere.  Use as the default card when there are not other offers available","Walmart/Target/Sam's • Flights • Gas • Public transportation • Everything else","https://www.bankofamerica.com/"],
+ ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% everywhere.  Use as the default card when there are not other offers available.","Walmart/Target/Sam's • Flights • Gas • Public transportation • Everything else","https://www.bankofamerica.com/"],
  ["capital","Capital One","Savor Mastercard","3% on grocery, restaurants, entertainment, and streaming services; 5% through Capital One Travel.","Streaming • Grocery • Restaurants • Entertainment • Travel portal","https://www.capitalone.com/"],
  ["discover","Discover","Discover More","Quarterly rotating categories at 5%.","Activate quarterly categories.","https://www.capitalone.com/"],
  ["","Chase","Freedom Flex Mastercard","Quarterly rotating categories at 5%.","Activate quarterly categories.","https://www.chase.com/"],
