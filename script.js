@@ -237,7 +237,12 @@ function renderSearchRewardBottom(name){
 
 globalSearch.addEventListener("input",()=>{
   const q=globalSearch.value.trim().toLowerCase();
-  if(!q){searchResults.classList.add("hidden");return}
+  if(!q){
+    searchResults.classList.add("hidden");
+    rewardGrid.classList.remove("hidden");
+    return;
+  }
+  rewardGrid.classList.add("hidden");
   const matches=rewards.filter(r=>[r.category,r.card,r.details,...r.search].join(" ").toLowerCase().includes(q));
   searchResults.innerHTML=matches.length?matches.map(r=>`<article class="search-result ${cardChipClass(r.card.includes("Capital One")?"Capital One Savor":r.card.includes("Freedom Flex")?"Chase Freedom Flex":r.card.includes("Unlimited")?"Chase Freedom Unlimited":r.card.includes("Discover")?"Discover More":"Bank of America")}"><div class="search-result-top"><div class="search-result-category"><span class="search-result-icon">${r.icon}</span><div><strong>${r.category}</strong><div class="search-result-detail">${r.details}</div></div></div><strong class="search-result-cash">${r.cash}</strong></div>${renderSearchRewardBottom(r.card)}</article>`).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
   searchResults.classList.remove("hidden");
