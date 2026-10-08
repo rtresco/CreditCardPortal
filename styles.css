@@ -678,3 +678,26 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards > .section-heading{
   margin-top:10px;
 }
+
+/* Keep the rewards heading inside the search panel, aligned with the search field. */
+.hero.rewards-search-only{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.hero.rewards-search-only .rewards-panel-title{
+  margin:0;
+  color:var(--navy);
+  font-size:19px;
+  font-weight:650;
+  white-space:nowrap;
+}
+.hero.rewards-search-only .search-wrap{
+  flex:0 1 520px;
+}
+@media(max-width:760px){
+  .hero.rewards-search-only{gap:10px;padding:10px 12px}
+  .hero.rewards-search-only .rewards-panel-title{font-size:15px;white-space:normal}
+  .hero.rewards-search-only .search-wrap{flex:1 1 auto;min-width:0}
+}
