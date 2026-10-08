@@ -839,3 +839,28 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .search-result-bottom-split .search-result-issuer-half + .search-result-issuer-half{
   border-left:1px solid rgba(255,255,255,.12)!important;
 }
+
+/* Mobile Card Rewards: put the heading above a full-width search field. */
+@media(max-width:760px){
+  .hero.rewards-search-only{
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:center;
+    gap:12px;
+  }
+  .hero.rewards-search-only .rewards-panel-title{
+    width:100%;
+    white-space:normal;
+  }
+  .hero.rewards-search-only .search-wrap{
+    width:100%;
+    max-width:none;
+    flex:0 0 auto;
+    box-sizing:border-box;
+  }
+  .hero.rewards-search-only .search-wrap input{
+    width:100%;
+    min-width:0;
+    box-sizing:border-box;
+  }
+}
