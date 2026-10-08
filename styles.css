@@ -783,3 +783,13 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 @media(max-width:650px){
   .search-results{grid-template-columns:1fr}
 }
+
+/* Search result cards: mirror the simplified main rewards layout. */
+.search-result-detail{display:none!important}
+.search-result-cash{
+  color:#ffc62e!important;
+  font-size:14px!important;
+  line-height:1.2;
+  font-weight:700;
+}
+.search-result-category strong{font-size:14px}
