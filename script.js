@@ -89,11 +89,11 @@ const benefits = {
 };
 
 const cards = [
- ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% on the categories where it is the best card; also used for everything else.","Amazon • Walmart/Target/Sam's • Flights • Gas • Public transportation • Everything else","https://www.bankofamerica.com/"],
- ["capital","Capital One","Savor Mastercard","3% on grocery, dining, entertainment and popular streaming; 5% through Capital One Travel.","Streaming • Grocery • Dining • Entertainment • Travel portal","https://www.capitalone.com/"],
- ["discover","Discover","Discover More","Q4 2026 rotating categories: Restaurants, Entertainment and Utilities at 5%.","Activate quarterly categories.","https://www.capitalone.com/"],
- ["","Chase","Freedom Flex Mastercard","Q4 2026 categories: Grocery 5%, Restaurants/takeout/delivery 7%, American Red Cross donations 5%.","Dining • Grocery • Benefits","https://www.chase.com/"],
- ["","Chase","Freedom Unlimited Visa","3% on dining and drugstores; also carries Chase benefits.","Dining • Drugstores • Benefits","https://www.chase.com/"]
+ ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% everywhere.  Use as the default card when there are not other offers available","Walmart/Target/Sam's • Flights • Gas • Public transportation • Everything else","https://www.bankofamerica.com/"],
+ ["capital","Capital One","Savor Mastercard","3% on grocery, restaurants, entertainment, and streaming services; 5% through Capital One Travel.","Streaming • Grocery • Restaurants • Entertainment • Travel portal","https://www.capitalone.com/"],
+ ["discover","Discover","Discover More","Quarterly rotating categories at 5%.","Activate quarterly categories.","https://www.capitalone.com/"],
+ ["","Chase","Freedom Flex Mastercard","Quarterly rotating categories at 5%.","Activate quarterly categories.","https://www.chase.com/"],
+ ["","Chase","Freedom Unlimited Visa","3% on restaurants and drugstores.","Restaurants • Drugstores","https://www.chase.com/"]
 ];
 
 function cardChipClass(name){
