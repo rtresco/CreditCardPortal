@@ -879,3 +879,18 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   font-size:19px!important;
   font-weight:650!important;
 }
+
+/* Card Rewards heading/search row: remove the surrounding panel and present as a clean title row. */
+.hero.rewards-search-only{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  padding:10px 0!important;
+}
+.hero.rewards-search-only .rewards-panel-title{
+  color:var(--text,#f5f7fb);
+}
+@media(max-width:760px){
+  .hero.rewards-search-only{padding:10px 0!important}
+}
