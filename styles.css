@@ -650,3 +650,11 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     padding:11px 14px 12px;
   }
 }
+
+/* Recurring Payments: outer content-card border matches the payment card issuer,
+   consistent with the Card Rewards cards. */
+.payment-card.payment-boa{border-color:#b8bec5!important}
+.payment-card.payment-capital{border-color:#c14a58!important}
+.payment-card.payment-discover{border-color:#f07a2b!important}
+.payment-card.payment-flex{border-color:#4f8cf0!important}
+.payment-card.payment-unlimited{border-color:#42638e!important}
