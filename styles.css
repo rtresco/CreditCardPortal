@@ -394,11 +394,20 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .reward-gradient-area.chip-unlimited{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%)}
 .reward-card-method{padding:13px 14px 11px;min-height:54px;display:flex;align-items:center}
 .reward-card-method .card-chips{gap:6px}
-.reward-expiry-row{
+.reward-gradient-area{
+  position:relative;
+}
+.reward-gradient-area .reward-card-method{
+  padding-right:125px;
+}
+.reward-gradient-area .reward-expiry-row{
+  position:absolute;
+  top:7px;
+  right:14px;
   display:flex;
   justify-content:flex-end;
   align-items:center;
-  padding:6px 14px 5px;
+  padding:0;
   color:#ff6666;
   font-size:11px;
   font-weight:700;
