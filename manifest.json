@@ -1,20 +1,22 @@
 {
+  "id": "/CreditCardPortal/",
   "name": "Credit Card Portal",
   "short_name": "Card Portal",
   "description": "Credit card rewards, benefits, offers, and recurring payments.",
-  "start_url": "./",
+  "start_url": "/CreditCardPortal/",
+  "scope": "/CreditCardPortal/",
   "display": "standalone",
   "background_color": "#020617",
   "theme_color": "#0b3d78",
   "icons": [
     {
-      "src": "assets/android-icon-192x192.png",
+      "src": "/CreditCardPortal/assets/android-icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "assets/android-icon-512x512.png",
+      "src": "/CreditCardPortal/assets/android-icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
