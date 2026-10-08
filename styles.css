@@ -673,3 +673,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     padding:10px 12px;
   }
 }
+
+/* Bring Best Current Rewards directly up beneath the compact search area. */
+#rewards > .section-heading{
+  margin-top:10px;
+}
