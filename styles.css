@@ -48,7 +48,7 @@ table{width:100%;border-collapse:collapse;min-width:760px}th{background:var(--na
   .mobile-nav .nav-btn{color:#5c6b79;flex:1;padding:7px 3px;font-size:19px}.mobile-nav .nav-btn small{display:block;font-size:10px;font-weight:700;margin-top:2px}.mobile-nav .nav-btn.active{color:var(--navy)}
   .search-result{display:block}.search-result .cash{float:right}.table-card{border-radius:8px}.filter-row{overflow:auto;flex-wrap:nowrap;padding-bottom:3px}.filter-btn{white-space:nowrap}
 }
-@media(max-width:430px){.reward-grid{grid-template-columns:1fr 1fr}.reward-title{font-size:13px}.reward-detail{font-size:10px}.reward-icon{font-size:18px}.cash{font-size:20px}}
+@media(max-width:430px){.reward-grid{grid-template-columns:1fr}.reward-title{font-size:13px}.reward-detail{font-size:10px}.reward-icon{font-size:18px}.cash{font-size:20px}}
 
 .info-panel{margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:18px;box-shadow:var(--shadow)}
 .info-panel h2{margin:0 0 10px;color:var(--navy);font-size:18px}
