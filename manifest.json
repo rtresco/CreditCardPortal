@@ -1,10 +1,10 @@
 {
-  "id": "/CreditCardPortal/",
+  "id": "/",
   "name": "Credit Card Portal",
   "short_name": "Card Portal",
   "description": "Credit card rewards, benefits, offers, and recurring payments.",
-  "start_url": "/CreditCardPortal/",
-  "scope": "/CreditCardPortal/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#020617",
   "theme_color": "#0b3d78",
