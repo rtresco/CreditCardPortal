@@ -597,3 +597,16 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .reward-card:not(.reward-card-multi) .reward-gradient-area .card-chip.chip-unlimited{
   border-color:#42638e!important;
 }
+
+/* Recurring Payments: match Card Rewards pill treatment — dark overlay with issuer-colored border */
+.payment-method-chip{
+  background:rgba(7,16,31,.42)!important;
+  background-image:none!important;
+  border-color:rgba(255,255,255,.42)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.16);
+}
+.payment-method-chip.payment-boa{border-color:#b8bec5!important}
+.payment-method-chip.payment-capital{border-color:#c14a58!important}
+.payment-method-chip.payment-discover{border-color:#f07a2b!important}
+.payment-method-chip.payment-flex{border-color:#4f8be8!important}
+.payment-method-chip.payment-unlimited{border-color:#42638e!important}
