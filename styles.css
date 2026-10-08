@@ -894,3 +894,11 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 @media(max-width:760px){
   .hero.rewards-search-only{padding:10px 0!important}
 }
+
+/* Keep the Card Rewards title the same size on mobile as the other page titles. */
+@media(max-width:760px){
+  .hero.rewards-search-only .rewards-panel-title{
+    font-size:19px!important;
+    font-weight:650!important;
+  }
+}
