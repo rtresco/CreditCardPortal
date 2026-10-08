@@ -360,3 +360,68 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .reward-card.chip-discover .reward-gradient-area{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%)}
 .reward-card.chip-flex .reward-gradient-area{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%)}
 .reward-card.chip-unlimited .reward-gradient-area{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%)}
+
+/* Card Rewards: compact two-part cards with issuer-colored lower section */
+.reward-card .reward-top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:64px;
+  padding:13px;
+  background:#0d1527;
+  border-bottom:1px solid #24324a;
+}
+.reward-card .reward-category-block{flex:1;min-width:0}
+.reward-card .reward-title{font-size:16px!important;line-height:1.2;font-weight:700!important}
+.reward-card .reward-detail{display:none!important}
+.reward-card .reward-header-rate{
+  margin-left:auto;
+  flex:0 0 auto;
+  font-size:16px!important;
+  line-height:1.2!important;
+  font-weight:700!important;
+  color:#ffc62e!important;
+  text-align:right;
+}
+.reward-gradient-area{
+  background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%);
+  padding:0;
+}
+.reward-gradient-area.chip-boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%)}
+.reward-gradient-area.chip-capital{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%)}
+.reward-gradient-area.chip-discover{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%)}
+.reward-gradient-area.chip-flex{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%)}
+.reward-gradient-area.chip-unlimited{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%)}
+.reward-card-method{padding:13px 14px 11px;min-height:54px;display:flex;align-items:center}
+.reward-card-method .card-chips{gap:6px}
+.reward-expiry-row{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding:0 14px 11px;
+  color:#ff6666;
+  font-size:11px;
+  font-weight:700;
+}
+.reward-card-multi{overflow:hidden}
+.reward-card-multi .reward-issuer-section{
+  min-height:54px;
+  padding:12px 14px;
+  display:flex;
+  align-items:center;
+  background-size:180% 180%;
+}
+.reward-card-multi .reward-issuer-section.chip-capital{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%)}
+.reward-card-multi .reward-issuer-section.chip-flex{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%)}
+.reward-card-multi .reward-issuer-section.chip-unlimited{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%)}
+.reward-card-multi .reward-issuer-section.chip-discover{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%)}
+.reward-card-multi .reward-issuer-section.chip-boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%)}
+.reward-card-multi .reward-issuer-section + .reward-issuer-section{border-top:1px solid rgba(255,255,255,.18)}
+.reward-card-multi .card-name{color:#fff!important}
+@media(max-width:430px){
+  .reward-card .reward-top{min-height:58px;padding:11px}
+  .reward-card .reward-title,.reward-card .reward-header-rate{font-size:14px!important}
+  .reward-card .reward-icon{font-size:18px}
+  .reward-card-method{padding:11px;min-height:50px}
+  .reward-expiry-row{padding:0 11px 10px;font-size:10px}
+}
