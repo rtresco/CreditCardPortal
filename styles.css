@@ -706,3 +706,80 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards > .reward-grid{
   margin-top:14px;
 }
+
+/* Modern search results: individual reward tiles styled like the main reward cards. */
+.search-results{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:12px;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  overflow:visible;
+}
+.search-result{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:0;
+  min-width:0;
+  padding:0;
+  border:1px solid var(--line);
+  border-radius:9px;
+  overflow:hidden;
+  background:#0d1527;
+  color:#f5f7fb;
+  box-shadow:var(--shadow);
+}
+.search-result-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:13px;
+  min-height:66px;
+  background:#0d1527;
+  border-bottom:1px solid #26354d;
+}
+.search-result-category{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+.search-result-icon{font-size:21px;flex:0 0 auto}
+.search-result-category strong{color:#fff;font-size:14px}
+.search-result-detail{margin-top:3px;color:#c3d0e2;font-size:12px;line-height:1.35}
+.search-result-cash{
+  flex:0 0 auto;
+  color:#ffc62e;
+  font-size:18px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.search-result-bottom{
+  flex:1;
+  min-height:48px;
+  padding:10px 13px;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(135deg,#2d3238 0%,#747c85 100%);
+}
+.search-result.chip-capital .search-result-bottom{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%)}
+.search-result.chip-discover .search-result-bottom{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%)}
+.search-result.chip-flex .search-result-bottom{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%)}
+.search-result.chip-unlimited .search-result-bottom{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%)}
+.search-result-bottom .card-chips{margin:0}
+.search-result-bottom .card-chip{background:rgba(7,16,31,.42)!important;background-image:none!important}
+.search-result-empty{
+  grid-column:1/-1;
+  padding:16px;
+  border:1px solid var(--line);
+  background:#0d1527;
+  color:#d5dfed;
+}
+@media(max-width:650px){
+  .search-results{grid-template-columns:1fr}
+}
