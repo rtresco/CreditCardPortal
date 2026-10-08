@@ -701,3 +701,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   .hero.rewards-search-only .rewards-panel-title{font-size:15px;white-space:normal}
   .hero.rewards-search-only .search-wrap{flex:1 1 auto;min-width:0}
 }
+
+/* Add breathing room between the rewards search panel and reward cards. */
+#rewards > .reward-grid{
+  margin-top:14px;
+}
