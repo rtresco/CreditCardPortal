@@ -658,3 +658,18 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .payment-card.payment-discover{border-color:#f07a2b!important}
 .payment-card.payment-flex{border-color:#4f8cf0!important}
 .payment-card.payment-unlimited{border-color:#42638e!important}
+
+/* Card Rewards: compact search area after removing the introductory copy. */
+.hero.rewards-search-only{
+  min-height:0;
+  padding:14px 18px;
+  justify-content:flex-end;
+}
+.hero.rewards-search-only .search-wrap{
+  width:min(520px,100%);
+}
+@media(max-width:760px){
+  .hero.rewards-search-only{
+    padding:10px 12px;
+  }
+}
