@@ -793,3 +793,35 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   font-weight:700;
 }
 .search-result-category strong{font-size:14px}
+
+/* Search results with multiple cards: split the lower half evenly and give each issuer its own gradient. */
+.search-result-bottom-split{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  padding:0;
+  gap:0;
+  background:transparent;
+}
+.search-result-issuer-half{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  padding:10px;
+  background:linear-gradient(135deg,#2d3238 0%,#747c85 100%);
+}
+.search-result-issuer-half + .search-result-issuer-half{
+  border-left:1px solid rgba(255,255,255,.16);
+}
+.search-result-issuer-half.chip-capital{background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%)}
+.search-result-issuer-half.chip-discover{background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%)}
+.search-result-issuer-half.chip-flex{background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%)}
+.search-result-issuer-half.chip-unlimited{background:linear-gradient(135deg,#081326 0%,#1c3e70 100%)}
+.search-result-issuer-half .card-chip{
+  max-width:100%;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  font-size:11px;
+  padding:4px 6px;
+  background:rgba(7,16,31,.42)!important;
+  background-image:none!important;
+}
