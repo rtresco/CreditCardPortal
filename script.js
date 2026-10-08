@@ -158,19 +158,25 @@ function renderBills(filter="All"){
   const rows=bills.filter(b=>filter==="All"||b[1]===filter);
   billsTable.innerHTML=`
     <div class="payment-grid">
-      ${rows.map(b=>`
-        <article class="payment-card ${paymentCardClass(b[2])}">
+      ${rows.map(b=>{
+        const methodClass=paymentCardClass(b[2]);
+        const reward = b[2] === "Bank of America Visa" ? "2.625% cash back" : b[3];
+        const noteIsExpiry = /expires/i.test(b[4]||"");
+        return `
+        <article class="payment-card ${methodClass}">
           <div class="payment-card-top">
             <div class="payment-payee">${b[5] ? `<a href="${b[5]}" target="_blank" rel="noopener" title="Open ${b[0].replace(/<[^>]*>/g,"")} website">${b[0]} <span class="external-link">↗</span></a>` : b[0]}</div>
             <span class="type-pill type-${b[1].toLowerCase().replace(/[^a-z]+/g,"-")}">${b[1]}</span>
           </div>
-          <div class="payment-method">
-            <span class="method-label">Payment Method</span>
-            <strong class="payment-method-chip ${paymentCardClass(b[2])}">${b[2]}</strong>
+          <div class="payment-gradient-area">
+            <div class="payment-card-reward-row">
+              <strong class="payment-method-chip ${methodClass}">${b[2]}</strong>
+              ${reward ? `<div class="payment-reward"><span>⭐</span>${reward}</div>` : ""}
+            </div>
+            ${b[4] ? `<div class="payment-note ${noteIsExpiry ? "note-red" : ""}">${b[4]}</div>` : ""}
           </div>
-          ${b[2] === "Bank of America Visa" ? `<div class="payment-reward"><span>⭐</span>2.625% cash back</div>` : (b[3] ? `<div class="payment-reward"><span>⭐</span>${b[3]}</div>` : "")}
-          ${b[4] ? `<div class="payment-note ${b[4].includes("Expires")||b[4].includes("expires") ? "note-red" : ""}">${b[4]}</div>` : ""}
-        </article>`).join("")}
+        </article>`;
+      }).join("")}
     </div>`;
 }function renderBillFilters(){
   const types=["All",...new Set(bills.map(b=>b[1]))];
