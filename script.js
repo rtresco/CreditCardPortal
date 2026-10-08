@@ -88,11 +88,11 @@ const benefits = {
 };
 
 const cards = [
- ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% everywhere.  Use as the default card when there are not other offers available.","Walmart/Target/Sam's • Flights • Gas • Public transportation • Everything else","https://www.bankofamerica.com/"],
- ["capital","Capital One","Savor Mastercard","3% on grocery, restaurants, entertainment, and streaming services; 5% through Capital One Travel.","Streaming • Grocery • Restaurants • Entertainment • Travel portal","https://www.capitalone.com/"],
- ["discover","Discover","Discover More","Quarterly rotating categories at 5%.","Activate quarterly categories.","https://www.capitalone.com/"],
- ["","Chase","Freedom Flex Mastercard","Quarterly rotating categories at 5%.","Activate quarterly categories.","https://www.chase.com/"],
- ["","Chase","Freedom Unlimited Visa","3% on restaurants and drugstores.","Restaurants • Drugstores","https://www.chase.com/"]
+ ["boa","Bank of America","Unlimited Cash Rewards Visa","2.625% everywhere.  Use as the default card when there are not other offers available.","Default card for credit card purchases.","https://www.bankofamerica.com/"],
+ ["capital","Capital One","Savor Mastercard","3% on entertainment, grocery, restaurants, and streaming services; 5% through Capital One Travel.","Entertainment • Grocery • Restaurants • Streaming • Travel Portal","https://www.capitalone.com/"],
+ ["discover","Discover","Discover More","5% quarterly rotating categories.","Activate quarterly categories.","https://www.capitalone.com/"],
+ ["","Chase","Freedom Flex Mastercard","5% quarterly rotating categories; 5% through Capital One Travel.","Travel Portal • Activate quarterly categories.","https://www.chase.com/"],
+ ["","Chase","Freedom Unlimited Visa","3% on drugstores and restaurants.","Restaurants • Drugstores","https://www.chase.com/"]
 ];
 
 function cardChipClass(name){
