@@ -225,11 +225,21 @@ function showView(view){
 }
 document.querySelectorAll(".nav-btn").forEach(b=>b.onclick=()=>showView(b.dataset.view));
 
+function renderSearchRewardBottom(name){
+  const parts = name === "Capital One / Chase" ? ["Capital One Savor","Chase Freedom Flex"] :
+    name === "Chase Freedom Flex & Unlimited" ? ["Chase Freedom Flex","Chase Freedom Unlimited"] :
+    name === "Discover" ? ["Discover More"] : [name];
+  if(parts.length===1){
+    return `<div class="search-result-bottom ${cardChipClass(parts[0])}">${renderCardChips(parts[0])}</div>`;
+  }
+  return `<div class="search-result-bottom search-result-bottom-split">${parts.map(card=>`<div class="search-result-issuer-half ${cardChipClass(card)}"><span class="card-chip ${cardChipClass(card)}">${card}</span></div>`).join("")}</div>`;
+}
+
 globalSearch.addEventListener("input",()=>{
   const q=globalSearch.value.trim().toLowerCase();
   if(!q){searchResults.classList.add("hidden");return}
   const matches=rewards.filter(r=>[r.category,r.card,r.details,...r.search].join(" ").toLowerCase().includes(q));
-  searchResults.innerHTML=matches.length?matches.map(r=>`<article class="search-result ${cardChipClass(r.card.includes("Capital One")?"Capital One Savor":r.card.includes("Freedom Flex")?"Chase Freedom Flex":r.card.includes("Unlimited")?"Chase Freedom Unlimited":r.card.includes("Discover")?"Discover More":"Bank of America")}"><div class="search-result-top"><div class="search-result-category"><span class="search-result-icon">${r.icon}</span><div><strong>${r.category}</strong><div class="search-result-detail">${r.details}</div></div></div><strong class="search-result-cash">${r.cash}</strong></div><div class="search-result-bottom">${renderCardChips(r.card)}</div></article>`).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
+  searchResults.innerHTML=matches.length?matches.map(r=>`<article class="search-result ${cardChipClass(r.card.includes("Capital One")?"Capital One Savor":r.card.includes("Freedom Flex")?"Chase Freedom Flex":r.card.includes("Unlimited")?"Chase Freedom Unlimited":r.card.includes("Discover")?"Discover More":"Bank of America")}"><div class="search-result-top"><div class="search-result-category"><span class="search-result-icon">${r.icon}</span><div><strong>${r.category}</strong><div class="search-result-detail">${r.details}</div></div></div><strong class="search-result-cash">${r.cash}</strong></div>${renderSearchRewardBottom(r.card)}</article>`).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
   searchResults.classList.remove("hidden");
 });
 
