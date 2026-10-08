@@ -864,3 +864,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     box-sizing:border-box;
   }
 }
+
+@media(max-width:760px){
+  .hero.rewards-search-only{gap:6px}
+}
