@@ -25,6 +25,7 @@ const bills = [
  ["🏠 Houston Property Taxes Protest","Home/Auto","Bank of America Visa","","","https://www.hctax.net/"],
  ["🚗 Auto Registration","Home/Auto","Bank of America Visa","","","https://txt.texas.gov/"],
  ["📦 🚚 Public Storage","Home/Auto","Bank of America Visa","","","https://www.publicstorage.com/"],
+ ["📦 🏷️ Amazon Store Card","Home/Auto","Bank of America Checking","","5% cash back on Amazon and Whole Foods purchases with this card.","https://www.amazon.com/"],
  ["🛏️ Mattress Loan","Home/Auto","Bank of America Checking","","","https://id.synchrony.com/idp/en/standard/login"],
  ["🚗 Toll Roads","Home/Auto","Bank of America Visa","","","https://www.hctra.org/"],
  ["📚 TAMU College Tuition","School","Bank of America Visa","","","https://howdy.tamu.edu/"],
