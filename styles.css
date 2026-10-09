@@ -918,3 +918,13 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     white-space:nowrap;
   }
 }
+
+/* Use the same gold as reward percentages for expiration text on Rewards and Recurring Payments. */
+.reward-card .expiry,
+.reward-gradient-area .expiry,
+.search-result .expiry,
+.payment-note.note-red,
+.payment-gradient-area .payment-note.note-red{
+  color:#ffc62e!important;
+  text-shadow:1px 1px 2px rgba(0,0,0,.75);
+}
