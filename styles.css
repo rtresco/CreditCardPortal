@@ -944,3 +944,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards .reward-card .reward-value{
   color:#ffffff!important;
 }
+
+/* Actual Card Rewards rate element: force percentage values to white. */
+#rewards .reward-card .reward-top .reward-header-rate{
+  color:#ffffff!important;
+}
