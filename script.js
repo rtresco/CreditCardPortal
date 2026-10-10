@@ -108,7 +108,7 @@ function renderCardChips(name){
   const parts = name === "Capital One / Chase" ? ["Capital One Savor","Chase Freedom Flex"] :
     name === "Chase Freedom Flex & Unlimited" ? ["Chase Freedom Flex","Chase Freedom Unlimited"] :
     name === "Discover" ? ["Discover More"] : [name];
-  return `<div class="card-chips">${parts.map(x=>`<span class="card-chip ${cardChipClass(x)}">${x}</span>`).join("")}</div>`;
+  return `<div class="card-chips">${parts.map(x=>`<span class="card-chip ${cardChipClass(x)}">${x === "Bank of America" ? "Bank of America Unlimited Cash Rewards" : x}</span>`).join("")}</div>`;
 }
 function renderRewards(){
   rewardGrid.innerHTML = rewards.map((r,i)=>{
@@ -192,9 +192,9 @@ function renderBenefits(card="Chase Freedom Flex"){
   "Discover More":"https://www.mycardbenefits.com/",
   "Bank of America":"https://bankofamericalifestylebenefits.com/client/dashboard.jsf"
 };
-benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn ${c===card?"active":""} ${c===card?cardChipClass(c):""}" data-card="${c}"><span>${c.replace("Chase Freedom ","Chase ")}</span>${benefitGuides[c]?`<a class="benefit-guide-link" href="${benefitGuides[c]}" target="_blank" rel="noopener" title="Open ${c} benefits guide" onclick="event.stopPropagation()">↗</a>`:""}</button>`).join("");
+benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn ${c===card?"active":""} ${c===card?cardChipClass(c):""}" data-card="${c}"><span>${c === "Bank of America" ? "Bank of America Unlimited Cash Rewards" : c.replace("Chase Freedom ","Chase ")}</span>${benefitGuides[c]?`<a class="benefit-guide-link" href="${benefitGuides[c]}" target="_blank" rel="noopener" title="Open ${c} benefits guide" onclick="event.stopPropagation()">↗</a>`:""}</button>`).join("");
   benefitContent.innerHTML=`
-    <div class="benefit-list">${benefits[card].map(b=>`<article class="benefit-card"><span class="tag ${cardChipClass(card)}">${card}</span><h3>${b[0]}</h3><div class="benefit-body">${b[1]}</div></article>`).join("")}</div>
+    <div class="benefit-list">${benefits[card].map(b=>`<article class="benefit-card"><span class="tag ${cardChipClass(card)}">${card === "Bank of America" ? "Bank of America Unlimited Cash Rewards" : card}</span><h3>${b[0]}</h3><div class="benefit-body">${b[1]}</div></article>`).join("")}</div>
     <div class="info-panel">
       <h2>📝 Benefit Notes</h2>
       <ul>
