@@ -461,13 +461,11 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.16);
   text-shadow:0 1px 1px rgba(0,0,0,.28);
 }
-.reward-card-multi .reward-issuer-section.chip-capital .card-name{
-  background:linear-gradient(135deg,#2a1118 0%,#7d2635 100%);
-  border-color:#9e3541;
-}
+/* Keep multi-card name badges visually consistent: use a neutral translucent fill,
+   letting the issuer gradient belong to the full row rather than repeating inside the badge. */
+.reward-card-multi .reward-issuer-section.chip-capital .card-name,
 .reward-card-multi .reward-issuer-section.chip-flex .card-name{
-  background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%);
-  border-color:#3972d4;
+  background:rgba(3,12,25,.22);
 }
 .reward-card-multi .reward-issuer-section.chip-unlimited .card-name{
   background:linear-gradient(135deg,#081326 0%,#1c3e70 100%);
