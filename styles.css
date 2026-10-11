@@ -1003,6 +1003,33 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 
 
 
+/* Improve label legibility with a subtle dark backing directly behind text,
+   rather than darkening the entire photo. */
+#rewards .reward-card .reward-title,
+#rewards .reward-card .reward-icon{
+  display:inline-block;
+  background:rgba(0,0,0,.58);
+  border-radius:5px;
+  padding:4px 7px;
+  box-shadow:0 1px 5px rgba(0,0,0,.45);
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+}
+#rewards .reward-card .reward-title{
+  max-width:100%;
+}
+#bills .payment-card .payment-payee{
+  display:inline-block;
+  max-width:100%;
+  padding:4px 7px;
+  border-radius:5px;
+  background:rgba(0,0,0,.62);
+  box-shadow:0 1px 5px rgba(0,0,0,.45);
+}
+#bills .payment-card .payment-payee a{
+  color:#fff !important;
+}
+
 /* Recurring Payments: taller photo headers with text-only shadows for readability. */
 #bills .payment-card-top{
   position:relative;
