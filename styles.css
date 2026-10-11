@@ -962,10 +962,10 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards .reward-card .reward-title,
 #rewards .reward-card .reward-header-rate,
 #rewards .reward-card .reward-icon{
-  text-shadow:0 2px 4px rgba(0,0,0,.95),0 0 9px rgba(0,0,0,.8);
+  text-shadow:0 2px 5px rgba(0,0,0,1),0 0 10px rgba(0,0,0,1),0 0 16px rgba(0,0,0,.95);
 }
 #rewards .reward-card.category-warehouse-superstores .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1604719312566-8912e9c8a213?auto=format&fit=crop&w=900&q=80");
+  background-image:url("https://images.unsplash.com/photo-1768176136613-96a7bfc0049e?auto=format&fit=crop&w=900&q=80");
 }
 #rewards .reward-card.category-grocery-stores .reward-top{
   background-image:url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80");
