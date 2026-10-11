@@ -125,8 +125,9 @@ function renderRewards(){
         <div class="reward-card-method">${renderCardChips(r.card)}</div>
         ${r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}
       </div>`;
+    const categoryClass = "category-" + r.category.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
     return `
-      <article class="reward-card ${multi ? "reward-card-multi" : cardChipClass(parts[0])}" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
+      <article class="reward-card ${categoryClass} ${multi ? "reward-card-multi" : cardChipClass(parts[0])}" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
         <div class="reward-top">
           <div class="reward-icon">${r.icon}</div>
           <div class="reward-category-block"><div class="reward-title">${r.category}</div></div>
