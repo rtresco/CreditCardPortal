@@ -21,22 +21,22 @@ const bills = [
  ["📱 Cell Phones","Utilities","Bank of America Checking","","$15 discount ($5 per line) with bank account","https://www.verizon.com/"],
  ["🚗 Auto Loans","Home/Auto","Bank of America Checking","","Bank account payment only available","https://www.wellsfargo.com/"],
  ["🏠🚗 Home / Auto Insurance","Home/Auto","Bank of America Visa","","","https://www.statefarm.com/"],
- ["🏠 Property Tax","Home/Auto","Bank of America Visa","","Check to see if credit txn fee is > than cash back. If so, use Bank of America Checking","https://www.hctax.net/"],
+ ["🏠 Property Tax","Home/Auto","Bank of America Visa","","Check to see if credit txn fee is > than Cash Back. If so, use Bank of America Checking","https://www.hctax.net/"],
  ["🏠 Property Tax Protest","Home/Auto","Bank of America Visa","","","https://www.hctax.net/"],
  ["🚗 Auto Registration","Home/Auto","Bank of America Visa","","","https://txt.texas.gov/"],
  ["📦 🚚 Public Storage","Home/Auto","Bank of America Visa","","","https://www.publicstorage.com/"],
- ["📦 🏷️ Amazon Store Card","Home/Auto","Bank of America Checking","","5% cash back on Amazon and Whole Foods purchases with this card.","https://www.amazon.com/"],
+ ["📦 🏷️ Amazon Store Card","Home/Auto","Bank of America Checking","","5% Cash Back on Amazon and Whole Foods purchases with this card.","https://www.amazon.com/"],
  ["🛏️ Mattress Loan","Home/Auto","Bank of America Checking","","","https://id.synchrony.com/idp/en/standard/login"],
  ["🚗 Toll Roads","Home/Auto","Bank of America Visa","","","https://www.hctra.org/"],
  ["📚 TAMU College Tuition","School","Bank of America Visa","","","https://howdy.tamu.edu/"],
  ["🏠 FSU Apartment Rent","School","Bank of America Checking","","","https://west10.residentportal.com/auth"],
  ["🏠 TAMU Apartment Rent","School","Bank of America Checking","","","https://woodlandsapts.residentportal.com/auth"],
- ["📺 Netflix","Streaming","Capital One Savor","3% cash back","","https://www.netflix.com/"],
+ ["📺 Netflix","Streaming","Capital One Savor","3% Cash Back","","https://www.netflix.com/"],
  ["📺 Paramount+","Streaming","Bank of America Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
  ["📺 YouTube TV","Streaming","Chase Freedom Unlimited","$20 Cash Back","Expires 10/29/2026","https://tv.youtube.com/"],
- ["📺 Disney+ / Hulu Bundle","Streaming","Capital One Savor","3% cash back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
- ["📺 HBO Max","Streaming","Capital One Savor","3% cash back","Promo price expires 12/1/2026, then $10.99/month","https://play.hbomax.com/"],
- ["🎵 Spotify","Streaming","Capital One Savor","3% cash back","","https://www.spotify.com/"],
+ ["📺 Disney+ / Hulu Bundle","Streaming","Capital One Savor","3% Cash Back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
+ ["📺 HBO Max","Streaming","Capital One Savor","3% Cash Back","Promo price expires 12/1/2026, then $10.99/month","https://play.hbomax.com/"],
+ ["🎵 Spotify","Streaming","Capital One Savor","3% Cash Back","","https://www.spotify.com/"],
  ["🤖 ChatGPT","Software","Bank of America Visa","","","https://chatgpt.com/"],
  ["📍 Life360","Software","Bank of America Visa","","","https://play.google.com/"],
  ["☁️ Apple iCloud","Software","Bank of America Visa","","","https://www.icloud.com/"],
@@ -168,7 +168,7 @@ function renderBills(filter="All"){
       ${rows.map(b=>{
         const methodClass=paymentCardClass(b[2]);
         const paymentCategoryClass = "payment-category-" + b[1].toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-        const reward = b[2] === "Bank of America Visa" ? "2.625% cash back" : b[3];
+        const reward = b[2] === "Bank of America Visa" ? "2.625% Cash Back" : b[3];
         const noteIsExpiry = /expires/i.test(b[4]||"");
         return `
         <article class="payment-card ${methodClass} ${paymentCategoryClass}">
