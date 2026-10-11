@@ -1146,3 +1146,17 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   border-color:#9aa3ad!important;
 }
 
+/* Fill stretched reward cards with one uninterrupted issuer gradient. */
+#rewards .reward-card:not(.reward-card-multi){
+  display:flex;
+  flex-direction:column;
+}
+#rewards .reward-card:not(.reward-card-multi) .reward-top{
+  flex:0 0 auto;
+}
+#rewards .reward-card:not(.reward-card-multi) .reward-gradient-area{
+  flex:1 1 auto;
+  display:flex;
+  flex-direction:column;
+  background-repeat:no-repeat!important;
+}
