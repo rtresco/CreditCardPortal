@@ -1234,6 +1234,9 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-repeat:no-repeat!important;
 }
 
+/* Recurring Payments: slightly smaller category emoji and larger external-link arrow. */
+#bills .payment-category-icon{font-size:14px;display:inline-block;vertical-align:baseline;}
+#bills .payment-payee .external-link{font-size:19px!important;vertical-align:baseline;}
 /* Match Recurring Payments header icon/text sizing to Card Rewards on desktop and mobile. */
 @media(min-width:761px){
   #bills .payment-card .payment-payee,
