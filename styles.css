@@ -1234,6 +1234,11 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-repeat:no-repeat!important;
 }
 
+/* Recurring Payments: enlarge category chips by 2px. */
+#bills .payment-card .type-pill{
+  font-size:14px!important;
+  line-height:1.2!important;
+}
 /* Recurring Payments: slightly smaller category emoji and larger external-link arrow. */
 #bills .payment-category-icon{font-size:14px;display:inline-block;vertical-align:baseline;}
 #bills .payment-payee .external-link{font-size:19px!important;vertical-align:baseline;}
