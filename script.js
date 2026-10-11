@@ -129,8 +129,10 @@ function renderRewards(){
     return `
       <article class="reward-card ${categoryClass} ${multi ? "reward-card-multi" : cardChipClass(parts[0])}" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
         <div class="reward-top">
-          <div class="reward-icon">${r.icon}</div>
-          <div class="reward-category-block"><div class="reward-title">${r.category}</div></div>
+          <div class="reward-category-label">
+            <div class="reward-icon">${r.icon}</div>
+            <div class="reward-category-block"><div class="reward-title">${r.category}</div></div>
+          </div>
           <div class="reward-header-rate">${r.cash}</div>
         </div>
         ${lower}
