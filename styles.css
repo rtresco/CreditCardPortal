@@ -1018,6 +1018,22 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards .reward-card .reward-icon{
   text-shadow:0 2px 4px rgba(0,0,0,1),0 0 8px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.65);
 }
+
+/* Mobile Card Rewards: enlarge each card header's icon, category name, and cashback rate.
+   Leave the separate "Highest Active Rewards" page heading unchanged. */
+@media(max-width:760px){
+  #rewards .reward-card .reward-category-label .reward-icon{
+    font-size:24px!important;
+  }
+  #rewards .reward-card .reward-category-label .reward-title{
+    font-size:16px!important;
+    line-height:1.2!important;
+  }
+  #rewards .reward-card .reward-top .reward-header-rate{
+    font-size:18px!important;
+    line-height:1.2!important;
+  }
+}
 #rewards .reward-card.category-warehouse-superstores .reward-top{
   background-image:url("./images/warehouse-reward-header.jpg");
 }
