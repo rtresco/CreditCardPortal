@@ -158,6 +158,9 @@ function paymentCardClass(method){
   if(method === "Bank of America Visa" || method === "Bank of America Checking") return "payment-boa";
   return "payment-boa";
 }
+function formatPaymentPayee(name){
+  return name.replace(/^(\p{Extended_Pictographic}\uFE0F?)/u, '<span class="payment-category-icon">$1</span>');
+}
 function renderBills(filter="All"){
   const rows=bills.filter(b=>filter==="All"||b[1]===filter);
   billsTable.innerHTML=`
@@ -170,7 +173,7 @@ function renderBills(filter="All"){
         return `
         <article class="payment-card ${methodClass} ${paymentCategoryClass}">
           <div class="payment-card-top">
-            <div class="payment-payee">${b[5] ? `<a href="${b[5]}" target="_blank" rel="noopener" title="Open ${b[0].replace(/<[^>]*>/g,"")} website">${b[0]} <span class="external-link">↗</span></a>` : b[0]}</div>
+            <div class="payment-payee">${b[5] ? `<a href="${b[5]}" target="_blank" rel="noopener" title="Open ${b[0].replace(/<[^>]*>/g,"")} website">${formatPaymentPayee(b[0])} <span class="external-link">↗</span></a>` : b[0]}</div>
             <span class="type-pill type-${b[1].toLowerCase().replace(/[^a-z]+/g,"-")}">${b[1]}</span>
           </div>
           <div class="payment-gradient-area ${methodClass}">
