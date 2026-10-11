@@ -498,19 +498,22 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.16);
   text-shadow:0 1px 1px rgba(0,0,0,.28);
 }
-/* Keep multi-card name badges visually consistent: use a neutral translucent fill,
-   letting the issuer gradient belong to the full row rather than repeating inside the badge. */
-.reward-card-multi .reward-issuer-section.chip-capital .card-name,
+/* Multi-card reward pills: match the vivid Card Benefits issuer gradients. */
+.reward-card-multi .reward-issuer-section.chip-capital .card-name{
+  background:linear-gradient(135deg,#5f0b1b 0%,#861b2e 52%,#b33449 100%);
+  border-color:#9f3447;
+}
 .reward-card-multi .reward-issuer-section.chip-flex .card-name{
-  background:rgba(3,12,25,.22);
+  background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%);
+  border-color:#3972d4;
 }
 .reward-card-multi .reward-issuer-section.chip-unlimited .card-name{
   background:linear-gradient(135deg,#081326 0%,#1c3e70 100%);
   border-color:#284f82;
 }
 .reward-card-multi .reward-issuer-section.chip-discover .card-name{
-  background:linear-gradient(135deg,#3a1a0d 0%,#8f3510 100%);
-  border-color:#e86a22;
+  background:linear-gradient(135deg,#9d2600 0%,#d94708 52%,#ff7a1a 100%);
+  border-color:#e45a1b;
 }
 .reward-card-multi .reward-issuer-section.chip-boa .card-name{
   background:linear-gradient(135deg,#2d3238 0%,#747c85 100%);
