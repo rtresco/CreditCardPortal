@@ -1234,6 +1234,28 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-repeat:no-repeat!important;
 }
 
+/* Match Recurring Payments header icon/text sizing to Card Rewards on desktop and mobile. */
+@media(min-width:761px){
+  #bills .payment-card .payment-payee,
+  #bills .payment-card .payment-payee a{
+    font-size:16px!important;
+    line-height:1.2!important;
+    font-weight:700!important;
+  }
+}
+@media(max-width:760px){
+  #bills .payment-card .payment-payee,
+  #bills .payment-card .payment-payee a{
+    font-size:18px!important;
+    line-height:1.2!important;
+    font-weight:700!important;
+  }
+  #bills .payment-card .type-pill{
+    font-size:12px!important;
+    line-height:1.2!important;
+  }
+}
+
 /* Desktop Card Rewards: reduce category icons slightly; mobile keeps its current 22px size. */
 @media(min-width:761px){
   #rewards .reward-card .reward-category-label .reward-icon{
