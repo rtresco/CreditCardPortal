@@ -40,9 +40,9 @@ const bills = [
  ["🤖 ChatGPT","Software","Bank of America Visa","","","https://chatgpt.com/"],
  ["📍 Life360","Software","Bank of America Visa","","","https://play.google.com/"],
  ["☁️ Apple iCloud","Software","Bank of America Visa","","","https://www.icloud.com/"],
- ["🏠 Google Home (Nest Aware)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["🏠 Google Home Premium","Software","Bank of America Visa","","","https://play.google.com/"],
  ["❤️ Google Health (Fitbit)","Software","Bank of America Visa","","","https://play.google.com/"],
- ["☁️ Google One (Cloud Storage/AI Plus)","Software","Bank of America Visa","","","https://play.google.com/"],
+ ["☁️ Google One AI Plus (400 GB)","Software","Bank of America Visa","","","https://play.google.com/"],
  ["📻 VRadio","Software","Bank of America Visa","","","https://play.google.com/"]
 ];
 
