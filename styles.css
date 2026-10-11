@@ -1063,7 +1063,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     white-space:nowrap;
   }
 }
-#rewards .reward-card.category-superstores-and-clubs .reward-top{
+#rewards .reward-card.category-superstores-clubs .reward-top{
   background-image:url("./images/warehouse-reward-header.jpg");
 }
 #rewards .reward-card.category-grocery-stores .reward-top{
