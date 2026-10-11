@@ -270,6 +270,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .my-card h2{font-size:17px;max-width:90%;margin:5px 0 0;color:#fff!important}
 .my-card p,.my-card li{color:#e5edf8!important}
 .portfolio-card-brand{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.portfolio-card-brand{display:flex;align-items:center;gap:7px}
+.portfolio-bank-logo{width:20px;height:20px;flex:0 0 20px;object-fit:contain;border-radius:4px;background:rgba(255,255,255,.96);padding:2px;box-sizing:border-box}
 .my-card.boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%) !important;border-color:#9aa3ad!important;color:#fff!important}
 .my-card.boa h2,.my-card.boa p,.my-card.boa li{color:#fff!important}
 .my-card.boa .portfolio-card-brand{color:#c2c8ce!important}
