@@ -1019,31 +1019,31 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   text-shadow:0 2px 4px rgba(0,0,0,1),0 0 8px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.65);
 }
 #rewards .reward-card.category-warehouse-superstores .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1768176136613-96a7bfc0049e?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/warehouse-reward-header.jpg");
 }
 #rewards .reward-card.category-grocery-stores .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/grocery-reward-header.jpg");
 }
 #rewards .reward-card.category-flights .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/flights-reward-header.jpg");
 }
 #rewards .reward-card.category-travel-hotels .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/travel-hotels-reward-header.jpg");
 }
 #rewards .reward-card.category-gas .reward-top{
   background-image:url("./images/gas-reward-header.webp");
 }
 #rewards .reward-card.category-public-transportation .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/public-transportation-reward-header.jpg");
 }
 #rewards .reward-card.category-restaurants-dining .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/restaurants-reward-header.jpg");
 }
 #rewards .reward-card.category-entertainment .reward-top{
   background-image:url("./images/entertainment-reward-header.jpg");
 }
 #rewards .reward-card.category-streaming-services .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/streaming-reward-header.jpg");
 }
 #rewards .reward-card.category-utilities .reward-top{
   background-image:url("./images/utilities-reward-header.jpg");
@@ -1052,7 +1052,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-image:url("./images/drugstores-clean-header.jpg");
 }
 #rewards .reward-card.category-everything-else .reward-top{
-  background-image:url("https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/everything-else-reward-header.jpg");
 }
 
 
@@ -1129,16 +1129,16 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-image:url("./images/utilities-reward-header.jpg");
 }
 #bills .payment-card.payment-category-home-auto .payment-card-top{
-  background-image:url("https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/home-auto-payment-header.jpg");
 }
 #bills .payment-card.payment-category-school .payment-card-top{
-  background-image:url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/school-payment-header.jpg");
 }
 #bills .payment-card.payment-category-streaming .payment-card-top{
-  background-image:url("https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/streaming-reward-header.jpg");
 }
 #bills .payment-card.payment-category-software .payment-card-top{
-  background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80");
+  background-image:url("./images/software-payment-header.jpg");
 }
 
 /* Keep issuer-name pills consistent with the richer Card Benefits gradients
