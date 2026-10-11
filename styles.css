@@ -402,9 +402,9 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 }
 .reward-gradient-area .reward-expiry-row{
   position:absolute;
-  top:50%;
+  top:18px;
   right:14px;
-  transform:translateY(-50%);
+  transform:none;
   display:flex;
   justify-content:flex-end;
   align-items:center;
