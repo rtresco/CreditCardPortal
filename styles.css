@@ -953,8 +953,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   position:relative;
   isolation:isolate;
   box-sizing:border-box;
-  min-height:78px;
-  padding:18px 13px;
+  min-height:90px;
+  padding:21px 13px;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -962,7 +962,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards .reward-card .reward-title,
 #rewards .reward-card .reward-header-rate,
 #rewards .reward-card .reward-icon{
-  text-shadow:0 2px 5px rgba(0,0,0,1),0 0 10px rgba(0,0,0,1),0 0 16px rgba(0,0,0,.95);
+  text-shadow:0 2px 6px rgba(0,0,0,1),0 0 12px rgba(0,0,0,1),0 0 20px rgba(0,0,0,1);
 }
 #rewards .reward-card.category-warehouse-superstores .reward-top{
   background-image:url("https://images.unsplash.com/photo-1768176136613-96a7bfc0049e?auto=format&fit=crop&w=900&q=80");
