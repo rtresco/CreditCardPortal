@@ -947,3 +947,57 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards .reward-card .reward-top .reward-header-rate{
   color:#ffffff!important;
 }
+
+/* Card Rewards category images: taller header, no image-wide dark mask. */
+#rewards .reward-card .reward-top{
+  position:relative;
+  isolation:isolate;
+  box-sizing:border-box;
+  min-height:78px;
+  padding:18px 13px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+#rewards .reward-card .reward-title,
+#rewards .reward-card .reward-header-rate,
+#rewards .reward-card .reward-icon{
+  text-shadow:0 2px 4px rgba(0,0,0,.95),0 0 9px rgba(0,0,0,.8);
+}
+#rewards .reward-card.category-warehouse-superstores .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1604719312566-8912e9c8a213?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-grocery-stores .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-flights .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-travel-hotels .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-gas .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1545262810-77515befe149?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-public-transportation .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-restaurants-dining .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-entertainment .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-streaming-services .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-utilities .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-drugstores .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=80");
+}
+#rewards .reward-card.category-everything-else .reward-top{
+  background-image:url("https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80");
+}
+
