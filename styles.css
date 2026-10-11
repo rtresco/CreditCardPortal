@@ -1057,20 +1057,34 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 
 
 
-/* Improve label legibility with a subtle dark backing directly behind text,
-   rather than darkening the entire photo. */
-#rewards .reward-card .reward-title,
-#rewards .reward-card .reward-icon{
-  display:inline-block;
-  background:rgba(0,0,0,.58);
-  border-radius:5px;
+/* Keep the reward icon and category name together in one dark label,
+   matching the label treatment used in Recurring Payments. */
+#rewards .reward-card .reward-category-label{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  flex:0 1 auto;
+  min-width:0;
+  max-width:calc(100% - 70px);
   padding:4px 7px;
+  border-radius:5px;
+  background:rgba(0,0,0,.62);
   box-shadow:0 1px 5px rgba(0,0,0,.45);
-  -webkit-box-decoration-break:clone;
-  box-decoration-break:clone;
 }
-#rewards .reward-card .reward-title{
+#rewards .reward-card .reward-category-label .reward-icon{
+  display:block;
+  flex:0 0 auto;
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+}
+#rewards .reward-card .reward-category-label .reward-title{
+  display:block;
   max-width:100%;
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+  overflow-wrap:anywhere;
 }
 #bills .payment-card .payment-payee{
   display:inline-block;
