@@ -1001,3 +1001,46 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-image:url("https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80");
 }
 
+/* Recurring Payments: taller photo headers with text-only shadows for readability. */
+#bills .payment-card-top{
+  position:relative;
+  isolation:isolate;
+  box-sizing:border-box;
+  min-height:90px;
+  margin:-16px -16px 14px;
+  padding:18px 16px;
+  background-size:cover;
+  background-position:center 48%;
+  background-repeat:no-repeat;
+  border-radius:10px 10px 0 0;
+}
+#bills .payment-card-top > *{
+  position:relative;
+  z-index:1;
+}
+#bills .payment-card .payment-payee,
+#bills .payment-card .payment-payee a,
+#bills .payment-card .type-pill{
+  color:#fff !important;
+  text-shadow:0 2px 4px rgba(0,0,0,1),0 0 8px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.65);
+}
+#bills .payment-card .type-pill{
+  background:rgba(5,14,28,.68);
+  border-color:rgba(255,255,255,.35);
+}
+#bills .payment-card.payment-category-utilities .payment-card-top{
+  background-image:url("./images/utilities-reward-header.jpg");
+}
+#bills .payment-card.payment-category-home-auto .payment-card-top{
+  background-image:url("https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=900&q=80");
+}
+#bills .payment-card.payment-category-school .payment-card-top{
+  background-image:url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80");
+}
+#bills .payment-card.payment-category-streaming .payment-card-top{
+  background-image:url("https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=80");
+}
+#bills .payment-card.payment-category-software .payment-card-top{
+  background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80");
+}
+
