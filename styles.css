@@ -1239,6 +1239,10 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background:#07101f!important;
   background-color:#07101f!important;
 }
+/* Desktop only: increase the icon before each Recurring Payments title by 1px. */
+@media(min-width:761px){
+  #bills .payment-category-icon{font-size:15px!important;}
+}
 /* Recurring Payments: enlarge category chips by 2px. */
 #bills .payment-card .type-pill{
   font-size:14px!important;
