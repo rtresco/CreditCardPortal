@@ -1233,3 +1233,10 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   flex-direction:column;
   background-repeat:no-repeat!important;
 }
+
+/* Desktop Card Rewards: reduce category icons slightly; mobile keeps its current 22px size. */
+@media(min-width:761px){
+  #rewards .reward-card .reward-category-label .reward-icon{
+    font-size:19px!important;
+  }
+}
