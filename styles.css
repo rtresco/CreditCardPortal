@@ -1245,6 +1245,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 }
 /* Recurring Payments: enlarge category chips by 2px. */
 #bills .payment-card .type-pill{
+  color:#cfe0f5!important;
   font-size:14px!important;
   line-height:1.2!important;
 }
