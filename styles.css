@@ -1033,6 +1033,17 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     font-size:20px!important;
     line-height:1.2!important;
   }
+  #rewards .reward-card .reward-top .reward-header-rate{
+    display:inline-flex!important;
+    align-items:center;
+    justify-content:center;
+    padding:4px 7px;
+    border-radius:5px;
+    background:rgba(0,0,0,.62);
+    box-shadow:0 1px 5px rgba(0,0,0,.45);
+    text-shadow:0 2px 4px rgba(0,0,0,1),0 0 8px rgba(0,0,0,.9);
+    white-space:nowrap;
+  }
 }
 #rewards .reward-card.category-warehouse-superstores .reward-top{
   background-image:url("./images/warehouse-reward-header.jpg");
