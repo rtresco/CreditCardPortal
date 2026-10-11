@@ -1002,6 +1002,19 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   color:#ffffff!important;
 }
 
+/* Card Rewards cashback percentage: keep the dark label and shadow visible on desktop and mobile. */
+#rewards .reward-card .reward-top .reward-header-rate{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  padding:4px 7px;
+  border-radius:5px;
+  background:rgba(0,0,0,.62)!important;
+  box-shadow:0 1px 5px rgba(0,0,0,.45)!important;
+  text-shadow:0 2px 4px rgba(0,0,0,1),0 0 8px rgba(0,0,0,.9);
+  white-space:nowrap;
+}
+
 /* Card Rewards category images: taller header, no image-wide dark mask. */
 #rewards .reward-card .reward-top{
   position:relative;
