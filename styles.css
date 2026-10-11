@@ -429,6 +429,43 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .reward-card-multi .reward-issuer-section.chip-boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%)}
 .reward-card-multi .reward-issuer-section + .reward-issuer-section{border-top:1px solid rgba(255,255,255,.18)}
 .reward-card-multi .card-name{color:#fff!important}
+
+/* Multi-card reward pills: use the same issuer gradients as Card Benefits. */
+.reward-card-multi .reward-issuer-section .card-name{
+  display:inline-block;
+  width:max-content;
+  max-width:100%;
+  padding:5px 9px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:5px;
+  color:#fff!important;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.1;
+  background-size:180% 180%;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 3px 8px rgba(0,0,0,.16);
+  text-shadow:0 1px 1px rgba(0,0,0,.28);
+}
+.reward-card-multi .reward-issuer-section.chip-capital .card-name{
+  background:linear-gradient(135deg,#5f0b1b 0%,#861b2e 52%,#b33449 100%);
+  border-color:#9f3447;
+}
+.reward-card-multi .reward-issuer-section.chip-discover .card-name{
+  background:linear-gradient(135deg,#9d2600 0%,#d94708 52%,#ff7a1a 100%);
+  border-color:#e45a1b;
+}
+.reward-card-multi .reward-issuer-section.chip-flex .card-name{
+  background:linear-gradient(135deg,#0d2a63 0%,#356fd0 100%);
+  border-color:#3972d4;
+}
+.reward-card-multi .reward-issuer-section.chip-unlimited .card-name{
+  background:linear-gradient(135deg,#081326 0%,#1c3e70 100%);
+  border-color:#284f82;
+}
+.reward-card-multi .reward-issuer-section.chip-boa .card-name{
+  background:linear-gradient(135deg,#2d3238 0%,#747c85 100%);
+  border-color:#9aa3ad;
+}
 @media(max-width:430px){
   .reward-card .reward-top{min-height:58px;padding:11px}
   .reward-card .reward-title,.reward-card .reward-header-rate{font-size:14px!important}
