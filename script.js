@@ -162,10 +162,11 @@ function renderBills(filter="All"){
     <div class="payment-grid">
       ${rows.map(b=>{
         const methodClass=paymentCardClass(b[2]);
+        const paymentCategoryClass = "payment-category-" + b[1].toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
         const reward = b[2] === "Bank of America Visa" ? "2.625% cash back" : b[3];
         const noteIsExpiry = /expires/i.test(b[4]||"");
         return `
-        <article class="payment-card ${methodClass}">
+        <article class="payment-card ${methodClass} ${paymentCategoryClass}">
           <div class="payment-card-top">
             <div class="payment-payee">${b[5] ? `<a href="${b[5]}" target="_blank" rel="noopener" title="Open ${b[0].replace(/<[^>]*>/g,"")} website">${b[0]} <span class="external-link">↗</span></a>` : b[0]}</div>
             <span class="type-pill type-${b[1].toLowerCase().replace(/[^a-z]+/g,"-")}">${b[1]}</span>
