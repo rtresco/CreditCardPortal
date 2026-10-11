@@ -273,7 +273,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .my-card{position:relative;padding-right:82px}
 .my-card h2{max-width:none}
 .portfolio-card-brand{display:flex;align-items:center;gap:7px}
-.portfolio-bank-logo{position:absolute;top:16px;right:16px;width:56px;height:56px;object-fit:contain;border-radius:7px;background:rgba(255,255,255,.96);padding:5px;box-sizing:border-box}
+.portfolio-bank-logo{position:absolute;top:16px;right:16px;width:56px;height:56px;object-fit:contain;background:transparent!important;padding:0;box-sizing:border-box;filter:drop-shadow(0 3px 4px rgba(0,0,0,.58)) drop-shadow(0 0 7px rgba(255,255,255,.12));}
 .my-card.boa{background:linear-gradient(135deg,#2d3238 0%,#747c85 100%) !important;border-color:#9aa3ad!important;color:#fff!important}
 .my-card.boa h2,.my-card.boa p,.my-card.boa li{color:#fff!important}
 .my-card.boa .portfolio-card-brand{color:#c2c8ce!important}
