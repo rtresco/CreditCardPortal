@@ -1007,7 +1007,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   isolation:isolate;
   box-sizing:border-box;
   min-height:90px;
-  margin:-16px -16px 14px;
+  margin:-16px -16px 0;
   padding:18px 16px;
   background-size:cover;
   background-position:center 48%;
