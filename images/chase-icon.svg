@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+  <g fill="#1176c9">
+    <path d="M49 18H93L129 49H56V130L17 99H89V92H17V56Z" opacity="0"/>
+    <path d="M49 18V92H17V56Z"/>
+    <path d="M56 18H93L129 49H56Z"/>
+    <path d="M17 99H89V130H53Z"/>
+    <path d="M96 59H129V92L96 130Z"/>
+  </g>
+</svg>
