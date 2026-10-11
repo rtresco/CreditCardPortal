@@ -1002,11 +1002,16 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   color:#ffffff!important;
 }
 
-/* Card Rewards cashback percentage: keep the dark label and shadow visible on desktop and mobile. */
+/* Card Rewards cashback percentage: right-align the value and keep the label tight to the text. */
 #rewards .reward-card .reward-top .reward-header-rate{
   display:inline-flex!important;
+  flex:0 0 auto!important;
   align-items:center;
   justify-content:center;
+  align-self:center;
+  margin-left:auto;
+  width:max-content!important;
+  max-width:max-content!important;
   padding:4px 7px;
   border-radius:5px;
   background:rgba(0,0,0,.62)!important;
