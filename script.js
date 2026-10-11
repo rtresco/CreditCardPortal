@@ -1,5 +1,5 @@
 const rewards = [
- {category:"Superstores & Clubs",icon:"🛒",card:"Bank of America",cash:"2.625%",details:"Walmart, Target, Sam's Club, etc.",until:"Ongoing",search:["walmart","target","sam's","sams","warehouse","superstore"]},
+ {category:"Superstores / Clubs",icon:"🛒",card:"Bank of America",cash:"2.625%",details:"Walmart, Target, Sam's Club, etc.",until:"Ongoing",search:["walmart","target","sam's","sams","warehouse","superstore"]},
  {category:"Grocery Stores",icon:"🧺",card:"Chase Freedom Flex",cash:"5%",details:"Kroger, HEB, etc. (excludes warehouse and superstores)",until:"Dec 31, 2026",search:["grocery","kroger","heb"]},
  {category:"Flights",icon:"✈️",card:"Bank of America",cash:"2.625%",details:"Airlines, air travel purchases",until:"Ongoing",search:["flight","airline","air travel"]},
  {category:"Travel / Hotels",icon:"🏨",card:"Capital One / Chase",cash:"5%",details:"Capital One and Chase Travel portal purchases",until:"Ongoing",search:["hotel","travel","capital one travel","chase travel"]},
