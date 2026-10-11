@@ -1234,6 +1234,11 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-repeat:no-repeat!important;
 }
 
+/* Recurring Payments category chips: use the same solid dark-blue fill as unselected filter chips. */
+#bills .payment-card .type-pill{
+  background:#07101f!important;
+  background-color:#07101f!important;
+}
 /* Recurring Payments: enlarge category chips by 2px. */
 #bills .payment-card .type-pill{
   font-size:14px!important;
