@@ -935,6 +935,14 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .hero.rewards-search-only .rewards-panel-title{
   color:var(--text,#f5f7fb);
 }
+/* Shorten the Rewards search field to sit closer to the title's height. */
+.hero.rewards-search-only .search-wrap{
+  height:32px;
+  padding:0 10px;
+}
+.hero.rewards-search-only .search-wrap input{
+  font-size:14px;
+}
 @media(max-width:760px){
   .hero.rewards-search-only{padding:0 0 10px!important}
 }
