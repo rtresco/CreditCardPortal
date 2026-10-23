@@ -1185,6 +1185,9 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #bills .payment-card.payment-category-software .payment-card-top{
   background-image:url("./images/software-payment-header.jpg");
 }
+#bills .payment-card.payment-category-memberships .payment-card-top{
+  background-image:url("./images/memberships-reward-header.jpg");
+}
 
 /* Keep issuer-name pills consistent with the richer Card Benefits gradients
    across Card Rewards and Recurring Payments. */
