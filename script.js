@@ -1,11 +1,11 @@
 const rewards = [
- {category:"Superstores / Clubs",icon:"🛒",card:"Bank of America",cash:"2.625%",details:"Walmart, Target, Sam's Club, etc.",until:"Ongoing",search:["walmart","target","sam's","sams","warehouse","superstore"]},
  {category:"Grocery Stores",icon:"🧺",card:"Chase Freedom Flex",cash:"5%",details:"Kroger, HEB, etc. (excludes warehouse and superstores)",until:"Dec 31, 2026",search:["grocery","kroger","heb"]},
+ {category:"Restaurants / Dining",icon:"🍴",card:"Chase Freedom Flex",cash:"7%",details:"Dine-in, takeout, delivery",until:"Dec 31, 2026",search:["restaurant","dining","takeout","delivery"]},
+ {category:"Superstores / Clubs",icon:"🛒",card:"Bank of America",cash:"2.625%",details:"Walmart, Target, Sam's Club, etc.",until:"Ongoing",search:["walmart","target","sam's","sams","warehouse","superstore"]},
  {category:"Flights",icon:"✈️",card:"Bank of America",cash:"2.625%",details:"Airlines, air travel purchases",until:"Ongoing",search:["flight","airline","air travel"]},
  {category:"Travel / Hotels",icon:"🏨",card:"Capital One / Chase",cash:"5%",details:"Capital One and Chase Travel portal purchases",until:"Ongoing",search:["hotel","travel","capital one travel","chase travel"]},
  {category:"Gas",icon:"⛽",card:"Bank of America",cash:"2.625%",details:"Gas stations",until:"Ongoing",search:["gas","gas station","fuel"]},
  {category:"Public Transportation",icon:"🚌",card:"Bank of America",cash:"2.625%",details:"Bus, rail, ferry, etc.",until:"Ongoing",search:["bus","rail","ferry","transportation"]},
- {category:"Restaurants / Dining",icon:"🍴",card:"Chase Freedom Flex",cash:"7%",details:"Dine-in, takeout, delivery",until:"Dec 31, 2026",search:["restaurant","dining","takeout","delivery"]},
  {category:"Entertainment",icon:"🎟️",card:"Discover",cash:"5%",details:"Movies, concerts, events, etc.",until:"Dec 31, 2026",search:["movie","concert","entertainment","event"]},
  {category:"Streaming Services",icon:"▶️",card:"Capital One Savor",cash:"3%",details:"Netflix, YouTube TV, Disney+ / Hulu Bundle, Paramount+, Spotify, HBO Max, etc.",until:"Ongoing",search:["streaming","netflix","youtube tv","disney","hulu","paramount","spotify","hbo"]},
  {category:"Utilities",icon:"💡",card:"Discover",cash:"5%",details:"Electric, water, internet, phone, etc.",until:"Dec 31, 2026",search:["utility","electric","electricity","water","internet","phone"]},
