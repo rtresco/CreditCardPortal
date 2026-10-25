@@ -35,7 +35,7 @@ const bills = [
  ["📺 Paramount+","Streaming","Bank of America Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
  ["📺 YouTube TV","Streaming","Chase Freedom Unlimited","$20 Cash Back","Expires 10/29/2026","https://tv.youtube.com/"],
  ["📺 Disney+ / Hulu Bundle","Streaming","Capital One Savor","3% Cash Back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
- ["📺 HBO Max","Streaming","Capital One Savor","3% Cash Back","Promo price expires 12/1/2026, then $10.99/month","https://play.hbomax.com/"],
+ ["📺 HBO Max","Streaming","Capital One Savor","3% Cash Back","Promo price expires 11/24/2026, then $10.99/month","https://play.hbomax.com/"],
  ["🎵 Spotify","Streaming","Capital One Savor","3% Cash Back","","https://www.spotify.com/"],
  ["🤖 ChatGPT","Software","Bank of America Visa","","","https://chatgpt.com/"],
  ["📍 Life360","Software","Bank of America Visa","","","https://play.google.com/"],
