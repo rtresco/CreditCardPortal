@@ -1358,7 +1358,7 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   padding:68px 0 0!important;
   gap:0!important;
   background-color:#000!important;
-  background-size:100% 68px!important;
+  background-size:cover!important;
   background-position:center top!important;
   background-repeat:no-repeat!important;
   border-bottom:0!important;
@@ -1399,6 +1399,6 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   #rewards .reward-card .reward-top{
     min-height:116px!important;
     padding-top:64px!important;
-    background-size:100% 64px!important;
+    background-size:cover!important;
   }
 }
