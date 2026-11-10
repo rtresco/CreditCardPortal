@@ -1319,3 +1319,23 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .my-card.usb .card-site-link:hover{
   color:#26313d!important;
 }
+
+
+/* U.S. Bank Cash+ benefits: silver issuer treatment. */
+.chip-usb{
+  background:linear-gradient(135deg,#929ba6 0%,#c2c8cf 55%,#eef1f4 100%);
+  border-color:#c5ccd4;
+  color:#26313d;
+  text-shadow:none;
+}
+.tab-btn.active.chip-usb{
+  background:linear-gradient(135deg,#929ba6 0%,#c2c8cf 55%,#eef1f4 100%);
+  border-color:#c5ccd4;
+  color:#26313d;
+}
+.benefit-card .tag.chip-usb{
+  background:linear-gradient(135deg,#929ba6 0%,#c2c8cf 55%,#eef1f4 100%);
+  border-color:#c5ccd4;
+  color:#26313d;
+  text-shadow:none;
+}
