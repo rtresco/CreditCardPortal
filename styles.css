@@ -1339,3 +1339,11 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   color:#26313d;
   text-shadow:none;
 }
+
+
+/* U.S. Bank Cash+ quarterly category header */
+.offer-head.offer-usb{
+  background:linear-gradient(135deg,#929ba6 0%,#c2c8cf 55%,#eef1f4 100%);
+  border-bottom:1px solid #aeb7c1;
+  color:#26313d;
+}
