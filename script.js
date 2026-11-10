@@ -90,9 +90,32 @@ const benefits = {
   ["🚫 Unauthorized Charge Protection","Zero-liability / fraud protection, subject to issuer terms."]
  ],
  "U.S. Bank Cash+ Visa Signature":[
+  ["💰 5% Cash Back","Earn 5% cash back on your first $2,000 in combined eligible purchases each quarter (exclusions apply)."],
+  ["🛍️ 2% Cash Back","Earn 2% cash back on your choice of one everyday category (exclusions apply)."],
+  ["💳 1% Cash Back","Earn 1% cash back on all other eligible purchases."],
+  ["✈️ 5% Cash Back — Travel Center","Earn 5% cash back when using your card to book prepaid air, hotels and car rentals in the Travel Center."],
+  ["⛳ Premier Golf Rewards","Earn more points on golf fees and merchandise with Troon®."],
+  ["🎵 Sofar Sounds Access","Discover new music with exclusive ticket offers and presale access."],
+  ["🎢 Universal Studios Hollywood Offers","A world of action and adventure awaits with Universal Studios Hollywood offers."],
+  ["🎟️ Universal Orlando Resort Offers","Enjoy special offers at Universal Orlando Resort."],
+  ["🧳 Book a Trip","Explore fun travel options and create your dream vacation."],
+  ["🛎️ Concierge Service","Get assistance with travel planning, entertainment tickets and more."],
+  ["🚘 Car Rental Discounts","Unlock special offers and upgrades from Avis® and Budget®."],
+  ["📱 GigSky Global Mobile Data","Stay connected with global mobile data options in destinations around the world."],
+  ["🛒 Cash-Back Deals","Earn up to 5% total cash back on online shopping."],
+  ["🏦 U.S. Bank Smart Rewards®","Grow with U.S. Bank and get rewarded."],
+  ["🎁 Discounted Gift Cards","Receive 5% off your order when you purchase from The Gift Card Shop."],
+  ["📅 U.S. Bank ExtendPay® Plan","Get extra time to pay for larger purchases."],
+  ["🛍️ Shop with Points at Amazon.com","Use your rewards to get your favorite items at Amazon.com."],
+  ["💻 Check Out with PayPal","Redeem your rewards at checkout for easy online shopping."],
+  ["📲 Real-Time Rewards","Claim your rewards instantly on new purchases with a text."],
   ["🛡️ Zero Fraud Liability & More","Built-in protection features and security coverage."],
-  ["🚗 Roadside Dispatch®","24/7 emergency roadside assistance."],
-  ["🧭 Travel & Emergency Assistance","Emergency assistance while traveling."]
+  ["🚗 Roadside Dispatch®","Rely on 24/7 emergency roadside assistance."],
+  ["🧭 Travel & Emergency Assistance","Count on emergency assistance while traveling."],
+  ["👥 Authorized Users","Add authorized users to share your account with family or friends."],
+  ["🔔 Account Alerts","Set account alerts to track your balance, payments and more."],
+  ["📄 Go Paperless","With e-statements it's easy, simple and saves paper."],
+  ["📱 24/7 Account Access","Bank when and where you want with the mobile app or online banking."]
  ]
 };
 
