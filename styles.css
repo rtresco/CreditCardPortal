@@ -1309,3 +1309,13 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .my-card.usb ul{
   color:#26313d!important;
 }
+
+
+/* U.S. Bank Cash+: dark-to-light silver gradient and dark card link arrow. */
+.my-card.usb{
+  background:linear-gradient(135deg,#929ba6 0%,#c2c8cf 55%,#eef1f4 100%)!important;
+}
+.my-card.usb .card-site-link,
+.my-card.usb .card-site-link:hover{
+  color:#26313d!important;
+}
