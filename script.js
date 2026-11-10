@@ -88,6 +88,11 @@ const benefits = {
   ["💎 Purchase Protection","Purchase protection/security for eligible theft or damage."],
   ["🔧 Manufacturer Warranty","Extended warranty protection."],
   ["🚫 Unauthorized Charge Protection","Zero-liability / fraud protection, subject to issuer terms."]
+ ],
+ "U.S. Bank Cash+ Visa Signature":[
+  ["🛡️ Zero Fraud Liability & More","Built-in protection features and security coverage."],
+  ["🚗 Roadside Dispatch®","24/7 emergency roadside assistance."],
+  ["🧭 Travel & Emergency Assistance","Emergency assistance while traveling."]
  ]
 };
 
@@ -106,6 +111,7 @@ function cardChipClass(name){
   if(name.includes("Chase Freedom Unlimited")) return "chip-unlimited";
   if(name.includes("Chase Freedom Flex")) return "chip-flex";
   if(name.includes("Bank of America") || name.includes("Bank of America Visa")) return "chip-boa";
+  if(name.includes("U.S. Bank Cash+")) return "chip-usb";
   return "chip-neutral";
 }
 function renderCardChips(name){
@@ -201,7 +207,8 @@ function renderBenefits(card="Chase Freedom Flex"){
   "Chase Freedom Unlimited":"https://www.chase.com/personal/credit-cards/education/chase-cards/chase-freedom-benefits-guide",
   "Capital One Savor":"https://ecm.capitalone.com/WCM/card/discover-gtb_english-web.pdf",
   "Discover More":"https://www.mycardbenefits.com/",
-  "Bank of America":"https://bankofamericalifestylebenefits.com/client/dashboard.jsf"
+  "Bank of America":"https://bankofamericalifestylebenefits.com/client/dashboard.jsf",
+  "U.S. Bank Cash+ Visa Signature":"https://rewards.usbank.com/benefits/card/CashPlusBenefits"
 };
 benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn ${c===card?"active":""} ${c===card?cardChipClass(c):""}" data-card="${c}"><span>${c === "Bank of America" ? "Bank of America Unlimited Cash Rewards" : c.replace("Chase Freedom ","Chase ")}</span>${benefitGuides[c]?`<a class="benefit-guide-link" href="${benefitGuides[c]}" target="_blank" rel="noopener" title="Open ${c} benefits guide" onclick="event.stopPropagation()">↗</a>`:""}</button>`).join("");
   benefitContent.innerHTML=`
