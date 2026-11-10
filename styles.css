@@ -1283,3 +1283,10 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     font-size:17px!important;
   }
 }
+
+
+/* My Cards: slightly enlarge the Bank of America logo without changing U.S. Bank sizing. */
+.my-card.boa:not(.usb) .portfolio-bank-logo{
+  width:68px;
+  height:68px;
+}
