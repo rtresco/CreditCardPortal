@@ -90,9 +90,8 @@ const benefits = {
   ["🚫 Unauthorized Charge Protection","Zero-liability / fraud protection, subject to issuer terms."]
  ],
  "U.S. Bank Cash+ Visa Signature":[
-  ["💰 5% Cash Back","Earn 5% cash back on your first $2,000 in combined eligible purchases each quarter (exclusions apply)."],
-  ["🛍️ 2% Cash Back","Earn 2% cash back on your choice of one everyday category (exclusions apply)."],
-  ["💳 1% Cash Back","Earn 1% cash back on all other eligible purchases."],
+  ["💰 5% Cash Back","Earn 5% cash back on your first $2,000 in combined eligible purchases each quarter (exclusions apply). Eligible spend categories: Cell Phone Providers, Department Stores, Electronic Stores, Fast Food, Furniture Stores, Ground Transportation, Gym/Fitness Centers, Home Utilities, Movie Theaters, Select Clothing Stores, Sporting Goods Stores, and TV, Internet & Streaming Services."],
+  ["🛍️ 2% Cash Back","Earn 2% cash back on your choice of one everyday category. Everyday categories: Gas Stations and EV Charging Stations*, Grocery Stores* or Restaurants. *Excludes discount stores/supercenters and wholesale clubs."],
   ["✈️ 5% Cash Back — Travel Center","Earn 5% cash back when using your card to book prepaid air, hotels and car rentals in the Travel Center."],
   ["⛳ Premier Golf Rewards","Earn more points on golf fees and merchandise with Troon®."],
   ["🎵 Sofar Sounds Access","Discover new music with exclusive ticket offers and presale access."],
