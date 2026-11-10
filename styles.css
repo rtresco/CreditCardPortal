@@ -1347,3 +1347,29 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   border-bottom:1px solid #aeb7c1;
   color:#26313d;
 }
+
+
+/* Card Rewards: connect the translucent smoke backing behind the category and rate. */
+#rewards .reward-card .reward-top{
+  position:relative;
+  isolation:isolate;
+}
+#rewards .reward-card .reward-top::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:0;
+  right:0;
+  top:50%;
+  height:42px;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.62);
+}
+#rewards .reward-card .reward-category-label{
+  background:transparent!important;
+  box-shadow:none!important;
+}
+#rewards .reward-card .reward-top .reward-header-rate{
+  background:transparent!important;
+  box-shadow:none!important;
+}
