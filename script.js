@@ -97,7 +97,7 @@ const cards = [
  ["discover","Capital One","Discover More","5% quarterly rotating categories.","Activate quarterly categories.","https://www.capitalone.com/"],
  ["","Chase","Freedom Flex Mastercard","5% quarterly rotating categories; 5% through Chase Travel.","Travel Portal • Activate quarterly categories.","https://www.chase.com/"],
  ["","Chase","Freedom Unlimited Visa","3% on drugstores and restaurants.","Restaurants • Drugstores","https://www.chase.com/"],
- ["usb","U.S. Bank","Cash+ Visa Signature","Two 5% quarterly categories. One 2% quarterly “everyday” category.","Select two 5% quarterly categories to activate. • Select one 2% quarterly “everyday” category to activate.","https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html"]
+ ["usb","U.S. Bank","Cash+ Visa Signature","Two 5% quarterly categories. One 2% quarterly “everyday” category.","Select two 5% quarterly categories to activate. • Select one 2% quarterly “everyday” category to activate.","https://www.usbank.com/"]
 ];
 
 function cardChipClass(name){
