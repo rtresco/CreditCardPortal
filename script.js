@@ -229,7 +229,7 @@ function renderBenefits(card="Chase Freedom Flex"){
   "Chase Freedom Flex":"https://www.chase.com/personal/credit-cards/education/chase-cards/chase-freedom-benefits-guide",
   "Chase Freedom Unlimited":"https://www.chase.com/personal/credit-cards/education/chase-cards/chase-freedom-benefits-guide",
   "Capital One Savor":"https://ecm.capitalone.com/WCM/card/discover-gtb_english-web.pdf",
-  "Discover More":"https://www.mycardbenefits.com/",
+  "Discover More":"https://www.capitalone.com/updates/discover/consumer-card/",
   "Bank of America":"https://bankofamericalifestylebenefits.com/client/dashboard.jsf",
   "U.S. Bank Cash+ Visa Signature":"https://rewards.usbank.com/benefits/card/CashPlusBenefits"
 };
