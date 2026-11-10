@@ -1290,3 +1290,22 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   width:68px;
   height:68px;
 }
+
+
+/* U.S. Bank Cash+: lighter silver gradient, distinct from the darker BofA gray. */
+.my-card.usb{
+  background:linear-gradient(135deg,#d9dde2 0%,#aeb6c0 52%,#eef1f4 100%)!important;
+  border-color:#c5ccd4!important;
+  color:#26313d!important;
+}
+.my-card.usb h2,
+.my-card.usb p,
+.my-card.usb li{
+  color:#26313d!important;
+}
+.my-card.usb .portfolio-card-brand{
+  color:#46515e!important;
+}
+.my-card.usb ul{
+  color:#26313d!important;
+}
