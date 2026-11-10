@@ -1347,3 +1347,58 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   border-bottom:1px solid #aeb7c1;
   color:#26313d;
 }
+
+
+/* Card Rewards: separate the photo strip from a full-width black category/rate bar. */
+#rewards .reward-card .reward-top{
+  display:flex!important;
+  align-items:center!important;
+  box-sizing:border-box;
+  min-height:122px!important;
+  padding:68px 0 0!important;
+  gap:0!important;
+  background-color:#000!important;
+  background-size:100% 68px!important;
+  background-position:center top!important;
+  background-repeat:no-repeat!important;
+  border-bottom:0!important;
+}
+#rewards .reward-card .reward-category-label{
+  display:inline-flex!important;
+  align-items:center!important;
+  flex:1 1 auto!important;
+  min-width:0!important;
+  max-width:none!important;
+  gap:10px!important;
+  padding:10px 14px!important;
+  border-radius:0!important;
+  background:#000!important;
+  box-shadow:none!important;
+}
+#rewards .reward-card .reward-category-label .reward-icon{
+  flex:0 0 auto!important;
+}
+#rewards .reward-card .reward-category-label .reward-title{
+  min-width:0;
+  overflow-wrap:normal!important;
+}
+#rewards .reward-card .reward-top .reward-header-rate{
+  align-self:stretch!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  margin:0!important;
+  padding:10px 14px!important;
+  border-radius:0!important;
+  background:#000!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  color:#fff!important;
+}
+@media(max-width:760px){
+  #rewards .reward-card .reward-top{
+    min-height:116px!important;
+    padding-top:64px!important;
+    background-size:100% 64px!important;
+  }
+}
