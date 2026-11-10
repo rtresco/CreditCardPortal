@@ -236,7 +236,6 @@ function renderBenefits(card="Chase Freedom Flex"){
 benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn ${c===card?"active":""} ${c===card?cardChipClass(c):""}" data-card="${c}"><span>${c === "Bank of America" ? "Bank of America Unlimited Cash Rewards" : c.replace("Chase Freedom ","Chase ")}</span>${benefitGuides[c]?`<a class="benefit-guide-link" href="${benefitGuides[c]}" target="_blank" rel="noopener" title="Open ${c} benefits guide" onclick="event.stopPropagation()">↗</a>`:""}</button>`).join("");
   benefitContent.innerHTML=`
     <div class="benefit-list">${benefits[card].map(b=>`<article class="benefit-card"><span class="tag ${cardChipClass(card)}">${card === "Bank of America" ? "Bank of America Unlimited Cash Rewards" : card}</span><h3>${b[0]}</h3><div class="benefit-body">${b[1]}</div></article>`).join("")}</div>
-    ${card !== "U.S. Bank Cash+ Visa Signature" ? `
     <div class="info-panel">
       <h2>📝 Benefit Notes</h2>
       <ul>
@@ -249,7 +248,6 @@ benefitTabs.innerHTML=Object.keys(benefits).map((c,i)=>`<button class="tab-btn $
       <h2>✈️ Travel Benefits</h2>
       <p>Savor has the broadest set of travel-related benefits, including baggage, lost luggage, travel accident, trip cancellation/interruption, and rental-car coverage.</p>
     </div>
-    ${` : ""}
 `;
   benefitTabs.querySelectorAll(".tab-btn").forEach(btn=>btn.onclick=()=>renderBenefits(btn.dataset.card));
 }
