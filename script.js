@@ -253,7 +253,7 @@ function renderCards(){
     <div class="info-panel page-notes">
       <h2>📝 Notes</h2>
       <ul>
-        <li>Activate Discover and Chase Freedom Flex 5% categories each quarter (required).</li>
+        <li>Activate Discover and Chase Freedom Flex 5% categories, as well as U.S. Bank Cash+ Signature 5%/2% categories, each quarter (required).</li>
         <li>Choose to activate U.S. Bank Cash+ Visa Signature 5% &amp; 2% categories each quarter (required).</li>
         <li>Bank of America base rewards (1.5%) post first; the 75% Preferred Honors bonus is added after the transaction posts (total 2.625%).</li>
         <li>Chase Freedom Flex/Unlimited: 3% on dining and 3% on drugstores.</li>
