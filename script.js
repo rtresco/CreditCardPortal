@@ -171,17 +171,6 @@ function renderRewards(){
         ${multi && r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}
       </article>`;
   }).join("");
-  document.getElementById("rewards").insertAdjacentHTML("beforeend", `
-    <div class="info-panel page-notes">
-      <h2>📝 Notes</h2>
-      <ul>
-        <li>Activate Discover and Chase Freedom Flex 5% categories each quarter (required).</li>
-        <li>Choose to activate U.S. Bank Cash+ Visa Signature 5% &amp; 2% categories each quarter (required).</li>
-        <li>Bank of America base rewards (1.5%) post first; the 75% Preferred Honors bonus is added after the transaction posts (total 2.625%).</li>
-        <li>Chase Freedom Flex/Unlimited: 3% on dining and 3% on drugstores.</li>
-        <li>Capital One Savor: 3% on grocery stores, dining, entertainment and popular streaming services.</li>
-      </ul>
-    </div>`);
 }
 function paymentCardClass(method){
   if(method === "Discover" || method === "Discover More") return "payment-discover";
@@ -260,6 +249,17 @@ function renderOffers(){
 }
 function renderCards(){
   cardsGrid.innerHTML=cards.map(c=>{const logoPath=c[0]==="boa"?"./images/boa-icon.svg":c[0]==="capital"?"./images/capital-one-icon.svg":c[0]==="discover"?"./images/discover-icon.svg":c[0]==="usb"?"./images/us-bank-icon.svg":"./images/chase-icon.svg";return `<article class="my-card ${c[0]} ${c[0]==="usb"?"boa":""} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand"><img class="portfolio-bank-logo" src="${logoPath}" alt="${c[1]} icon" loading="lazy">${c[1]}</div><h2>${c[2]} <a class="card-site-link" href="${c[5]}" target="_blank" rel="noopener" title="Open ${c[2]} website">↗</a></h2><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`}).join("");
+  cardsGrid.insertAdjacentHTML("afterend", `
+    <div class="info-panel page-notes">
+      <h2>📝 Notes</h2>
+      <ul>
+        <li>Activate Discover and Chase Freedom Flex 5% categories each quarter (required).</li>
+        <li>Choose to activate U.S. Bank Cash+ Visa Signature 5% &amp; 2% categories each quarter (required).</li>
+        <li>Bank of America base rewards (1.5%) post first; the 75% Preferred Honors bonus is added after the transaction posts (total 2.625%).</li>
+        <li>Chase Freedom Flex/Unlimited: 3% on dining and 3% on drugstores.</li>
+        <li>Capital One Savor: 3% on grocery stores, dining, entertainment and popular streaming services.</li>
+      </ul>
+    </div>`);
 }
 function showView(view){
   document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===view));
