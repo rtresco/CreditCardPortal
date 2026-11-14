@@ -126,7 +126,7 @@ const cards = [
  ["","Chase","Freedom Unlimited Visa","3% on drugstores and restaurants.","Restaurants • Drugstores","https://www.chase.com/"],
  ["usb","U.S. Bank","Cash+ Visa Signature","Two 5% quarterly categories. One 2% quarterly “everyday” category.","Select two 5% quarterly categories to activate. • Select one 2% quarterly “everyday” category to activate.","https://www.usbank.com/"],
  ["synchrony","Synchrony Bank","Walmart OnePay Cash Rewards Mastercard","","","https://www.synchrony.com/"],
- ["synchrony","Synchrony Bank","Amazon Prime Store Card","","","https://www.synchrony.com/"]
+ ["synchrony","Synchrony Bank","Amazon Prime Store Card","","","https://asc.syf.com/login/"]
 ];
 
 function cardChipClass(name){
