@@ -1386,3 +1386,14 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .my-card.synchrony p,
 .my-card.synchrony li{color:#fff!important}
 .my-card.synchrony .portfolio-card-brand{color:#c7c7c7!important}
+
+
+/* Synchrony Bank wordmark: use the wide horizontal SVG rather than the square bank marks. */
+.my-card.synchrony .portfolio-bank-logo{
+  top:19px;
+  right:14px;
+  width:104px;
+  height:38px;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.75));
+}
