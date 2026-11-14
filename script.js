@@ -124,7 +124,9 @@ const cards = [
  ["discover","Capital One","Discover More","5% quarterly rotating categories.","Activate quarterly categories.","https://www.capitalone.com/"],
  ["","Chase","Freedom Flex Mastercard","5% quarterly rotating categories; 5% through Chase Travel.","Travel Portal • Activate quarterly categories.","https://www.chase.com/"],
  ["","Chase","Freedom Unlimited Visa","3% on drugstores and restaurants.","Restaurants • Drugstores","https://www.chase.com/"],
- ["usb","U.S. Bank","Cash+ Visa Signature","Two 5% quarterly categories. One 2% quarterly “everyday” category.","Select two 5% quarterly categories to activate. • Select one 2% quarterly “everyday” category to activate.","https://www.usbank.com/"]
+ ["usb","U.S. Bank","Cash+ Visa Signature","Two 5% quarterly categories. One 2% quarterly “everyday” category.","Select two 5% quarterly categories to activate. • Select one 2% quarterly “everyday” category to activate.","https://www.usbank.com/"],
+ ["synchrony","Synchrony Bank","Walmart OnePay Cash Rewards Mastercard","","","https://www.synchrony.com/"],
+ ["synchrony","Synchrony Bank","Amazon Prime Store Card","","","https://www.synchrony.com/"]
 ];
 
 function cardChipClass(name){
@@ -248,7 +250,7 @@ function renderOffers(){
   <article class="offer-card"><div class="offer-head">Offers Currently Used</div><div class="offer-body"><div class="used-offer-item"><h3>Paramount+</h3><p><strong class="offer-card-title chip-boa">Bank of America Checking</strong></p><p>Up to $8 off/month • No expiration.</p></div><div class="used-offer-item"><h3>YouTube TV</h3><p><strong class="offer-card-title chip-unlimited">Chase Freedom Unlimited</strong></p><p>$20 Cash Back • Expires 10/29/2026.</p></div></div></article>`;
 }
 function renderCards(){
-  cardsGrid.innerHTML=cards.map(c=>{const logoPath=c[0]==="boa"?"./images/boa-icon.svg":c[0]==="capital"?"./images/capital-one-icon.svg":c[0]==="discover"?"./images/discover-icon.svg":c[0]==="usb"?"./images/us-bank-icon.svg":"./images/chase-icon.svg";return `<article class="my-card ${c[0]} ${c[0]==="usb"?"boa":""} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand"><img class="portfolio-bank-logo" src="${logoPath}" alt="${c[1]} icon" loading="lazy">${c[1]}</div><h2>${c[2]} <a class="card-site-link" href="${c[5]}" target="_blank" rel="noopener" title="Open ${c[2]} website">↗</a></h2><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`}).join("");
+  cardsGrid.innerHTML=cards.map(c=>{const logoPath=c[0]==="boa"?"./images/boa-icon.svg":c[0]==="capital"?"./images/capital-one-icon.svg":c[0]==="discover"?"./images/discover-icon.svg":c[0]==="usb"?"./images/us-bank-icon.svg":c[0]==="synchrony"?"":"./images/chase-icon.svg";return `<article class="my-card ${c[0]} ${c[0]==="usb"?"boa":""} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand">${logoPath?'<img class="portfolio-bank-logo" src="'+logoPath+'" alt="'+c[1]+' icon" loading="lazy">':''}${c[1]}</div><h2>${c[2]} <a class="card-site-link" href="${c[5]}" target="_blank" rel="noopener" title="Open ${c[2]} website">↗</a></h2><p style="margin-top:10px">${c[3]}</p><ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul></article>`}).join("");
   cardsGrid.insertAdjacentHTML("afterend", `
     <div class="info-panel page-notes">
       <h2>📝 Notes</h2>
