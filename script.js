@@ -46,7 +46,7 @@ const bills = [
  ["☁️ Google One AI Plus (400 GB)","Software","Bank of America Visa","","","https://play.google.com/"],
  ["📻 VRadio","Software","Bank of America Visa","","","https://play.google.com/"],
  ["🛣️ AAA Texas","Memberships","Bank of America Visa","","","https://www.aaa.com/"],
- ["🛒 Sam's Club / Walmart+","Memberships","Bank of America Visa","","","https://www.samsclub.com/"],
+ ["🛒 Sam's Club / Walmart+","Memberships","Bank of America Visa","","When renewing, check cards for cash back offers. For example, Chase Unlimited offered 40% back for memberships (up to $20).","https://www.samsclub.com/"],
  ["📦 Amazon","Memberships","Bank of America Visa","","","https://www.amazon.com/"]
 ];
 
