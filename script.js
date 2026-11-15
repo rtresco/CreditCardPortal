@@ -294,7 +294,15 @@ globalSearch.addEventListener("input",()=>{
     if(q.startsWith("amaz") || q.includes("amazon") || q.startsWith("whole") || q.includes("whole foods")) return r.card==="Amazon Prime Store Card";
     return [r.category,r.card,r.details,...r.search].join(" ").toLowerCase().includes(q);
   });
-  searchResults.innerHTML=matches.length?matches.map(r=>`<article class="search-result ${cardChipClass(r.card.includes("Capital One")?"Capital One Savor":r.card.includes("Freedom Flex")?"Chase Freedom Flex":r.card.includes("Unlimited")?"Chase Freedom Unlimited":r.card.includes("Discover")?"Discover More":"Bank of America")}"><div class="search-result-top"><div class="search-result-category"><span class="search-result-icon">${r.icon}</span><div><strong>${r.category}</strong><div class="search-result-detail">${r.details}</div></div></div><strong class="search-result-cash">${r.cash}</strong></div>${renderSearchRewardBottom(r.card)}</article>`).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
+  searchResults.innerHTML=matches.length?matches.map(r=>{
+    const parts=r.card==="Capital One / Chase"?["Capital One Savor","Chase Freedom Flex"]:
+      r.card==="Chase Freedom Flex & Unlimited"?["Chase Freedom Flex","Chase Freedom Unlimited"]:
+      r.card==="Discover"?["Discover More"]:[r.card];
+    const multi=parts.length>1;
+    const categoryClass="category-"+r.category.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+    const lower=multi?parts.map(card=>`<div class="reward-issuer-section ${cardChipClass(card)}"><div class="card-name">${card}</div></div>`).join(""):`<div class="reward-gradient-area ${cardChipClass(parts[0])}"><div class="reward-card-method">${renderCardChips(r.card)}</div>${r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</div>`;
+    return `<article class="search-result reward-card ${categoryClass} ${multi?"reward-card-multi":cardChipClass(parts[0])}"><div class="reward-top"><div class="reward-category-label"><div class="reward-icon">${r.icon}</div><div class="reward-category-block"><div class="reward-title">${r.category}</div></div></div><div class="reward-header-rate">${r.cash}</div></div>${lower}${multi&&r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</article>`;
+  }).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
   searchResults.classList.remove("hidden");
 });
 
