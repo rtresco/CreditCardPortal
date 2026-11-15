@@ -1396,3 +1396,24 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   object-fit:contain;
   filter:drop-shadow(0 3px 5px rgba(0,0,0,.75));
 }
+
+
+/* Amazon Prime Store Card and Walmart OnePay rewards: Synchrony black finish. */
+.chip-synchrony{
+  background:linear-gradient(135deg,#050505 0%,#171717 48%,#3b3b3b 100%)!important;
+  background-image:linear-gradient(135deg,#050505 0%,#171717 48%,#3b3b3b 100%)!important;
+  border-color:#555!important;
+  color:#fff!important;
+  text-shadow:none!important;
+}
+#rewards .reward-card.chip-synchrony .reward-gradient-area{
+  background:linear-gradient(135deg,#050505 0%,#171717 48%,#3b3b3b 100%)!important;
+}
+#rewards .reward-card.chip-synchrony .card-chip{
+  background:rgba(0,0,0,.42)!important;
+  border-color:rgba(255,255,255,.24)!important;
+  color:#fff!important;
+}
+.search-result-bottom.chip-synchrony{
+  background:linear-gradient(135deg,#050505 0%,#171717 48%,#3b3b3b 100%)!important;
+}
