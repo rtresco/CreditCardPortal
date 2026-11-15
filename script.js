@@ -3,6 +3,8 @@ const rewards = [
  {category:"Restaurants / Dining",icon:"🍴",card:"Chase Freedom Flex",cash:"7%",details:"Dine-in, takeout, delivery",until:"Dec 31, 2026",search:["restaurant","dining","takeout","delivery"]},
  {category:"Drugstores",icon:"💊",card:"Chase Freedom Flex & Unlimited",cash:"3%",details:"CVS, Walgreens, etc.",until:"Ongoing",search:["drugstore","cvs","walgreens","pharmacy"]},
  {category:"Superstores / Clubs",icon:"🛒",card:"Bank of America",cash:"2.625%",details:"Walmart, Target, Sam's Club, etc.",until:"Ongoing",search:["walmart","target","sam's","sams","warehouse","superstore"]},
+ {category:"Amazon.com / Whole Foods",icon:"📦",card:"Amazon Prime Store Card",cash:"5%",details:"Amazon.com and Whole Foods purchases with an active Prime membership.",until:"Ongoing",search:["amazon","whole foods","prime store card"]},
+ {category:"Walmart",icon:"🛒",card:"Walmart OnePay Cash Rewards",cash:"5%",details:"Walmart in-store and online purchases with an active Walmart+ membership.",until:"Ongoing",search:["walmart","onepay","walmart plus","walmart+"]},
  {category:"Gas",icon:"⛽",card:"Bank of America",cash:"2.625%",details:"Gas stations",until:"Ongoing",search:["gas","gas station","fuel"]},
  {category:"Entertainment",icon:"🎟️",card:"Discover",cash:"5%",details:"Movies, concerts, events, etc.",until:"Dec 31, 2026",search:["movie","concert","entertainment","event"]},
  {category:"Streaming Services",icon:"▶️",card:"Capital One Savor",cash:"3%",details:"Netflix, YouTube TV, Disney+ / Hulu Bundle, Paramount+, Spotify, HBO Max, etc.",until:"Ongoing",search:["streaming","netflix","youtube tv","disney","hulu","paramount","spotify","hbo"]},
@@ -130,6 +132,7 @@ const cards = [
 ];
 
 function cardChipClass(name){
+  if(name.includes("Amazon Prime Store Card") || name.includes("Walmart OnePay Cash Rewards")) return "chip-synchrony";
   if(name.includes("Discover")) return "chip-discover";
   if(name.includes("Capital One Savor")) return "chip-capital";
   if(name.includes("Chase Freedom Unlimited")) return "chip-unlimited";
