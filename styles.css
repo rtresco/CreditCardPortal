@@ -1417,3 +1417,21 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .search-result-bottom.chip-synchrony{
   background:linear-gradient(135deg,#050505 0%,#171717 48%,#3b3b3b 100%)!important;
 }
+
+
+/* Amazon and Walmart rewards: reuse the Superstores photo header and Synchrony charcoal finish. */
+#rewards .reward-card.category-amazon-whole-foods .reward-top,
+#rewards .reward-card.category-walmart .reward-top{
+  background-image:url("./images/warehouse-reward-header.jpg")!important;
+}
+.reward-card.chip-synchrony .reward-gradient-area,
+#rewards .reward-card.chip-synchrony .reward-gradient-area{
+  background:linear-gradient(135deg,#050505 0%,#171717 48%,#3b3b3b 100%)!important;
+  background-image:linear-gradient(135deg,#050505 0%,#171717 48%,#3b3b3b 100%)!important;
+}
+.reward-card.chip-synchrony .reward-gradient-area .card-chip,
+#rewards .reward-card.chip-synchrony .reward-gradient-area .card-chip{
+  background:rgba(0,0,0,.42)!important;
+  border-color:rgba(255,255,255,.24)!important;
+  color:#fff!important;
+}
