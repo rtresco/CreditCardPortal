@@ -1397,10 +1397,3 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   object-fit:contain;
   filter:drop-shadow(0 3px 5px rgba(0,0,0,.75));
 }
-
-
-/* My Cards: remove the extra-looking row gutter above the final Synchrony card row. */
-#cards .my-card.synchrony{
-  transform:translateY(-14px);
-  margin-bottom:-14px;
-}
