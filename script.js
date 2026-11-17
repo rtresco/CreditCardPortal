@@ -307,3 +307,60 @@ globalSearch.addEventListener("input",()=>{
 });
 
 renderRewards();renderBillFilters();renderBills();renderBenefits();renderOffers();renderCards();
+
+
+// Replace decorative emoji throughout all portal views with minimal Lucide outline icons.
+// This also covers content re-rendered later by filters and tabs.
+(()=>{
+  const iconMap={
+    "💰":"wallet","🏆":"trophy","🔄":"refresh-cw","💳":"credit-card","📋":"clipboard-list",
+    "⭐":"star","🔎":"search","📝":"notebook-pen","🛒":"shopping-cart","🛍️":"shopping-bag",
+    "🛍":"shopping-bag","🏪":"store","💊":"pill","⛽":"fuel","🎟️":"ticket",
+    "🎟":"ticket","🎬":"clapperboard","🎵":"music","📺":"tv","💡":"lightbulb",
+    "✈️":"plane","✈":"plane","🏨":"hotel","🚌":"bus","🚗":"car","🚘":"car",
+    "🛡️":"shield-check","🛡":"shield-check","🎁":"gift","📅":"calendar-days",
+    "📱":"smartphone","💻":"laptop","🔧":"wrench","🚫":"ban","👥":"users",
+    "🔔":"bell","📄":"file-text","🧭":"compass","🛎️":"bell-ring","🛎":"bell-ring",
+    "🎢":"ferris-wheel","🎫":"ticket","🏦":"landmark","📦":"package",
+    "🍽️":"utensils","🍽":"utensils","🚌":"bus","🛣️":"route","🛣":"route",
+    "📍":"map-pin","💵":"banknote","💲":"badge-dollar-sign","🔒":"lock",
+    "🌐":"globe","📞":"phone","📧":"mail","⚡":"zap","🏠":"house",
+    "🎮":"gamepad-2","🎤":"mic","🧳":"luggage","🚲":"bike"
+  };
+  const emojiPattern=/(?:\\p{Extended_Pictographic}(?:\\uFE0F|\\uFE0E)?(?:\\u200D\\p{Extended_Pictographic}(?:\\uFE0F|\\uFE0E)?)*)/gu;
+  function iconName(emoji){return iconMap[emoji]||iconMap[emoji.replace(/\\uFE0F/g,"")]||"sparkles";}
+  function convertTextNode(node){
+    const value=node.nodeValue;
+    if(!value||!emojiPattern.test(value)){emojiPattern.lastIndex=0;return;}
+    emojiPattern.lastIndex=0;
+    const frag=document.createDocumentFragment();
+    let last=0, match;
+    while((match=emojiPattern.exec(value))){
+      if(match.index>last)frag.append(document.createTextNode(value.slice(last,match.index)));
+      const span=document.createElement("span");
+      span.className="portal-lucide";
+      const icon=document.createElement("i");
+      icon.setAttribute("data-lucide",iconName(match[0]));
+      span.append(icon);frag.append(span);last=match.index+match[0].length;
+    }
+    if(last<value.length)frag.append(document.createTextNode(value.slice(last)));
+    node.parentNode.replaceChild(frag,node);
+    emojiPattern.lastIndex=0;
+  }
+  function convert(root){
+    if(!root)return;
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(convertTextNode);
+    if(window.lucide)window.lucide.createIcons();
+  }
+  convert(document.body);
+  const observer=new MutationObserver(records=>{
+    for(const record of records){
+      if(record.type==="childList")record.addedNodes.forEach(node=>{if(node.nodeType===Node.TEXT_NODE)convertTextNode(node);else if(node.nodeType===Node.ELEMENT_NODE)convert(node);});
+      else if(record.type==="characterData")convertTextNode(record.target);
+    }
+    if(window.lucide)window.lucide.createIcons();
+  });
+  observer.observe(document.body,{childList:true,subtree:true,characterData:true});
+})();
