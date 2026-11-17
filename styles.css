@@ -1440,3 +1440,17 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .portal-lucide{display:inline-flex;align-items:center;justify-content:center;vertical-align:-.16em;flex:0 0 auto;color:currentColor;line-height:1}
 .portal-lucide svg{display:block;width:1.08em;height:1.08em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .brand-icon .portal-lucide svg{width:27px;height:27px}.nav-btn .portal-lucide svg{width:17px;height:17px}.mobile-nav .nav-btn .portal-lucide svg{width:19px;height:19px}.reward-icon .portal-lucide svg{width:21px;height:21px}
+
+
+/* Grocery Stores reward header: soften the dark text backing so it blends
+   into the produce photo instead of reading as a hard-edged black strip. */
+#rewards .reward-card.category-grocery-stores .reward-top::before{
+  height:68px;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.48) 22%,
+    rgba(0,0,0,.48) 78%,
+    rgba(0,0,0,0) 100%
+  );
+}
