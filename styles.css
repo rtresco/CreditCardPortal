@@ -1435,3 +1435,8 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   border-color:rgba(255,255,255,.24)!important;
   color:#fff!important;
 }
+
+/* Minimal inline outline icons across the portal */
+.portal-lucide{display:inline-flex;align-items:center;justify-content:center;vertical-align:-.16em;flex:0 0 auto;color:currentColor;line-height:1}
+.portal-lucide svg{display:block;width:1.08em;height:1.08em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.brand-icon .portal-lucide svg{width:27px;height:27px}.nav-btn .portal-lucide svg{width:17px;height:17px}.mobile-nav .nav-btn .portal-lucide svg{width:19px;height:19px}.reward-icon .portal-lucide svg{width:21px;height:21px}
