@@ -1,24 +1,4 @@
 
-function rewardIcon(category){
-  const icons = {
-    "Grocery Stores": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8a3 3 0 0 1 6 0M8 12v4m4-4v4m4-4v4"/></svg>',
-    "Restaurants / Dining": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v7m-3-7v4a3 3 0 0 0 6 0V3M7 10v11M16 3v18m0-18c3 2 4 5 4 8h-4"/></svg>',
-    "Drugstores": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7V3Z"/></svg>',
-    "Superstores / Clubs": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>',
-    "Amazon / Whole Foods": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16l-1 13H5L4 7Z"/><path d="M9 7a3 3 0 0 1 6 0M8 12h8m-8 4h5"/></svg>',
-    "Walmart": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16v12H4zM3 4h18v4H3zM9 20v-6h6v6"/></svg>',
-    "Gas": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v17M3 21h14M7 6h6v5H7zM16 8h2l3 3v6a2 2 0 0 1-4 0v-4"/></svg>',
-    "Entertainment": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4zM8 5v14m8-14v14M4 9h4m8 0h4M4 15h4m8 0h4"/></svg>',
-    "Streaming Services": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/></svg>',
-    "Utilities": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 4h4m-2-20a7 7 0 0 0-4 12.7c.8.6 1 1.3 1 2.3h6c0-1 .2-1.7 1-2.3A7 7 0 0 0 12 2Z"/><path d="m13 6-4 6h3l-1 4 4-6h-3l1-4Z"/></svg>',
-    "Flights": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 16 20-6-8-3-3-5-2 1 2 5-6 2-3-2-1 1 2 4-1 3Z"/></svg>',
-    "Travel / Hotels": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16M3 10h18M8 10v4m8-4v4M2 21h20"/></svg>',
-    "Public Transportation": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 18l-2 3m10-3 2 3M8 7h.01M16 7h.01M8 14h.01M16 14h.01"/></svg>',
-    "Everything Else": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>'
-  };
-  return icons[category] || icons["Everything Else"];
-}
-
 const rewards = [
  {category:"Grocery Stores",icon:"🧺",card:"Chase Freedom Flex",cash:"5%",details:"Kroger, HEB, etc. (excludes warehouse and superstores)",until:"Dec 31, 2026",search:["grocery","kroger","heb"]},
  {category:"Restaurants / Dining",icon:"🍴",card:"Chase Freedom Flex",cash:"7%",details:"Dine-in, takeout, delivery",until:"Dec 31, 2026",search:["restaurant","dining","takeout","delivery"]},
@@ -187,7 +167,7 @@ function renderRewards(){
       <article class="reward-card ${categoryClass} ${multi ? "reward-card-multi" : cardChipClass(parts[0])}" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
         <div class="reward-top">
           <div class="reward-category-label">
-            <div class="reward-icon">${rewardIcon(r.category)}</div>
+            <div class="reward-icon">${r.icon}</div>
             <div class="reward-category-block"><div class="reward-title">${r.category}</div></div>
           </div>
           <div class="reward-header-rate">${r.cash}</div>
@@ -321,7 +301,7 @@ globalSearch.addEventListener("input",()=>{
     const multi=parts.length>1;
     const categoryClass="category-"+r.category.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
     const lower=multi?parts.map(card=>`<div class="reward-issuer-section ${cardChipClass(card)}"><div class="card-name">${card}</div></div>`).join(""):`<div class="reward-gradient-area ${cardChipClass(parts[0])}"><div class="reward-card-method">${renderCardChips(r.card)}</div>${r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</div>`;
-    return `<article class="search-result reward-card ${categoryClass} ${multi?"reward-card-multi":cardChipClass(parts[0])}"><div class="reward-top"><div class="reward-category-label"><div class="reward-icon">${rewardIcon(r.category)}</div><div class="reward-category-block"><div class="reward-title">${r.category}</div></div></div><div class="reward-header-rate">${r.cash}</div></div>${lower}${multi&&r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</article>`;
+    return `<article class="search-result reward-card ${categoryClass} ${multi?"reward-card-multi":cardChipClass(parts[0])}"><div class="reward-top"><div class="reward-category-label"><div class="reward-icon">${r.icon}</div><div class="reward-category-block"><div class="reward-title">${r.category}</div></div></div><div class="reward-header-rate">${r.cash}</div></div>${lower}${multi&&r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</article>`;
   }).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
   searchResults.classList.remove("hidden");
 });
