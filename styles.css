@@ -1436,3 +1436,14 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   color:#fff!important;
 }
 
+
+
+/* Minimal Lucide outline icons — consistent across the entire portal */
+.portal-lucide{display:inline-flex;align-items:center;justify-content:center;vertical-align:-0.18em;flex:0 0 auto;color:currentColor;line-height:1}
+.portal-lucide svg{width:1.08em;height:1.08em;stroke-width:1.8}
+.brand-icon .portal-lucide svg{width:27px;height:27px;stroke-width:1.9}
+.nav-btn .portal-lucide svg{width:17px;height:17px;stroke-width:1.9}
+.mobile-nav .nav-btn .portal-lucide svg{width:19px;height:19px}
+.reward-icon .portal-lucide svg{width:21px;height:21px;stroke-width:1.7}
+.page-heading h1 .portal-lucide svg{width:23px;height:23px}
+.payment-category-icon .portal-lucide{margin-right:2px}
