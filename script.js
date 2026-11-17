@@ -379,7 +379,8 @@ renderRewards();renderBillFilters();renderBills();renderBenefits();renderOffers(
  "🛣️":'<path d="M8 22 11 2m5 20L13 2M12 5v3m0 4v3m0 4v2"/>',
  "🤖":'<rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4m-3 6h.01m6 0h.01M8 17h8M2 11v5m20-5v5"/>',
  "🧑‍💼":'<circle cx="12" cy="7" r="4"/><path d="M4 21a8 8 0 0 1 16 0M9 15l3 3 3-3"/>',
- "🧺":'<path d="M3 10h18l-2 11H5L3 10Z"/><path d="m7 10 3-6m7 6-3-6M8 14v4m4-4v4m4-4v4"/>'
+ "🧺":'<path d="M3 10h18l-2 11H5L3 10Z"/><path d="m7 10 3-6m7 6-3-6M8 14v4m4-4v4m4-4v4"/>',
+ "🚌":'<path d="M5 4h14a2 2 0 0 1 2 2v13H3V6a2 2 0 0 1 2-2Z"/><path d="M3 10h18M7 15h.01M17 15h.01M7 19v2m10-2v2M8 4V2m8 2V2"/>'
  };
  const keys=Object.keys(paths).sort((a,b)=>b.length-a.length);
  const pattern=new RegExp(keys.join("|"),"gu");
