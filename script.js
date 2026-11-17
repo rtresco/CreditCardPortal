@@ -329,7 +329,7 @@ renderRewards();renderBillFilters();renderBills();renderBenefits();renderOffers(
  "📺":'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="m8 2 4 4 4-4M8 22h8"/>',
  "💡":'<path d="M9 18h6m-5 4h4m-2-20a7 7 0 0 0-4 12.7c.6.4 1 1 1 1.8V18h6v-1.5c0-.8.4-1.4 1-1.8A7 7 0 0 0 12 2Z"/>',
  "✈️":'<path d="m17.8 19.2-1.8-8.2 3.5-3.5a2.1 2.1 0 0 0-3-3L13 8l-8.2-1.8a.5.5 0 0 0-.5.8L9 12l-3 3-3-1-1 1 4 4 1-1-1-3 3-3 4.7 5a.5.5 0 0 0 .8-.5Z"/>',
- "🏨":'<path d="M3 21V5h18v16M3 11h18M7 8h2m6 0h2M7 15h2m6 0h2M10 21v-4h4v4"/>',
+ "🏨":'<path d="M3 21V5h18v16H3ZM3 11h18M7 8h2m6 0h2M7 15h2m6 0h2M10 21v-4h4v4"/>',
  "🚗":'<path d="m5 11 2-6h10l2 6 2 2v6h-2v-2H5v2H3v-6l2-2Z"/><path d="M5 11h14M6 15h.01M18 15h.01"/>',
  "🛡️":'<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
  "🎁":'<rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M2 8h20v4H2zM12 8H7a2 2 0 1 1 2-2c0 2 3 2 3 2Zm0 0h5a2 2 0 1 0-2-2c0 2-3 2-3 2Z"/>',
