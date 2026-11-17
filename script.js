@@ -55,30 +55,30 @@ const bills = [
  [`${iconSvg("i46")} Google One AI Plus (400 GB)`,"Software","Bank of America Visa","","","https://play.google.com/"],
  [`${iconSvg("i57")} VRadio`,"Software","Bank of America Visa","","","https://play.google.com/"],
  [`${iconSvg("i65")} AAA Texas`,"Memberships","Bank of America Visa","","","https://www.aaa.com/"],
- [`${iconSvg("i8")} Sam`s Club / Walmart+`,"Memberships","Bank of America Visa","","When renewing, check cards for cash back offers. For example, Chase Unlimited offered 40% back for memberships (up to $20).","https://www.samsclub.com/"],
+ [`${iconSvg("i8")} Sam's Club / Walmart+`,"Memberships","Bank of America Visa","","When renewing, check cards for cash back offers. For example, Chase Unlimited offered 40% back for memberships (up to $20).","https://www.samsclub.com/"],
  [`${iconSvg("i33")} Amazon`,"Memberships","Bank of America Visa","","","https://www.amazon.com/"]
 ];
 
 const benefits = {
  "Chase Freedom Flex":[
   [`${iconSvg("i38")} Cell Phone Protection`,"Pay the wireless bill with Flex. You do NOT have to buy the phone with the Flex. Coverage is tied to eligible phones listed on the bill. Up to $800/claim; $50 deductible; 2 claims / 12 months; $1,000 max / 12 months."],
-  [`${iconSvg("i19")} Rental Car Insurance`,"Auto rental collision/theft coverage. Chase coverage is secondary in the U.S.; generally decline the rental company`s collision waiver and pay the full rental with the card. The benefit generally covers the rental vehicle, not liability for injuries or damage to others."],
+  [`${iconSvg("i19")} Rental Car Insurance`,"Auto rental collision/theft coverage. Chase coverage is secondary in the U.S.; generally decline the rental company's collision waiver and pay the full rental with the card. The benefit generally covers the rental vehicle, not liability for injuries or damage to others."],
   [`${iconSvg("i17")} Trip Cancellation Protection`,"Trip Cancellation & Interruption coverage. Chase Flex/Unlimited: up to $1,500 per covered traveler / $6,000 per trip."],
   [`${iconSvg("i52")} Purchase Protection`,"Eligible theft or damage protection. Chase: 120 days, up to $500 per item."],
-  [`${iconSvg("i25")} Manufacturer Warranty`,"Extended warranty protection. Chase adds 1 year to eligible manufacturer`s warranties of 3 years or less."],
+  [`${iconSvg("i25")} Manufacturer Warranty`,"Extended warranty protection. Chase adds 1 year to eligible manufacturer's warranties of 3 years or less."],
   [`${iconSvg("i61")} Travel Assistance`,"Travel & Emergency Assistance."],
   [`${iconSvg("i26")} Unauthorized Charge Protection`,"Zero-liability / fraud protection, subject to issuer terms."]
  ],
  "Chase Freedom Unlimited":[
-  [`${iconSvg("i19")} Rental Car Insurance`,"Auto rental collision/theft coverage. Chase coverage is secondary in the U.S.; generally decline the rental company`s collision waiver and pay the full rental with the card. The benefit generally covers the rental vehicle, not liability for injuries or damage to others."],
+  [`${iconSvg("i19")} Rental Car Insurance`,"Auto rental collision/theft coverage. Chase coverage is secondary in the U.S.; generally decline the rental company's collision waiver and pay the full rental with the card. The benefit generally covers the rental vehicle, not liability for injuries or damage to others."],
   [`${iconSvg("i17")} Trip Cancellation Protection`,"Trip Cancellation & Interruption coverage. Chase Flex/Unlimited: up to $1,500 per covered traveler / $6,000 per trip."],
   [`${iconSvg("i52")} Purchase Protection`,"120-day purchase protection, up to $500 per item."],
-  [`${iconSvg("i25")} Manufacturer Warranty`,"Adds 1 year to eligible manufacturer`s warranties of 3 years or less."],
+  [`${iconSvg("i25")} Manufacturer Warranty`,"Adds 1 year to eligible manufacturer's warranties of 3 years or less."],
   [`${iconSvg("i61")} Travel Assistance`,"Travel & Emergency Assistance."],
   [`${iconSvg("i26")} Unauthorized Charge Protection`,"Zero-liability / fraud protection, subject to issuer terms."]
  ],
  "Capital One Savor":[
-  [`${iconSvg("i19")} Rental Car Insurance`,"Auto rental collision/theft coverage. Savor coverage is secondary in the U.S.; generally decline the rental company`s collision waiver and pay the full rental with the card. The benefit generally covers the rental vehicle, not liability for injuries or damage to others."],
+  [`${iconSvg("i19")} Rental Car Insurance`,"Auto rental collision/theft coverage. Savor coverage is secondary in the U.S.; generally decline the rental company's collision waiver and pay the full rental with the card. The benefit generally covers the rental vehicle, not liability for injuries or damage to others."],
   [`${iconSvg("i17")} Trip Cancellation Protection`,"Trip Cancellation & Interruption coverage."],
   [`${iconSvg("i50")} Baggage Protection`,"Baggage-delay and lost-luggage reimbursement benefits."],
   [`${iconSvg("i62")} Travel Accident Coverage`,"Travel/flight accident insurance."],
@@ -123,7 +123,7 @@ const benefits = {
   [`${iconSvg("i30")} Travel & Emergency Assistance`,"Count on emergency assistance while traveling."],
   [`${iconSvg("i27")} Authorized Users`,"Add authorized users to share your account with family or friends."],
   [`${iconSvg("i28")} Account Alerts`,"Set account alerts to track your balance, payments and more."],
-  [`${iconSvg("i29")} Go Paperless`,"With e-statements it`s easy, simple and saves paper."],
+  [`${iconSvg("i29")} Go Paperless`,"With e-statements it's easy, simple and saves paper."],
   [`${iconSvg("i23")} 24/7 Account Access`,"Bank when and where you want with the mobile app or online banking."]
  ]
 };
@@ -194,7 +194,7 @@ function paymentCardClass(method){
   return "payment-boa";
 }
 function formatPaymentPayee(name){
-  return name.replace(/^(\p{Extended_Pictographic}\uFE0F?)/u, `<span class="payment-category-icon">$1</span>`);
+  return name.replace(/^(\p{Extended_Pictographic}\uFE0F?)/u, '<span class="payment-category-icon">$1</span>');
 }
 function renderBills(filter="All"){
   const rows=bills.filter(b=>filter==="All"||b[1]===filter);
@@ -261,7 +261,7 @@ function renderOffers(){
   <article class="offer-card"><div class="offer-head">Offers Currently Used</div><div class="offer-body"><div class="used-offer-item"><h3>Paramount+</h3><p><strong class="offer-card-title chip-boa">Bank of America Checking</strong></p><p>Up to $8 off/month • No expiration.</p></div><div class="used-offer-item"><h3>YouTube TV</h3><p><strong class="offer-card-title chip-unlimited">Chase Freedom Unlimited</strong></p><p>$20 Cash Back • Expires 10/29/2026.</p></div></div></article>`;
 }
 function renderCards(){
-  cardsGrid.innerHTML=cards.map(c=>{const logoPath=c[0]==="boa"?"./images/boa-icon.svg":c[0]==="capital"?"./images/capital-one-icon.svg":c[0]==="discover"?"./images/discover-icon.svg":c[0]==="usb"?"./images/us-bank-icon.svg":c[0]==="synchrony"?"./images/synchrony-bank-logo.svg":"./images/chase-icon.svg";return `<article class="my-card ${c[0]} ${c[0]==="usb"?"boa":""} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand">${logoPath?`<img class="portfolio-bank-logo" src="'+logoPath+'" alt="'+c[1]+' icon" loading="lazy">':''}${c[1]}</div><h2>${c[2]} <a class="card-site-link" href="${c[5]}" target="_blank" rel="noopener" title="Open ${c[2]} website">↗</a></h2>${c[3]?`<p style="margin-top:10px">${c[3]}</p>`:""}${c[4]?`<ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul>`:""}</article>`}).join("");
+  cardsGrid.innerHTML=cards.map(c=>{const logoPath=c[0]==="boa"?"./images/boa-icon.svg":c[0]==="capital"?"./images/capital-one-icon.svg":c[0]==="discover"?"./images/discover-icon.svg":c[0]==="usb"?"./images/us-bank-icon.svg":c[0]==="synchrony"?"./images/synchrony-bank-logo.svg":"./images/chase-icon.svg";return `<article class="my-card ${c[0]} ${c[0]==="usb"?"boa":""} ${c[2].includes("Unlimited")?"card-unlimited":c[2].includes("Flex")?"card-flex":""}"><div class="portfolio-card-brand">${logoPath?'<img class="portfolio-bank-logo" src="'+logoPath+'" alt="'+c[1]+' icon" loading="lazy">':''}${c[1]}</div><h2>${c[2]} <a class="card-site-link" href="${c[5]}" target="_blank" rel="noopener" title="Open ${c[2]} website">↗</a></h2>${c[3]?`<p style="margin-top:10px">${c[3]}</p>`:""}${c[4]?`<ul>${c[4].split(" • ").map(x=>`<li>${x}</li>`).join("")}</ul>`:""}</article>`}).join("");
   cardsGrid.insertAdjacentHTML("afterend", `
     <div class="info-panel page-notes">
       <h2>${iconSvg("i7")} Notes</h2>
