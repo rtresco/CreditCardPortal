@@ -1446,3 +1446,18 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards .reward-card.category-grocery-stores .reward-top{
   background-position:center calc(50% - 30px);
 }
+
+
+/* Card Rewards: vertically center SVG category icons with their labels. */
+#rewards .reward-card .reward-category-label{
+  align-items:center!important;
+}
+#rewards .reward-card .reward-category-label .reward-icon{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  line-height:1!important;
+}
+#rewards .reward-card .reward-category-label .portal-lucide{
+  vertical-align:0!important;
+}
