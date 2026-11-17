@@ -307,3 +307,76 @@ globalSearch.addEventListener("input",()=>{
 });
 
 renderRewards();renderBillFilters();renderBills();renderBenefits();renderOffers();renderCards();
+
+/* Minimal inline outline icon pass: no external library or network dependency. */
+(()=>{
+ const paths={
+ "💰":'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 14h.01"/>',
+ "🏆":'<path d="M8 21h8m-4-4v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a4 4 0 0 0 4 4m9-6h3v2a4 4 0 0 1-4 4"/>',
+ "🔄":'<path d="M20 7v5h-5M4 17v-5h5M5 9a7 7 0 0 1 12-3l3 6M4 12l3 6a7 7 0 0 0 12-3"/>',
+ "💳":'<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>',
+ "📋":'<rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V3h6v1m-6 6h6m-6 4h6m-6 4h4"/>',
+ "⭐":'<path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z"/>',
+ "🔎":'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+ "📝":'<path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/>',
+ "🛒":'<path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/>',
+ "🛍️":'<path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/>',
+ "💊":'<rect x="3" y="7" width="18" height="10" rx="5" transform="rotate(-45 12 12)"/><path d="m8 8 8 8"/>',
+ "⛽":'<path d="M3 21h12V4H3zM6 7h6v5H6zM15 9h2l3 3v6a2 2 0 0 1-4 0v-3"/>',
+ "🎟️":'<path d="M3 7a2 2 0 0 0 0 4v2a2 2 0 0 0 0 4v2h18v-2a2 2 0 0 1 0-4v-2a2 2 0 0 1 0-4V5H3Z"/><path d="M13 5v14"/>',
+ "🎬":'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 4 4 6m2-6 4 6M7 20l4-6m2 6 4-6"/>',
+ "🎵":'<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+ "📺":'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="m8 2 4 4 4-4M8 22h8"/>',
+ "💡":'<path d="M9 18h6m-5 4h4m-2-20a7 7 0 0 0-4 12.7c.6.4 1 1 1 1.8V18h6v-1.5c0-.8.4-1.4 1-1.8A7 7 0 0 0 12 2Z"/>',
+ "✈️":'<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
+ "🏨":'<path d="M3 21V5h18v16M3 11h18M7 8h2m6 0h2M7 15h2m6 0h2M10 21v-4h4v4"/>',
+ "🚗":'<path d="m5 11 2-6h10l2 6 2 2v6h-2v-2H5v2H3v-6l2-2Z"/><path d="M5 11h14M6 15h.01M18 15h.01"/>',
+ "🛡️":'<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
+ "🎁":'<rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M2 8h20v4H2zM12 8H7a2 2 0 1 1 2-2c0 2 3 2 3 2Zm0 0h5a2 2 0 1 0-2-2c0 2-3 2-3 2Z"/>',
+ "📅":'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>',
+ "📱":'<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>',
+ "💻":'<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M2 20h20"/>',
+ "🔧":'<path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 12l-3-3Z"/>',
+ "🚫":'<circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/>',
+ "👥":'<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m6-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7-7.5a4 4 0 0 1 0 7.8M20 21v-2a4 4 0 0 0-3-3.9"/>',
+ "🔔":'<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/>',
+ "📄":'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8m-8 4h8"/>',
+ "🧭":'<circle cx="12" cy="12" r="10"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5Z"/>',
+ "🎢":'<path d="M3 20V5m0 10h18M7 15v-4a3 3 0 0 1 6 0v4m0-5a3 3 0 0 1 6 0v5M3 20h18"/>',
+ "🏦":'<path d="m3 9 9-6 9 6M4 10h16M5 10v8m4-8v8m6-8v8m4-8v8M3 21h18M2 18h20"/>',
+ "📦":'<path d="m3 7 9-4 9 4v10l-9 4-9-4Z"/><path d="m3 7 9 4 9-4m-9 4v10"/>',
+ "🍽️":'<path d="M3 2v7a3 3 0 0 0 6 0V2M6 2v20m12-20v20m0-20c-4 4-4 9 0 11"/>',
+ "📍":'<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2"/>',
+ "🔒":'<rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/>',
+ "🌐":'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>',
+ "📞":'<path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 2.7a2 2 0 0 1-.6 1.9L8.1 11a16 16 0 0 0 4.9 4.9l1.7-1.9a2 2 0 0 1 1.9-.6l2.7.5a2 2 0 0 1 1.7 2Z"/>',
+ "📧":'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+ "⚡":'<path d="m13 2-3 9h7l-6 11 2-9H6Z"/>',
+ "🏠":'<path d="m3 10 9-7 9 7v11h-6v-7H9v7H3Z"/>',
+ "🎮":'<path d="M6 11h4m-2-2v4m7-1h.01M18 12h.01M5 7h14a3 3 0 0 1 3 3l-1 8a2 2 0 0 1-3 1l-4-3h-4l-4 3a2 2 0 0 1-3-1l-1-8a3 3 0 0 1 3-3Z"/>',
+ "🎤":'<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2m-7 9v3m-4 0h8"/>',
+ "🧳":'<rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M8 11v6m8-6v6"/>'
+ };
+ const keys=Object.keys(paths).sort((a,b)=>b.length-a.length);
+ const pattern=new RegExp(keys.join("|"),"gu");
+ function makeIcon(key){
+  const span=document.createElement("span");span.className="portal-lucide";
+  const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 24 24");svg.setAttribute("aria-hidden","true");
+  svg.innerHTML=paths[key];span.append(svg);return span;
+ }
+ function convertText(node){
+  if(!node.parentNode||node.parentElement?.closest(".portal-lucide,script,style,textarea,input"))return;
+  const value=node.nodeValue;if(!value||!pattern.test(value)){pattern.lastIndex=0;return;}pattern.lastIndex=0;
+  const frag=document.createDocumentFragment();let pos=0,match;
+  while((match=pattern.exec(value))){if(match.index>pos)frag.append(document.createTextNode(value.slice(pos,match.index)));frag.append(makeIcon(match[0]));pos=match.index+match[0].length;}
+  if(pos<value.length)frag.append(document.createTextNode(value.slice(pos)));
+  node.parentNode.replaceChild(frag,node);pattern.lastIndex=0;
+ }
+ function convert(root){
+  if(!root)return;if(root.nodeType===Node.TEXT_NODE){convertText(root);return;}
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(convertText);
+ }
+ convert(document.body);
+ const observer=new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(convert)));
+ observer.observe(document.body,{childList:true,subtree:true});
+})();
