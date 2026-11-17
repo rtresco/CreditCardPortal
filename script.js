@@ -327,8 +327,8 @@ renderRewards();renderBillFilters();renderBills();renderBenefits();renderOffers(
     "🌐":"globe","📞":"phone","📧":"mail","⚡":"zap","🏠":"house",
     "🎮":"gamepad-2","🎤":"mic","🧳":"luggage","🚲":"bike"
   };
-  const emojiPattern=/(?:\\p{Extended_Pictographic}(?:\\uFE0F|\\uFE0E)?(?:\\u200D\\p{Extended_Pictographic}(?:\\uFE0F|\\uFE0E)?)*)/gu;
-  function iconName(emoji){return iconMap[emoji]||iconMap[emoji.replace(/\\uFE0F/g,"")]||"sparkles";}
+  const emojiPattern=/(?:\p{Extended_Pictographic}(?:\uFE0F|\uFE0E)?(?:\u200D\p{Extended_Pictographic}(?:\uFE0F|\uFE0E)?)*)/gu;
+  function iconName(emoji){return iconMap[emoji]||iconMap[emoji.replace(/\uFE0F/g,"")]||"sparkles";}
   function convertTextNode(node){
     const value=node.nodeValue;
     if(!value||!emojiPattern.test(value)){emojiPattern.lastIndex=0;return;}
