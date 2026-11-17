@@ -1461,3 +1461,22 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 #rewards .reward-card .reward-category-label .portal-lucide{
   vertical-align:0!important;
 }
+
+
+/* Desktop navigation: vertically center inline SVG icons with their labels. */
+.desktop-nav .nav-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+}
+.desktop-nav .nav-btn .portal-lucide{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  vertical-align:0;
+  line-height:1;
+}
+.desktop-nav .nav-btn .portal-lucide svg{
+  display:block;
+}
