@@ -1444,5 +1444,5 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 
 /* Shift the Grocery Stores photo upward slightly within its header crop. */
 #rewards .reward-card.category-grocery-stores .reward-top{
-  background-position:center calc(50% + 15px);
+  background-position:center calc(50% - 30px);
 }
