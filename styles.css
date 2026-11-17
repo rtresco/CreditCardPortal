@@ -1435,3 +1435,46 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   border-color:rgba(255,255,255,.24)!important;
   color:#fff!important;
 }
+
+
+/* Featured SVG category icons — Card Rewards only */
+#rewards .reward-card .reward-top .reward-icon{
+  width:50px!important;
+  height:50px!important;
+  flex:0 0 50px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:15px!important;
+  background:linear-gradient(145deg,#1b3454,#102039)!important;
+  border:1px solid #2b4567!important;
+  color:#79b8ff!important;
+  font-size:0!important;
+  box-shadow:0 6px 18px rgba(45,115,190,.16),inset 0 1px 0 rgba(255,255,255,.06)!important;
+  filter:none!important;
+}
+#rewards .reward-card .reward-top .reward-icon svg{
+  display:block!important;
+  width:27px!important;
+  height:27px!important;
+  stroke:currentColor!important;
+  fill:none!important;
+  stroke-width:1.8!important;
+}
+#rewards .reward-card.category-grocery-stores .reward-icon{color:#70d9b0!important;background:linear-gradient(145deg,#173c3b,#102b31)!important;border-color:#28534d!important}
+#rewards .reward-card.category-restaurants-dining .reward-icon{color:#ffad72!important;background:linear-gradient(145deg,#493027,#2c2024)!important;border-color:#694536!important}
+#rewards .reward-card.category-drugstores .reward-icon{color:#b9a0ff!important;background:linear-gradient(145deg,#302b50,#201f3b)!important;border-color:#49406e!important}
+#rewards .reward-card.category-superstores-clubs .reward-icon,
+#rewards .reward-card.category-amazon-whole-foods .reward-icon,
+#rewards .reward-card.category-walmart .reward-icon{color:#79b8ff!important;background:linear-gradient(145deg,#1b3858,#14283f)!important;border-color:#2c5076!important}
+#rewards .reward-card.category-gas .reward-icon{color:#ffbd68!important;background:linear-gradient(145deg,#493822,#2c261d)!important;border-color:#6a5230!important}
+#rewards .reward-card.category-entertainment .reward-icon{color:#b99aff!important;background:linear-gradient(145deg,#302b50,#201f3b)!important;border-color:#49406e!important}
+#rewards .reward-card.category-streaming-services .reward-icon,
+#rewards .reward-card.category-public-transportation .reward-icon{color:#70d9b0!important;background:linear-gradient(145deg,#173c3b,#102b31)!important;border-color:#28534d!important}
+#rewards .reward-card.category-utilities .reward-icon{color:#ffd66e!important;background:linear-gradient(145deg,#443b22,#292519)!important;border-color:#66572e!important}
+#rewards .reward-card.category-flights .reward-icon,
+#rewards .reward-card.category-travel-hotels .reward-icon{color:#79b8ff!important;background:linear-gradient(145deg,#1b3858,#14283f)!important;border-color:#2c5076!important}
+#rewards .reward-card.category-everything-else .reward-icon{color:#aebbd0!important;background:linear-gradient(145deg,#293548,#182333)!important;border-color:#3a4b63!important}
+@media(max-width:760px){
+  #rewards .reward-card .reward-top .reward-icon{width:46px!important;height:46px!important;flex-basis:46px!important}
+  #rewards .reward-card .reward-top .reward-icon svg{width:25px!important;height:25px!important}
+}
