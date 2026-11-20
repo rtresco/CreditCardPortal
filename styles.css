@@ -1582,3 +1582,23 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   color:#26313d!important;
   text-shadow:none!important;
 }
+
+/* Recurring Payments: U.S. Bank uses its silver issuer gradient and muted gray detail text. */
+.payment-gradient-area.payment-usb{
+  background:linear-gradient(135deg,#929ba6 0%,#c2c8cf 55%,#eef1f4 100%)!important;
+}
+.payment-method-chip.payment-usb{
+  background:linear-gradient(135deg,#e5e9ed 0%,#c2c9d1 55%,#f4f6f8 100%)!important;
+  border-color:#c5ccd4!important;
+  color:#26313d!important;
+  text-shadow:none!important;
+}
+.payment-card.payment-usb{
+  border-color:#c5ccd4!important;
+}
+.payment-card.payment-usb .payment-note,
+.payment-card.payment-usb .payment-note.note-red{
+  color:#59636f!important;
+  border-top-color:rgba(38,49,61,.24)!important;
+  text-shadow:none!important;
+}
