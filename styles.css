@@ -1537,3 +1537,36 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   opacity:1!important;
   visibility:visible!important;
 }
+
+/* Card Rewards: make the issuer name span the lower card width, with expiry on its own right-aligned line below. */
+#rewards .reward-card:not(.reward-card-multi) .reward-gradient-area .reward-card-method{
+  width:100%;
+  box-sizing:border-box;
+  min-height:0;
+  padding:13px 14px 0!important;
+}
+#rewards .reward-card:not(.reward-card-multi) .reward-gradient-area .reward-card-method .card-chips{
+  display:flex;
+  width:100%;
+  flex-wrap:nowrap;
+}
+#rewards .reward-card:not(.reward-card-multi) .reward-gradient-area .reward-card-method .card-chip{
+  display:block;
+  width:100%;
+  max-width:none;
+  box-sizing:border-box;
+}
+#rewards .reward-card:not(.reward-card-multi) .reward-gradient-area .reward-expiry-row{
+  position:static!important;
+  top:auto!important;
+  right:auto!important;
+  transform:none!important;
+  width:100%;
+  box-sizing:border-box;
+  display:flex!important;
+  justify-content:flex-end!important;
+  align-items:center;
+  padding:7px 14px 10px!important;
+  margin:0;
+  text-align:right;
+}
