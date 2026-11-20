@@ -1502,3 +1502,10 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   background-image:url("./images/electronics-stores-header.jpg");
   background-position:center 52%;
 }
+
+
+/* Keep the new Department Stores and Electronics Stores leading SVG icons white, matching the other reward headers. */
+#rewards .reward-card.category-department-stores .reward-icon,
+#rewards .reward-card.category-electronics-stores .reward-icon{
+  color:#fff!important;
+}
