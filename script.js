@@ -9,7 +9,7 @@ function iconSvg(id){
 
 const rewards = [
  {category:"Grocery Stores",icon:`${iconSvg("i68")}`,card:"Chase Freedom Flex",cash:"5%",details:"Kroger, HEB, etc. (excludes warehouse and superstores)",until:"Dec 31, 2026",search:["grocery","kroger","heb"]},
- {category:"Department Stores",icon:`${iconSvg("i70")}`,card:"U.S. Bank Cash+ Visa Signature",cash:"5%",details:"Department store purchases",until:"Dec 31, 2026",search:["department store","department stores","macy's","macys","nordstrom","kohls","kohl's","jcpenney","dillard's"]},
+ {category:"Department Stores",icon:`${iconSvg("i70")}`,card:"U.S. Bank Cash+ Visa Signature",cash:"5%",details:"Department store purchases",until:"Dec 31, 2026",search:["department store","department stores","bloomingdale's","bloomingdales","kohl's","kohls","off 5th","off fifth","bon-ton","bonton","loehmann's","loehmanns","saks fifth avenue","saks","boston store","boston stores","macy's","macys","sears","dillard's","dillards","nordstrom","soma intimates","soma","jcpenney","j.c. penney","jcp","nordstrom rack","von maur"]},
  {category:"Electronics Stores",icon:`${iconSvg("i24")}`,card:"U.S. Bank Cash+ Visa Signature",cash:"5%",details:"Electronics store purchases",until:"Dec 31, 2026",search:["electronics","electronics store","electronics stores","best buy","computer store","apple store"]},
  {category:"Restaurants / Dining",icon:`${iconSvg("i49")}`,card:"Chase Freedom Flex",cash:"7%",details:"Dine-in, takeout, delivery",until:"Dec 31, 2026",search:["restaurant","dining","takeout","delivery"]},
  {category:"Drugstores",icon:`${iconSvg("i10")}`,card:"Chase Freedom Flex & Unlimited",cash:"3%",details:"CVS, Walgreens, etc.",until:"Ongoing",search:["drugstore","cvs","walgreens","pharmacy"]},
