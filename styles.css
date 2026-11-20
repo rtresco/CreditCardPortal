@@ -1576,3 +1576,9 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   color:#555555!important;
   text-shadow:1px 1px 2px rgba(0,0,0,.75)!important;
 }
+
+/* Offers Currently Used: dark text on the silver U.S. Bank card-name pill. */
+.offer-card-title.chip-usb{
+  color:#26313d!important;
+  text-shadow:none!important;
+}
