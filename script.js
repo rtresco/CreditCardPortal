@@ -171,7 +171,7 @@ function renderRewards(){
     const lower = multi ? issuerArea : `
       <div class="reward-gradient-area ${cardChipClass(parts[0])}">
         <div class="reward-card-method">${renderCardChips(r.card)}</div>
-        ${r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}
+        ${`<div class="reward-expiry-row">${r.until!=="Ongoing"?`Expires ${r.until}`:"&nbsp;"}</div>`}
       </div>`;
     return `
       <article class="reward-card ${categoryClass} ${multi ? "reward-card-multi" : cardChipClass(parts[0])}" data-search="${[r.category,r.card,r.details,...r.search].join(" ").toLowerCase()}">
@@ -183,7 +183,7 @@ function renderRewards(){
           <div class="reward-header-rate">${r.cash}</div>
         </div>
         ${lower}
-        ${multi && r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}
+        ${multi?`<div class="reward-expiry-row">${r.until!=="Ongoing"?`Expires ${r.until}`:"&nbsp;"}</div>`:""}
       </article>`;
   }).join("");
 }
