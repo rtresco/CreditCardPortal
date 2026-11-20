@@ -1504,8 +1504,36 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 }
 
 
-/* Keep the new Department Stores and Electronics Stores leading SVG icons white, matching the other reward headers. */
+/* Department Stores and Electronics Stores: explicitly render the leading SVG icons in white. */
 #rewards .reward-card.category-department-stores .reward-icon,
 #rewards .reward-card.category-electronics-stores .reward-icon{
+  display:flex!important;
+  flex:0 0 21px!important;
+  width:21px!important;
+  height:21px!important;
+  align-items:center!important;
+  justify-content:center!important;
   color:#fff!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+#rewards .reward-card.category-department-stores .reward-icon .portal-lucide,
+#rewards .reward-card.category-electronics-stores .reward-icon .portal-lucide{
+  display:inline-flex!important;
+  width:21px!important;
+  height:21px!important;
+  color:#fff!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+#rewards .reward-card.category-department-stores .reward-icon svg,
+#rewards .reward-card.category-electronics-stores .reward-icon svg{
+  display:block!important;
+  width:21px!important;
+  height:21px!important;
+  fill:none!important;
+  stroke:#fff!important;
+  stroke-width:1.8!important;
+  opacity:1!important;
+  visibility:visible!important;
 }
