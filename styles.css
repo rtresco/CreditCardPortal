@@ -1480,3 +1480,25 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .desktop-nav .nav-btn .portal-lucide svg{
   display:block;
 }
+
+
+/* U.S. Bank Cash+ rewards: use the silver issuer treatment consistently on the reward card and its card-name pill. */
+#rewards .reward-card.chip-usb .reward-gradient-area{
+  background:linear-gradient(135deg,#737d89 0%,#aeb7c1 52%,#e5e9ed 100%)!important;
+}
+#rewards .reward-card .reward-card-method .card-chip.chip-usb{
+  background:linear-gradient(135deg,#e5e9ed 0%,#c2c9d1 55%,#f4f6f8 100%)!important;
+  border-color:#f4f6f8!important;
+  color:#26313d!important;
+  text-shadow:none!important;
+}
+
+/* New U.S. Bank quarterly category photo headers. */
+#rewards .reward-card.category-department-stores .reward-top{
+  background-image:url("./images/department-stores-header.jpg");
+  background-position:center 48%;
+}
+#rewards .reward-card.category-electronics-stores .reward-top{
+  background-image:url("./images/electronics-stores-header.jpg");
+  background-position:center 52%;
+}
