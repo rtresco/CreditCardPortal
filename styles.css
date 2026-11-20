@@ -1574,5 +1574,5 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 /* U.S. Bank Cash+ expiry text: use orange for stronger contrast on the silver background. */
 #rewards .reward-card.chip-usb .reward-expiry-row{
   color:#a84300!important;
-  text-shadow:none!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.28)!important;
 }
