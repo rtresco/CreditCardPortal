@@ -1604,8 +1604,13 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 }
 
 
-/* Card Rewards: reserve a taller bottom area when a reward has no expiration date. */
-#rewards .reward-card .reward-expiry-row-ongoing{
-  min-height:68px;
+/* Card Rewards: ongoing single-card entries use balanced spacing below the card-name chip. */
+#rewards .reward-card:not(.reward-card-multi) .reward-expiry-row-ongoing{
+  height:13px;
+  min-height:0;
+  padding:0!important;
+  margin:0;
+  line-height:0;
+  font-size:0;
   box-sizing:border-box;
 }
