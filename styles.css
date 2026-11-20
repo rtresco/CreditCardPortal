@@ -1602,3 +1602,10 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   border-top-color:rgba(38,49,61,.24)!important;
   text-shadow:1px 1px 2px rgba(255,255,255,.95)!important;
 }
+
+
+/* Card Rewards: reserve a taller bottom area when a reward has no expiration date. */
+#rewards .reward-card .reward-expiry-row-ongoing{
+  min-height:68px;
+  box-sizing:border-box;
+}
