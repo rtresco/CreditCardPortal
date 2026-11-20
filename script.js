@@ -193,6 +193,7 @@ function paymentCardClass(method){
   if(method === "Chase Freedom Unlimited") return "payment-unlimited";
   if(method === "Chase Freedom Flex") return "payment-flex";
   if(method === "Bank of America Visa" || method === "Bank of America Checking") return "payment-boa";
+  if(method === "U.S. Bank Cash+ Visa Signature") return "payment-usb";
   return "payment-boa";
 }
 function formatPaymentPayee(name){
