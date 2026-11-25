@@ -47,7 +47,7 @@ const bills = [
  [`${iconSvg("i15")} Paramount+`,"Streaming","Bank of America Checking","","Up to $8 off/month - No expiration.","https://www.paramountplus.com/"],
  [`${iconSvg("i15")} YouTube TV`,"Streaming","U.S. Bank Cash+ Visa Signature","","$20 cash back/month • Expires 12/31/2026.","https://tv.youtube.com/"],
  [`${iconSvg("i15")} Disney+ / Hulu Bundle`,"Streaming","Capital One Savor","3% Cash Back","Promo price expires 11/24/2026, then $12.99/month","https://www.disneyplus.com/"],
- [`${iconSvg("i15")} HBO Max`,"Streaming","Capital One Savor","3% Cash Back","Promo price expires 11/24/2026, then $10.99/month","https://play.hbomax.com/"],
+ [`${iconSvg("i15")} HBO Max`,"Streaming","Capital One Savor","3% Cash Back","Promo price expires 11/24/2027, then $10.99/month","https://play.hbomax.com/"],
  [`${iconSvg("i14")} Spotify`,"Streaming","Capital One Savor","3% Cash Back","","https://www.spotify.com/"],
  [`${iconSvg("i66")} ChatGPT`,"Software","Bank of America Visa","","","https://chatgpt.com/"],
  [`${iconSvg("i35")} Life360`,"Software","Bank of America Visa","","","https://play.google.com/"],
