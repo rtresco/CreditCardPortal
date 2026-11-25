@@ -1614,3 +1614,11 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   font-size:0;
   box-sizing:border-box;
 }
+
+
+/* Desktop Card Rewards: let two-card entries fit their content instead of stretching to the tallest card in the grid row. */
+@media(min-width:761px){
+  #rewards .reward-card.reward-card-multi{
+    align-self:start;
+  }
+}
