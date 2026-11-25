@@ -183,7 +183,7 @@ function renderRewards(){
           <div class="reward-header-rate">${r.cash}</div>
         </div>
         ${lower}
-        ${multi?`<div class="reward-expiry-row ${r.until==="Ongoing"?"reward-expiry-row-ongoing":""}">${r.until!=="Ongoing"?`Expires ${r.until}`:"&nbsp;"}</div>`:""}
+        ${multi&&r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}
       </article>`;
   }).join("");
 }
