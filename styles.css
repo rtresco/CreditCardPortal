@@ -1664,3 +1664,13 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   line-height:0;
   font-size:0;
 }
+
+
+/* Card Rewards search: show the merchant name that triggered the matching reward. */
+.search-result-merchant{
+  margin-top:4px;
+  font-size:12px;
+  line-height:1.25;
+  font-weight:600;
+  color:rgba(255,255,255,.88);
+}
