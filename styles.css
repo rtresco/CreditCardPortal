@@ -1674,3 +1674,9 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
   font-weight:600;
   color:rgba(255,255,255,.88);
 }
+
+
+/* Card Rewards search: merchant names use the same gold as expiration labels. */
+.search-result-merchant{
+  color:#ffc62e!important;
+}
