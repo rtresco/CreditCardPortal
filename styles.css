@@ -1637,3 +1637,9 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .usb-sample-merchants-link:hover{
   text-decoration:underline;
 }
+
+
+/* My Cards: use the portal's darker navy for the U.S. Bank sample-merchants link. */
+.my-card .usb-sample-merchants-link{
+  color:#0b3d78!important;
+}
