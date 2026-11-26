@@ -23,7 +23,7 @@ const rewards = [
  {category:"Flights",icon:`${iconSvg("i17")}`,card:"Bank of America",cash:"2.625%",details:"Airlines, air travel purchases",until:"Ongoing",search:["flight","airline","air travel"]},
  {category:"Travel / Hotels",icon:`${iconSvg("i18")}`,card:"Capital One / Chase",cash:"5%",details:"Capital One and Chase Travel portal purchases",until:"Ongoing",search:["hotel","travel","capital one travel","chase travel"]},
  {category:"Public Transportation",icon:`${iconSvg("i69")}`,card:"Bank of America",cash:"2.625%",details:"Bus, rail, ferry, etc.",until:"Ongoing",search:["bus","rail","ferry","transportation"]},
- {category:"Everything Else",icon:"•••",card:"Bank of America",cash:"2.625%",details:"Any purchase not listed above",until:"Ongoing",search:["everything else","other"]}
+ {category:"Everything Else",icon:"•••",card:"Bank of America",cash:"2.625%",details:"Any purchase not listed above",until:"Ongoing",search:["everything else","other","american","american eagle","american eagle outfitters","aeo"]}
 ];
 
 
