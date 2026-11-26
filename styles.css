@@ -1647,3 +1647,20 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .my-card .usb-sample-merchants-link .external-link{
   color:#0b3d78!important;
 }
+
+
+/* Search results: match the balanced bottom spacing used by ongoing single-card rewards. */
+.search-result.reward-card:not(.reward-card-multi) .reward-gradient-area .reward-expiry-row-ongoing{
+  position:static!important;
+  top:auto!important;
+  right:auto!important;
+  transform:none!important;
+  width:100%;
+  height:13px;
+  min-height:0;
+  box-sizing:border-box;
+  padding:0!important;
+  margin:0;
+  line-height:0;
+  font-size:0;
+}
