@@ -346,11 +346,25 @@ globalSearch.addEventListener("input",()=>{
   }
   rewardGrid.classList.add("hidden");
   const normalizedQuery=normalizeMerchantSearch(q);
+  const merchantMatch=(r)=>{
+    const aliases=merchantAliases[r.category]||[];
+    const candidates=aliases.filter(name=>{
+      const normalizedName=normalizeMerchantSearch(name);
+      if(normalizedQuery.length<=3){
+        const words=String(name).toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").match(/[a-z0-9]+/g)||[];
+        return words.some(word=>word.startsWith(normalizedQuery));
+      }
+      return normalizedName.includes(normalizedQuery);
+    });
+    return candidates.sort((a,b)=>normalizeMerchantSearch(a).length-normalizeMerchantSearch(b).length)[0]||"";
+  };
   const matches=rewards.filter(r=>{
     if(normalizedQuery.startsWith("walm") || normalizedQuery.includes("walmart")) return r.card==="Walmart OnePay Cash Rewards";
     if(normalizedQuery.startsWith("amaz") || normalizedQuery.includes("amazon") || normalizedQuery.startsWith("whole") || normalizedQuery.includes("wholefoods")) return r.card==="Amazon Prime Store Card";
-    const terms=[r.category,r.card,r.details,...r.search,...(merchantAliases[r.category]||[])];
-    return terms.some(term=>{
+    const aliases=merchantAliases[r.category]||[];
+    const merchantFound=!!merchantMatch(r);
+    const terms=[r.category,r.card,r.details,...r.search];
+    const categoryFound=terms.some(term=>{
       const normalizedTerm=normalizeMerchantSearch(term);
       if(normalizedQuery.length<=3){
         const words=String(term||"").toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").match(/[a-z0-9]+/g)||[];
@@ -358,15 +372,18 @@ globalSearch.addEventListener("input",()=>{
       }
       return normalizedTerm.includes(normalizedQuery);
     });
+    return merchantFound||categoryFound;
   });
   searchResults.innerHTML=matches.length?matches.map(r=>{
+    const matchedMerchant=merchantMatch(r);
     const parts=r.card==="Capital One / Chase"?["Capital One Savor","Chase Freedom Flex"]:
       r.card==="Chase Freedom Flex & Unlimited"?["Chase Freedom Flex","Chase Freedom Unlimited"]:
       r.card==="Discover"?["Discover More"]:[r.card];
     const multi=parts.length>1;
     const categoryClass="category-"+r.category.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
     const lower=multi?parts.map(card=>`<div class="reward-issuer-section ${cardChipClass(card)}"><div class="card-name">${card}</div></div>`).join(""):`<div class="reward-gradient-area ${cardChipClass(parts[0])}"><div class="reward-card-method">${renderCardChips(r.card)}</div>${`<div class="reward-expiry-row ${r.until==="Ongoing"?"reward-expiry-row-ongoing":""}">${r.until!=="Ongoing"?`Expires ${r.until}`:"&nbsp;"}</div>`}</div>`;
-    return `<article class="search-result reward-card ${categoryClass} ${multi?"reward-card-multi":cardChipClass(parts[0])}"><div class="reward-top"><div class="reward-category-label"><div class="reward-icon">${r.icon}</div><div class="reward-category-block"><div class="reward-title">${r.category}</div></div></div><div class="reward-header-rate">${r.cash}</div></div>${lower}${multi&&r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</article>`;
+    const merchantLabel=matchedMerchant?`<div class="search-result-merchant">Merchant: ${matchedMerchant}</div>`:"";
+    return `<article class="search-result reward-card ${categoryClass} ${multi?"reward-card-multi":cardChipClass(parts[0])}"><div class="reward-top"><div class="reward-category-label"><div class="reward-icon">${r.icon}</div><div class="reward-category-block"><div class="reward-title">${r.category}</div>${merchantLabel}</div></div><div class="reward-header-rate">${r.cash}</div></div>${lower}${multi&&r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</article>`;
   }).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
   searchResults.classList.remove("hidden");
 });
