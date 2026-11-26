@@ -1622,3 +1622,18 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
     align-self:start;
   }
 }
+
+
+/* U.S. Bank sample merchants links: standalone final line, not part of the bullet list. */
+.usb-sample-merchants-link-wrap{
+  margin:12px 0 0!important;
+  font-size:13px;
+  font-weight:700;
+}
+.usb-sample-merchants-link{
+  color:#68b3ff!important;
+  text-decoration:none;
+}
+.usb-sample-merchants-link:hover{
+  text-decoration:underline;
+}
