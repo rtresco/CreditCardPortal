@@ -350,7 +350,14 @@ globalSearch.addEventListener("input",()=>{
     if(normalizedQuery.startsWith("walm") || normalizedQuery.includes("walmart")) return r.card==="Walmart OnePay Cash Rewards";
     if(normalizedQuery.startsWith("amaz") || normalizedQuery.includes("amazon") || normalizedQuery.startsWith("whole") || normalizedQuery.includes("wholefoods")) return r.card==="Amazon Prime Store Card";
     const terms=[r.category,r.card,r.details,...r.search,...(merchantAliases[r.category]||[])];
-    return terms.some(term=>normalizeMerchantSearch(term).includes(normalizedQuery));
+    return terms.some(term=>{
+      const normalizedTerm=normalizeMerchantSearch(term);
+      if(normalizedQuery.length<=3){
+        const words=String(term||"").toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").match(/[a-z0-9]+/g)||[];
+        return words.some(word=>word.startsWith(normalizedQuery));
+      }
+      return normalizedTerm.includes(normalizedQuery);
+    });
   });
   searchResults.innerHTML=matches.length?matches.map(r=>{
     const parts=r.card==="Capital One / Chase"?["Capital One Savor","Chase Freedom Flex"]:
