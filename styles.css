@@ -1680,3 +1680,12 @@ table{color:#e7eef8}th{background:#123f78;color:#fff}td{border-bottom-color:#243
 .search-result-merchant{
   color:#ffc62e!important;
 }
+
+
+/* Keep the Merchant: label white while highlighting only the merchant name in gold. */
+.search-result-merchant .search-result-merchant-label{
+  color:#ffffff!important;
+}
+.search-result-merchant .search-result-merchant-name{
+  color:#ffc62e!important;
+}
