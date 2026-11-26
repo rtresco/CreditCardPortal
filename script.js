@@ -378,7 +378,7 @@ globalSearch.addEventListener("input",()=>{
     const multi=parts.length>1;
     const categoryClass="category-"+r.category.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
     const lower=multi?parts.map(card=>`<div class="reward-issuer-section ${cardChipClass(card)}"><div class="card-name">${card}</div></div>`).join(""):`<div class="reward-gradient-area ${cardChipClass(parts[0])}"><div class="reward-card-method">${renderCardChips(r.card)}</div>${`<div class="reward-expiry-row ${r.until==="Ongoing"?"reward-expiry-row-ongoing":""}">${r.until!=="Ongoing"?`Expires ${r.until}`:"&nbsp;"}</div>`}</div>`;
-    const merchantLabel=matchedMerchant?`<div class="search-result-merchant">Merchant: ${matchedMerchant}</div>`:"";
+    const merchantLabel=matchedMerchant?`<div class="search-result-merchant"><span class="search-result-merchant-label">Merchant:</span> <span class="search-result-merchant-name">${matchedMerchant}</span></div>`:"";
     return `<article class="search-result reward-card ${categoryClass} ${multi?"reward-card-multi":cardChipClass(parts[0])}"><div class="reward-top"><div class="reward-category-label"><div class="reward-icon">${r.icon}</div><div class="reward-category-block"><div class="reward-title">${r.category}</div>${merchantLabel}</div></div><div class="reward-header-rate">${r.cash}</div></div>${lower}${multi&&r.until!=="Ongoing"?`<div class="reward-expiry-row">Expires ${r.until}</div>`:""}</article>`;
   }).join(""):`<div class="search-result search-result-empty">No matching category found.</div>`;
   searchResults.classList.remove("hidden");
