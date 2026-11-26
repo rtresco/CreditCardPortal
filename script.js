@@ -26,6 +26,51 @@ const rewards = [
  {category:"Everything Else",icon:"•••",card:"Bank of America",cash:"2.625%",details:"Any purchase not listed above",until:"Ongoing",search:["everything else","other"]}
 ];
 
+
+// U.S. Bank Cash+ sample-merchant directory, mapped to the best currently active reward category/card.
+// Merchant names are searchable aliases; common punctuation, spacing and brand-name variations are included.
+const merchantAliases = {
+ "Streaming Services": [
+  "Charter","Spectrum","DirectTV","DirecTV","AT&T U-verse","Time Warner Cable","Comcast","Xfinity","DISH Network","Disney Plus","Disney+","Netflix","YouTube","YouTube TV","FandangoNOW","Fandango Now","Sling TV","Hulu","Vudu","Amazon Music","Pandora","Spotify","Apple Music","SiriusXM","Sirius XM","Google Play Music","Slacker Radio"
+ ],
+ "Restaurants / Dining": [
+  "Arby's","Arbys","Domino's","Dominos","Papa Murphy's","Papa Murphys","Burger King","BK","In-N-Out Burger","In N Out","Qdoba","Qdoba Mexican Grill","Carl's Jr","Carls Jr","Jack in the Box","Sonic Drive-In","Sonic","Chick-fil-A","Chick Fil A","Jimmy John's","Jimmy Johns","Subway","Chipotle","Chipotle Mexican Grill","KFC","Kentucky Fried Chicken","Taco Bell","Culver's","Culvers","McDonald's","McDonalds","Wendy's","Wendys","Dairy Queen","DQ","Panda Express",
+  "Applebee's","Applebees","Grubhub","Grub Hub","Red Lobster","BJ's Restaurant","BJs Restaurant","BJ's Brewhouse","IHOP","International House of Pancakes","Red Robin","Bite Squad","Longhorn Steakhouse","LongHorn","Ruby Tuesday","Bob Evans","Old Chicago","Sizzler","Buffalo Wild Wings","BWW","Olive Garden","Skyline Chili","Cheddar's","Cheddars Casual Cafe","Outback Steakhouse","Smashburger","Cracker Barrel","P.F. Chang's","PF Changs","T.G.I. Friday's","TGI Fridays","Perkins","Texas Roadhouse","Delivery.com","DoorDash","Uber Eats","Postmates","Village Inn","Pizza Hut"
+ ],
+ "Department Stores": [
+  "Bloomingdale's","Bloomingdales","Bloomies","Kohl's","Kohls","Off 5th","Saks Off 5th","Saks OFF 5TH","Bon-Ton","Bonton","Loehmann's","Loehmanns","Saks Fifth Avenue","Saks","Boston Store","Boston Stores","Macy's","Macys","Macy","Sears","Dillard's","Dillards","Nordstrom","Soma Intimates","Soma","JCPenney","JC Penney","JcPenney","JCP","Nordstrom Rack","Von Maur"
+ ],
+ "Utilities": [
+  "Ameren","Ameren Corporation","Nicor Gas","Puget Sound Energy","PSE","ComEd","ComEd Payment","NW Natural","Northwest Natural","Republic Services","Duke Energy","Pacific Gas and Electric","PG&E","PGE","Seattle City Light","Kansas City Power and Light","KCP&L","Portland General Electric","Waste Management","WM","Los Angeles Department of Water and Power","LADWP","Portland Water Bureau","Xcel Energy"
+ ],
+ "Electronics Stores": [
+  "Apple Store","Apple","firstSTREET","First Street","Magnolia","Magnolia Home Theater","Best Buy","Bestbuy","Bestbuy.com","Fry's Electronics","Frys Electronics","Fry's","Frys.com","Monoprice","Monoprice.com","Newegg","Newegg.com","Bose","h.h. gregg","HHGregg","H H Gregg","O&M Electronics","OM Electronics","Electronic Express","Huppin's","Huppins","Video Only"
+ ],
+ "Entertainment": [
+  "AMC Theatres","AMC Theater","AMC","Edwards Cinemas","Edwards Theater","movietickets.com","MovieTickets","Atom Tickets","Fandango.com","Fandango","Rave Cinema","Century Theatres","Century Theater","Harkins Theatres","Harkins","Regal Cinemas","Regal","Cinemark","Megaplex Theatres","Megaplex","Showplace Icon Theatres","Showplace Icon","Redbox"
+ ],
+ "Everything Else": [
+  "AT&T Wireless","ATT Wireless","AT&T Mobility","GreatCall","Lively","TracFone","TracFone Wireless","Boost Mobile","MetroPCS","Metro PCS","U.S. Cellular","US Cellular","CenturyLink","Sprint Wireless","Verizon Wireless","Verizon","Consumer Cellular","Straight Talk","Straight Talk Wireless","Virgin Mobile","Cricket Wireless","Cricket","T-Mobile","TMobile","Xfinity Mobile","XFINITY MOBILE",
+  "American Furniture Warehouse","AFW","Homemakers Furniture","Homemakers","RC Willey","Art Van Furniture","IKEA","Ikea.com","Restoration Hardware","RH","Ashley Furniture","La-Z-Boy","La Z Boy","Room & Board","Room and Board","Bob's Discount Furniture","Bobs Discount Furniture","Mattress Warehouse","Slumberland Furniture","Ethan Allen","Mor Furniture","Steinhafels","Furniture Row","Nebraska Furniture Mart","NFM","Value City Furniture","Hom Furniture",
+  "Academy Sports + Outdoors","Academy Sports","Academy","Camping World","Orvis","Backcountry.com","Backcountry","Dick's Sporting Goods","Dicks Sporting Goods","DICK'S","Play It Again Sports","Bass Pro Shops","Bass Pro","Golf Galaxy","REI","Big 5 Sporting Goods","Big 5","Hibbett Sports","Hibbett","Scheels","Cabela's","Cabelas","MLB.com","Sportsman's Warehouse","Sportsmans Warehouse",
+  "Aeropostale","Aéropostale","Express","Jos A Bank","Jos. A. Bank","Joseph A Bank","American Eagle Outfitters","American Eagle","AE","Forever 21","Old Navy","Ann Taylor","GAP","Gap Factory","Talbots","Banana Republic","J.Crew","J Crew","The Limited","Eddie Bauer",
+  "24 Hour Fitness","24 Hour Fitness USA","LA Fitness","L.A. Fitness","Snap Fitness","Anytime Fitness","Life Time Fitness","Lifetime Fitness","SoulCycle","Soul Cycle","Crunch Fitness","Orangetheory Fitness","Orange Theory","Weight Watchers","WW","Equinox","Planet Fitness","XSport Fitness","Genesis Health Clubs","Pure Barre","Zumba Fitness",
+  "Target","Target.com","Target Store","Walmart","Wal-Mart","Walmart.com","Wal Mart","Costco"
+ ],
+ "Gas": [
+  "7-Eleven","7 Eleven","7-Eleven Gas","EVgo","EVgo Fast Charging Network","Marathon Oil","Marathon","76 Gas Stations","76","76 Station","ExxonMobil","Exxon","Mobil","Maverick Country Store","Maverik","Blink Charging","Fred Meyer Fuel Center","Fred Meyer Fuel","Phillips 66","Phillips","BP","Holiday Stationstores","Holiday Station Stores","QuikTrip","QT","Cenex","Kroger Fuel Center","Kroger Fuel","Shell","ChargePoint","ChargePoint Charging Station","Kum & Go","Kum and Go","Speedway","Chevron","KwikShop","Kwik Shop","SuperAmerica","Love's Travel Stops","Loves Travel Stops","Tesla","Tesla Supercharger","Tesla Inc"
+ ],
+ "Public Transportation": [
+  "Amtrak","Lyft","Uber","car2go","Car2Go","Metra","Ventra","Catalina Express","NYC Taxi","New York City Taxi","Washington State Ferries","Clipper","Clipper Card","Sound Transit","Yellow Cab","Greyhound","TriMet","UberX","Uber Black","Uber Taxi"
+ ],
+ "Grocery Stores": [
+  "Albertsons","Jewel-Osco","Jewel Osco","Safeway","Cub Foods","King Soopers","Schnucks","Dierbergs","Kroger","Sprouts Farmers Market","Sprouts","Fred Meyer","Lunds & Byerlys","Lunds and Byerlys","Giant Eagle","Pick'n Save","Pick n Save","Trader Joe's","Trader Joes","Hy-Vee","Hy Vee","Publix","Instacart","Ralphs","Ralph's","Whole Foods Market","Whole Foods","Jet.com","Jet"
+ ]
+};
+function normalizeMerchantSearch(value){
+  return String(value||"").toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9]/g,"");
+}
+
 const bills = [
  [`${iconSvg("i40")} Electricity`,"Utilities","Discover More","5% Cash Back","Expires December 31, 2026, then Bank of America Visa","https://www.discountpowertx.com/"],
  [`${iconSvg("i53")} Water`,"Utilities","Discover More","5% Cash Back","Expires December 31, 2026, then Bank of America Checking to avoid credit card processing fees","https://www.houstonwaterbills.houstontx.gov/"],
@@ -300,10 +345,12 @@ globalSearch.addEventListener("input",()=>{
     return;
   }
   rewardGrid.classList.add("hidden");
+  const normalizedQuery=normalizeMerchantSearch(q);
   const matches=rewards.filter(r=>{
-    if(q.startsWith("walm") || q.includes("walmart")) return r.card==="Walmart OnePay Cash Rewards";
-    if(q.startsWith("amaz") || q.includes("amazon") || q.startsWith("whole") || q.includes("whole foods")) return r.card==="Amazon Prime Store Card";
-    return [r.category,r.card,r.details,...r.search].join(" ").toLowerCase().includes(q);
+    if(normalizedQuery.startsWith("walm") || normalizedQuery.includes("walmart")) return r.card==="Walmart OnePay Cash Rewards";
+    if(normalizedQuery.startsWith("amaz") || normalizedQuery.includes("amazon") || normalizedQuery.startsWith("whole") || normalizedQuery.includes("wholefoods")) return r.card==="Amazon Prime Store Card";
+    const terms=[r.category,r.card,r.details,...r.search,...(merchantAliases[r.category]||[])];
+    return terms.some(term=>normalizeMerchantSearch(term).includes(normalizedQuery));
   });
   searchResults.innerHTML=matches.length?matches.map(r=>{
     const parts=r.card==="Capital One / Chase"?["Capital One Savor","Chase Freedom Flex"]:
