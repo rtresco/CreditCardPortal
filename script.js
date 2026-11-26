@@ -350,10 +350,6 @@ globalSearch.addEventListener("input",()=>{
     const aliases=merchantAliases[r.category]||[];
     const candidates=aliases.filter(name=>{
       const normalizedName=normalizeMerchantSearch(name);
-      if(normalizedQuery.length<=3){
-        const words=String(name).toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").match(/[a-z0-9]+/g)||[];
-        return words.some(word=>word.startsWith(normalizedQuery));
-      }
       return normalizedName.includes(normalizedQuery);
     });
     return candidates.sort((a,b)=>normalizeMerchantSearch(a).length-normalizeMerchantSearch(b).length)[0]||"";
