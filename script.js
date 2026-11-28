@@ -43,6 +43,9 @@ const merchantAliases = {
  "Utilities": [
   "Ameren","Ameren Corporation","Nicor Gas","Puget Sound Energy","PSE","ComEd","ComEd Payment","NW Natural","Northwest Natural","Republic Services","Duke Energy","Pacific Gas and Electric","PG&E","PGE","Seattle City Light","Kansas City Power and Light","KCP&L","Portland General Electric","Waste Management","WM","Los Angeles Department of Water and Power","LADWP","Portland Water Bureau","Xcel Energy"
  ],
+ "Superstores / Clubs": [
+  "Target","Target.com","Target Store","Walmart","Wal-Mart","Walmart.com","Wal Mart","Sam's Club","Sams Club","Costco","BJ's Wholesale Club","BJ's","BJ's Wholesale"
+ ],
  "Electronics Stores": [
   "Apple Store","Apple","firstSTREET","First Street","Magnolia","Magnolia Home Theater","Best Buy","Bestbuy","Bestbuy.com","Fry's Electronics","Frys Electronics","Fry's","Frys.com","Monoprice","Monoprice.com","Newegg","Newegg.com","Bose","h.h. gregg","HHGregg","H H Gregg","O&M Electronics","OM Electronics","Electronic Express","Huppin's","Huppins","Video Only"
  ],
@@ -55,7 +58,7 @@ const merchantAliases = {
   "Academy Sports + Outdoors","Academy Sports","Academy","Camping World","Orvis","Backcountry.com","Backcountry","Dick's Sporting Goods","Dicks Sporting Goods","DICK'S","Play It Again Sports","Bass Pro Shops","Bass Pro","Golf Galaxy","REI","Big 5 Sporting Goods","Big 5","Hibbett Sports","Hibbett","Scheels","Cabela's","Cabelas","MLB.com","Sportsman's Warehouse","Sportsmans Warehouse",
   "Aeropostale","Aéropostale","Express","Jos A Bank","Jos. A. Bank","Joseph A Bank","American Eagle Outfitters","American Eagle","AE","Forever 21","Old Navy","Ann Taylor","GAP","Gap Factory","Talbots","Banana Republic","J.Crew","J Crew","The Limited","Eddie Bauer",
   "24 Hour Fitness","24 Hour Fitness USA","LA Fitness","L.A. Fitness","Snap Fitness","Anytime Fitness","Life Time Fitness","Lifetime Fitness","SoulCycle","Soul Cycle","Crunch Fitness","Orangetheory Fitness","Orange Theory","Weight Watchers","WW","Equinox","Planet Fitness","XSport Fitness","Genesis Health Clubs","Pure Barre","Zumba Fitness",
-  "Target","Target.com","Target Store","Walmart","Wal-Mart","Walmart.com","Wal Mart","Costco"
+  "Walmart","Wal-Mart","Walmart.com","Wal Mart","Costco"
  ],
  "Gas": [
   "7-Eleven","7 Eleven","7-Eleven Gas","EVgo","EVgo Fast Charging Network","Marathon Oil","Marathon","76 Gas Stations","76","76 Station","ExxonMobil","Exxon","Mobil","Maverick Country Store","Maverik","Blink Charging","Fred Meyer Fuel Center","Fred Meyer Fuel","Phillips 66","Phillips","BP","Holiday Stationstores","Holiday Station Stores","QuikTrip","QT","Cenex","Kroger Fuel Center","Kroger Fuel","Shell","ChargePoint","ChargePoint Charging Station","Kum & Go","Kum and Go","Speedway","Chevron","KwikShop","Kwik Shop","SuperAmerica","Love's Travel Stops","Loves Travel Stops","Tesla","Tesla Supercharger","Tesla Inc"
