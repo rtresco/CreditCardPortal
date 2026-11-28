@@ -61,7 +61,7 @@ const merchantAliases = {
   "Academy Sports + Outdoors","Academy Sports","Academy","Camping World","Orvis","Backcountry.com","Backcountry","Dick's Sporting Goods","Dicks Sporting Goods","DICK'S","Play It Again Sports","Bass Pro Shops","Bass Pro","Golf Galaxy","REI","Big 5 Sporting Goods","Big 5","Hibbett Sports","Hibbett","Scheels","Cabela's","Cabelas","MLB.com","Sportsman's Warehouse","Sportsmans Warehouse",
   "Aeropostale","Aéropostale","Express","Jos A Bank","Jos. A. Bank","Joseph A Bank","American Eagle Outfitters","American Eagle","AE","Forever 21","Old Navy","Ann Taylor","GAP","Gap Factory","Talbots","Banana Republic","J.Crew","J Crew","The Limited","Eddie Bauer",
   "24 Hour Fitness","24 Hour Fitness USA","LA Fitness","L.A. Fitness","Snap Fitness","Anytime Fitness","Life Time Fitness","Lifetime Fitness","SoulCycle","Soul Cycle","Crunch Fitness","Orangetheory Fitness","Orange Theory","Weight Watchers","WW","Equinox","Planet Fitness","XSport Fitness","Genesis Health Clubs","Pure Barre","Zumba Fitness",
-  "Walmart","Wal-Mart","Walmart.com","Wal Mart","Costco"
+  "Costco"
  ],
  "Gas": [
   "7-Eleven","7 Eleven","7-Eleven Gas","EVgo","EVgo Fast Charging Network","Marathon Oil","Marathon","76 Gas Stations","76","76 Station","ExxonMobil","Exxon","Mobil","Maverick Country Store","Maverik","Blink Charging","Fred Meyer Fuel Center","Fred Meyer Fuel","Phillips 66","Phillips","BP","Holiday Stationstores","Holiday Station Stores","QuikTrip","QT","Cenex","Kroger Fuel Center","Kroger Fuel","Shell","ChargePoint","ChargePoint Charging Station","Kum & Go","Kum and Go","Speedway","Chevron","KwikShop","Kwik Shop","SuperAmerica","Love's Travel Stops","Loves Travel Stops","Tesla","Tesla Supercharger","Tesla Inc"
@@ -361,6 +361,7 @@ globalSearch.addEventListener("input",()=>{
     return candidates.sort((a,b)=>normalizeMerchantSearch(a).length-normalizeMerchantSearch(b).length)[0]||"";
   };
   const matches=rewards.filter(r=>{
+    if(normalizedQuery==="wal") return r.card==="Walmart OnePay Cash Rewards" || (r.category==="Drugstores" && !!merchantMatch(r));
     if(normalizedQuery.startsWith("walm") || normalizedQuery.includes("walmart")) return r.card==="Walmart OnePay Cash Rewards";
     if(normalizedQuery.startsWith("amaz") || normalizedQuery.includes("amazon") || normalizedQuery.startsWith("whole") || normalizedQuery.includes("wholefoods")) return r.card==="Amazon Prime Store Card";
     const aliases=merchantAliases[r.category]||[];
