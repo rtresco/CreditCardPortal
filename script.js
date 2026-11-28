@@ -47,7 +47,10 @@ const merchantAliases = {
   "Ameren","Ameren Corporation","Nicor Gas","Puget Sound Energy","PSE","ComEd","ComEd Payment","NW Natural","Northwest Natural","Republic Services","Duke Energy","Pacific Gas and Electric","PG&E","PGE","Seattle City Light","Kansas City Power and Light","KCP&L","Portland General Electric","Waste Management","WM","Los Angeles Department of Water and Power","LADWP","Portland Water Bureau","Xcel Energy"
  ],
  "Superstores / Clubs": [
-  "Target","Target.com","Target Store","Walmart","Wal-Mart","Walmart.com","Wal Mart","Sam's Club","Sams Club","Costco","BJ's Wholesale Club","BJ's","BJ's Wholesale"
+  "Target","Target.com","Target Store","Sam's Club","Sams Club","Costco","BJ's Wholesale Club","BJ's","BJ's Wholesale"
+ ],
+ "Walmart": [
+  "Walmart","Wal-Mart","Walmart.com","Wal Mart"
  ],
  "Electronics Stores": [
   "Apple Store","Apple","firstSTREET","First Street","Magnolia","Magnolia Home Theater","Best Buy","Bestbuy","Bestbuy.com","Fry's Electronics","Frys Electronics","Fry's","Frys.com","Monoprice","Monoprice.com","Newegg","Newegg.com","Bose","h.h. gregg","HHGregg","H H Gregg","O&M Electronics","OM Electronics","Electronic Express","Huppin's","Huppins","Video Only"
@@ -360,8 +363,9 @@ globalSearch.addEventListener("input",()=>{
     });
     return candidates.sort((a,b)=>normalizeMerchantSearch(a).length-normalizeMerchantSearch(b).length)[0]||"";
   };
+  const walmartPrefixMatch=normalizedQuery.length>=2 && "walmart".startsWith(normalizedQuery);
   const matches=rewards.filter(r=>{
-    if(normalizedQuery==="wal") return r.card==="Walmart OnePay Cash Rewards" || (r.category==="Drugstores" && !!merchantMatch(r));
+    if(walmartPrefixMatch && r.category==="Superstores / Clubs") return false;
     if(normalizedQuery.startsWith("walm") || normalizedQuery.includes("walmart")) return r.card==="Walmart OnePay Cash Rewards";
     if(normalizedQuery.startsWith("amaz") || normalizedQuery.includes("amazon") || normalizedQuery.startsWith("whole") || normalizedQuery.includes("wholefoods")) return r.card==="Amazon Prime Store Card";
     const aliases=merchantAliases[r.category]||[];
