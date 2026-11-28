@@ -38,7 +38,7 @@ const merchantAliases = {
   "Applebee's","Applebees","Grubhub","Grub Hub","Red Lobster","BJ's Restaurant","BJs Restaurant","BJ's Brewhouse","IHOP","International House of Pancakes","Red Robin","Bite Squad","Longhorn Steakhouse","LongHorn","Ruby Tuesday","Bob Evans","Old Chicago","Sizzler","Buffalo Wild Wings","BWW","Olive Garden","Skyline Chili","Cheddar's","Cheddars Casual Cafe","Outback Steakhouse","Smashburger","Cracker Barrel","P.F. Chang's","PF Changs","T.G.I. Friday's","TGI Fridays","Perkins","Texas Roadhouse","Delivery.com","DoorDash","Uber Eats","Postmates","Village Inn","Pizza Hut"
  ],
  "Drugstores": [
-  "Walgreens","Walgreen","Walgreens.com","Walgreen's","Walgreens Pharmacy","CVS","CVS Pharmacy","CVS.com","Rite Aid","RiteAid","Duane Reade","DuaneReade","Bartell Drugs","Bartell Drugs Pharmacy","Medicine Shoppe","The Medicine Shoppe","Good Neighbor Pharmacy"
+  "Walgreens","Walgreens.com","Walgreen's","Walgreens Pharmacy","CVS","CVS Pharmacy","CVS.com","Rite Aid","RiteAid","Duane Reade","DuaneReade","Bartell Drugs","Bartell Drugs Pharmacy","Medicine Shoppe","The Medicine Shoppe","Good Neighbor Pharmacy"
  ],
  "Department Stores": [
   "Bloomingdale's","Bloomingdales","Bloomies","Kohl's","Kohls","Off 5th","Saks Off 5th","Saks OFF 5TH","Bon-Ton","Bonton","Loehmann's","Loehmanns","Saks Fifth Avenue","Saks","Boston Store","Boston Stores","Macy's","Macys","Macy","Sears","Dillard's","Dillards","Nordstrom","Soma Intimates","Soma","JCPenney","JC Penney","JcPenney","JCP","Nordstrom Rack","Von Maur"
